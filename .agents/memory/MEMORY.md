@@ -1,1 +1,1 @@
-- [Portfolio direction](portfolio-direction.md) — Follow the user's reference structure, use placeholders for unconfirmed content, and exclude Wix branding.
+- [Portfolio direction](portfolio-direction.md) — Fresh professional themes, reference content coverage, placeholders for unconfirmed content, and no Wix branding.
