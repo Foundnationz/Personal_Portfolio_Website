@@ -1,0 +1,1 @@
+- [Portfolio direction](portfolio-direction.md) — Follow the user's reference structure, use placeholders for unconfirmed content, and exclude Wix branding.
