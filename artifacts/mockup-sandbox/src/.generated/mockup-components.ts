@@ -4,5 +4,7 @@ export const modules: ModuleMap = {
   "./components/mockups/portfolio-themes/Current.tsx": () => import("../components/mockups/portfolio-themes/Current.tsx"),
   "./components/mockups/portfolio-themes/Editorial.tsx": () => import("../components/mockups/portfolio-themes/Editorial.tsx"),
   "./components/mockups/portfolio-themes/FinTech.tsx": () => import("../components/mockups/portfolio-themes/FinTech.tsx"),
-  "./components/mockups/portfolio-themes/Finance.tsx": () => import("../components/mockups/portfolio-themes/Finance.tsx")
+  "./components/mockups/portfolio-themes/Finance.tsx": () => import("../components/mockups/portfolio-themes/Finance.tsx"),
+  "./components/mockups/portfolio-themes/PersonalFinance.tsx": () => import("../components/mockups/portfolio-themes/PersonalFinance.tsx"),
+  "./components/mockups/portfolio-themes/SignatureFinTech.tsx": () => import("../components/mockups/portfolio-themes/SignatureFinTech.tsx")
 };
