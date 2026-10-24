@@ -3,7 +3,7 @@ import "./_signature-fintech.css";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Code2, FileText,
+  ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Building2, Code2, FileText,
   Link2, Mail, MapPin, Menu, Users, X,
 } from "lucide-react";
 import {
@@ -178,19 +178,21 @@ export function SignatureFinTech() {
         <div className="sf-wrap">
           <div className="sf-section-head">
             <div className="sf-section-label sf-kicker"><b>01</b><span /> About</div>
-            <div><h2 id="sf-about-title">A little context<br />before the work.</h2></div>
+            <div><h2 id="sf-about-title">About me.</h2></div>
           </div>
           <div className="sf-about-grid">
-            <aside className="sf-about-aside">
-              <h3>{profile.name}</h3><p>{profile.role}</p>
-              <div className="sf-meta">
-                <div className="sf-meta-row"><Mail size={16} aria-hidden /><span>{about.email} <Example /></span></div>
-                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><span>{about.location} <Example /></span></div>
+            <div className="sf-about-card">
+              <h3>{profile.name}</h3>
+              <p className="sf-about-role">{profile.role}</p>
+              <div className="sf-bio">
+                {about.bio.map((paragraph, index) => <p key={index}>{paragraph}{index > 0 && <span> <Example /></span>}</p>)}
               </div>
-              <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume"><FileText size={15} /> View resume <ArrowUpRight size={14} /></button>
-            </aside>
-            <div className="sf-bio">
-              {about.bio.map((paragraph, index) => <p key={index}>{paragraph}{index > 0 && <span> <Example /></span>}</p>)}
+              <div className="sf-about-bottom">
+                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><span>{about.location} <Example /></span></div>
+                <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume">
+                  <FileText size={15} /> View resume <ArrowUpRight size={14} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -224,9 +226,16 @@ export function SignatureFinTech() {
           </div>
           <div className="sf-education-list">
             {education.map((entry, index) => <article className="sf-edu" key={entry.school} data-testid={`card-education-${index}`}>
-              <span className="sf-period">{entry.period}</span>
-              <div><h3>{entry.school} {entry.isExample && <Example />}</h3><p className="sf-edu-degree">{entry.degree}</p><p className="sf-edu-note">{entry.note}</p></div>
-              <span className="sf-edu-index">0{index + 1}</span>
+              <div className="sf-edu-image" role="img" aria-label={`University image placeholder for ${entry.school}`}>
+                <Building2 size={30} aria-hidden="true" />
+                <span>University image placeholder</span>
+              </div>
+              <div className="sf-edu-copy">
+                <div className="sf-edu-topline"><span className="sf-period">{entry.period}</span><span className="sf-edu-index">0{index + 1}</span></div>
+                <h3>{entry.school} {entry.isExample && <Example />}</h3>
+                <p className="sf-edu-degree">{entry.degree}</p>
+                <p className="sf-edu-note">{entry.note}</p>
+              </div>
             </article>)}
           </div>
         </div>
@@ -266,7 +275,7 @@ export function SignatureFinTech() {
           <div className="sf-exp-list">
             {experience.map((item, index) => <article className="sf-exp" key={`${item.title}-${index}`} data-testid={`item-experience-${index}`}>
               <div className="sf-exp-date">{item.period}</div>
-              <div><div className="sf-exp-head"><h3>{item.title}</h3><Example light /></div><p className="sf-exp-org">{item.org}</p>
+              <div className="sf-exp-card"><div className="sf-exp-head"><h3>{item.title}</h3><Example light /></div><p className="sf-exp-org">{item.org}</p>
                 <ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>
               </div>
             </article>)}
