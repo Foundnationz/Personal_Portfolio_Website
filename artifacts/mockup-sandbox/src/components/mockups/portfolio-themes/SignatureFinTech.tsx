@@ -11,6 +11,7 @@ import {
   projects, skills, type IconKey, type Project,
 } from "./_data";
 import { ProjectArt } from "./_ProjectArt";
+import { SiteFooter } from "./_SiteFooter";
 
 const skillIcons: Record<IconKey, typeof BookOpen> = { ledger: BookOpen, code: Code2, people: Users };
 
@@ -303,9 +304,7 @@ export function SignatureFinTech() {
         </div>
       </section>
     </main>
-    <footer className="sf-wrap sf-footer"><span>© {new Date().getFullYear()} · {profile.name}</span><span>Example material is labelled · Preview form only</span>
-      <a href="#home" onClick={() => go("home")}>Back to top ↑</a>
-    </footer>
+    <SiteFooter onNavigate={go} />
 
     <Modal open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}
       title={selectedProject?.title ?? ""} description={selectedProject ? `${selectedProject.category} · Example project case note` : ""}>
