@@ -105,6 +105,14 @@ export function SignatureFinTech() {
   const [allOpen, setAllOpen] = useState(false);
   const [notice, setNotice] = useState<"resume" | "linkedin" | null>(null);
   const featured = projects.filter((project) => featuredProjectIds.includes(project.id));
+  const openProjectOutline = (project: Project) => {
+    setAllOpen(false);
+    if (project.id === "ledger-reconciliation") {
+      window.open("/projects/ledger-reconciliation", "_blank", "noopener,noreferrer");
+    } else {
+      setSelectedProject(project);
+    }
+  };
 
   useEffect(() => {
     const sections = navItems.map((item) => document.getElementById(item.id)).filter((node): node is HTMLElement => !!node);
@@ -257,8 +265,8 @@ export function SignatureFinTech() {
               <div className="sf-project-copy">
                 <div className="sf-project-meta"><span>{project.category}</span><Example /></div>
                 <h3>{project.title}</h3><p>{project.summary}</p>
-                <button className="sf-project-open" type="button" onClick={() => setSelectedProject(project)} data-testid={`button-view-project-${project.id}`}>
-                  Read project note <ArrowUpRight size={15} />
+                <button className="sf-project-open" type="button" onClick={() => openProjectOutline(project)} data-testid={`button-view-project-${project.id}`}>
+                  View project outline <ArrowUpRight size={15} />
                 </button>
               </div>
             </article>)}
@@ -319,7 +327,7 @@ export function SignatureFinTech() {
     </Modal>
     <Modal open={allOpen} onOpenChange={setAllOpen} title="Project index" description="Every entry is an example placeholder. Select one to inspect its illustrative case note.">
       <div className="sf-all-list">{projects.map((project) => <button type="button" key={project.id} data-testid={`button-all-${project.id}`}
-        onClick={() => { setAllOpen(false); setSelectedProject(project); }}>
+        onClick={() => openProjectOutline(project)}>
         <span className="sf-all-art"><ProjectArt kind={project.art} /></span>
         <span className="sf-all-title"><strong>{project.title}</strong><small>{project.category} · Example</small></span><ArrowUpRight size={16} />
       </button>)}</div>

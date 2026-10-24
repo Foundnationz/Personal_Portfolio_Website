@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/portfolio';
+import ProjectOutline from '@/pages/project-outline';
 import {
   Route,
   Switch,
@@ -21,6 +22,7 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/projects/ledger-reconciliation" component={ProjectOutline} />
         <Route component={NotFound} />
       </Switch>
     </RoutedErrorBoundary>

@@ -14,3 +14,9 @@ Use the revised Signature FinTech template as the portfolio's default going forw
 **Why:** The user explicitly asked to use this template from now on unless they say otherwise, and requested these structures to help recruiters read quickly.
 
 **How to apply:** Retain these preferences in later refinements or integration of the chosen design; stack content logically on small screens.
+
+Project outline pages should retain the reference page's content while using restrained styling that does not distract recruiters from reading.
+
+**Why:** The user explicitly prioritized project content over fancy design elements.
+
+**How to apply:** Keep future project pages readable and scannable, preserving placeholder status until real project details are supplied.

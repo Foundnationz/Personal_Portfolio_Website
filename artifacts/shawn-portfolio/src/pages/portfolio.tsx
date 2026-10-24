@@ -1,6 +1,7 @@
 import "@/styles/signature-fintech.css";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { useLocation } from "wouter";
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Building2, Code2, FileText,
   Link2, Mail, MapPin, Menu, Users, X,
@@ -98,12 +99,30 @@ function ContactForm() {
 }
 
 export default function Portfolio() {
+  const [, navigate] = useLocation();
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [allOpen, setAllOpen] = useState(false);
   const [notice, setNotice] = useState<"resume" | "linkedin" | null>(null);
   const featured = projects.filter((project) => featuredProjectIds.includes(project.id));
+  const openProjectOutline = (project: Project) => {
+    setAllOpen(false);
+    if (project.id === "ledger-reconciliation") {
+      navigate("/projects/ledger-reconciliation");
+    } else {
+      setSelectedProject(project);
+    }
+  };
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) target.scrollIntoView({ behavior: "instant" });
+      else window.scrollTo({ top: 0, behavior: "instant" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     const sections = navItems.map((item) => document.getElementById(item.id)).filter((node): node is HTMLElement => !!node);
@@ -256,8 +275,8 @@ export default function Portfolio() {
               <div className="sf-project-copy">
                 <div className="sf-project-meta"><span>{project.category}</span><Example /></div>
                 <h3>{project.title}</h3><p>{project.summary}</p>
-                <button className="sf-project-open" type="button" onClick={() => setSelectedProject(project)} data-testid={`button-view-project-${project.id}`}>
-                  Read project note <ArrowUpRight size={15} />
+                <button className="sf-project-open" type="button" onClick={() => openProjectOutline(project)} data-testid={`button-view-project-${project.id}`}>
+                  View project outline <ArrowUpRight size={15} />
                 </button>
               </div>
             </article>)}
@@ -318,7 +337,7 @@ export default function Portfolio() {
     </Modal>
     <Modal open={allOpen} onOpenChange={setAllOpen} title="Project index" description="Every entry is an example placeholder. Select one to inspect its illustrative case note.">
       <div className="sf-all-list">{projects.map((project) => <button type="button" key={project.id} data-testid={`button-all-${project.id}`}
-        onClick={() => { setAllOpen(false); setSelectedProject(project); }}>
+        onClick={() => openProjectOutline(project)}>
         <span className="sf-all-art"><ProjectArt kind={project.art} /></span>
         <span className="sf-all-title"><strong>{project.title}</strong><small>{project.category} · Example</small></span><ArrowUpRight size={16} />
       </button>)}</div>

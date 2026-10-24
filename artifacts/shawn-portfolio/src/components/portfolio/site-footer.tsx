@@ -18,7 +18,7 @@ function TikTokIcon({ size = 18 }: { size?: number }) {
   </svg>;
 }
 
-export function SiteFooter({ onNavigate }: { onNavigate: (id: string) => void }) {
+export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: string) => void; homeHref?: string }) {
   const [unconfigured, setUnconfigured] = useState<string | null>(null);
   const openSocial = (name: string) => {
     if (name === "LinkedIn" && profile.linkedinUrl) {
@@ -33,13 +33,13 @@ export function SiteFooter({ onNavigate }: { onNavigate: (id: string) => void })
       <div className="sf-wrap">
         <div className="sf-footer-columns">
           <div className="sf-footer-intro">
-            <a className="sf-footer-name" href="#home" onClick={() => onNavigate("home")}>{profile.name}</a>
+            <a className="sf-footer-name" href={`${homeHref}#home`} onClick={(event) => { event.preventDefault(); onNavigate("home"); }}>{profile.name}</a>
             <p>Thank you for visiting my personal portfolio website.<br />Connect with me over socials.</p>
           </div>
           <nav className="sf-footer-links" aria-label="Footer navigation">
             <h2>Quick links</h2>
             <ul>{navItems.map((item) => <li key={item.id}>
-              <a href={`#${item.id}`} onClick={() => onNavigate(item.id)}>{item.label}</a>
+              <a href={`${homeHref}#${item.id}`} onClick={(event) => { event.preventDefault(); onNavigate(item.id); }}>{item.label}</a>
             </li>)}</ul>
           </nav>
           <div className="sf-footer-contact">
