@@ -72,6 +72,8 @@ export const skills: {
 export const education = [
   {
     school: "UCSI University",
+    image: "images/ucsi-university.jpg",
+    imageAlt: "UCSI University campus building and entrance",
     degree: "Bachelor of Financial Technology (Honours)",
     period: "Final year",
     note: "Currently in the final year of the programme.",
@@ -79,6 +81,8 @@ export const education = [
   },
   {
     school: "Example: Previous Institution",
+    image: "images/sunway-college.jpg",
+    imageAlt: "Sunway College campus building and courtyard",
     degree: "Example: Pre-university qualification",
     period: "Example: Year - Year",
     note: "Placeholder entry. Replace with your pre-university studies and results.",

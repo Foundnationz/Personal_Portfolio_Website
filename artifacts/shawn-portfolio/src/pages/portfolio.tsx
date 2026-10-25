@@ -3,7 +3,7 @@ import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useLocation } from "wouter";
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Building2, Code2, FileText,
+  ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Code2, FileText,
   Link2, Mail, MapPin, Menu, Users, X,
 } from "lucide-react";
 import {
@@ -245,9 +245,8 @@ export default function Portfolio() {
           </div>
           <div className="sf-education-list">
             {education.map((entry, index) => <article className="sf-edu" key={entry.school} data-testid={`card-education-${index}`}>
-              <div className="sf-edu-image" role="img" aria-label={`University image placeholder for ${entry.school}`}>
-                <Building2 size={30} aria-hidden="true" />
-                <span>University image placeholder</span>
+              <div className="sf-edu-image sf-edu-image-photo">
+                <img src={import.meta.env.BASE_URL + entry.image} alt={entry.imageAlt} loading="lazy" decoding="async" />
               </div>
               <div className="sf-edu-copy">
                 <div className="sf-edu-topline"><span className="sf-period">{entry.period}</span><span className="sf-edu-index">0{index + 1}</span></div>
