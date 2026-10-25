@@ -190,14 +190,15 @@
 }
 
 .sf-outline-figure {
-  margin: 3px 0 0;
+  width: min(100%, 330px);
+  margin: 3px auto 0;
 }
 
 .sf-outline-figure img {
   display: block;
   width: 100%;
-  aspect-ratio: 1.08;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   background: #dce1d9;
   border: 1px solid var(--sf-rule);
 }
@@ -286,12 +287,8 @@
   }
 
   .sf-outline-figure {
-    width: min(100%, 520px);
+    width: min(100%, 330px);
     margin-inline: auto;
-  }
-
-  .sf-outline-figure img {
-    aspect-ratio: 1.35;
   }
 
   .sf-outline-text-section {
