@@ -20,3 +20,9 @@ Project outline pages should retain the reference page's content while using res
 **Why:** The user explicitly prioritized project content over fancy design elements.
 
 **How to apply:** Keep future project pages readable and scannable, preserving placeholder status until real project details are supplied.
+
+Keep project-detail labels and values individually editable through the visual editor rather than generated from shared text expressions.
+
+**Why:** The user wants to change these themselves and could not edit the four project metadata cells when they were generated from a list.
+
+**How to apply:** Prefer literal text in independently selectable elements for user-maintained project metadata; preserve this editing ability during later refactors.

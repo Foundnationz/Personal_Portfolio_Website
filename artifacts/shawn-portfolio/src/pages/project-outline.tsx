@@ -9,13 +9,6 @@ import { SiteFooter } from "@/components/portfolio/site-footer";
 
 const overview = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.";
 
-const metadata = [
-  ["Role", "Product Design"],
-  ["Timeline", "12 Weeks"],
-  ["Platform", "Web & Mobile"],
-  ["Focus", "Financial Tracking"],
-];
-
 export default function ProjectOutline() {
   const [, setLocation] = useLocation();
   const [unavailableOpen, setUnavailableOpen] = useState(false);
@@ -117,12 +110,22 @@ export default function ProjectOutline() {
               </div>
               <p className="sf-outline-prose" data-testid="text-project-overview">{overview}</p>
               <dl className="sf-outline-metadata" aria-label="Project details">
-                {metadata.map(([term, value]) => (
-                  <div className="sf-outline-meta-item" key={term}>
-                    <dt>{term}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
+                <div className="sf-outline-meta-item">
+                  <dt>Role</dt>
+                  <dd>Product Design</dd>
+                </div>
+                <div className="sf-outline-meta-item">
+                  <dt>Timeline</dt>
+                  <dd>12 Weeks</dd>
+                </div>
+                <div className="sf-outline-meta-item">
+                  <dt>Platform</dt>
+                  <dd>Web &amp; Mobile</dd>
+                </div>
+                <div className="sf-outline-meta-item">
+                  <dt>Focus</dt>
+                  <dd>Financial Tracking</dd>
+                </div>
               </dl>
               <div className="sf-outline-summary-grid">
                 <article>
