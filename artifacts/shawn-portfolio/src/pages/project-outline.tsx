@@ -143,11 +143,13 @@ export default function ProjectOutline() {
             </div>
             <figure className="sf-outline-figure">
               <img
-                src={import.meta.env.BASE_URL + "images/project-financial-tracker.jpg"}
-                alt="Abstract network and technology illustration used as a project reference image"
+                src={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"}
+                alt="Financial tracker app dashboard showing balance, income, expenses, and monthly spending"
+                width={804}
+                height={1748}
                 data-testid="img-project-illustration"
               />
-              <figcaption>Illustrative image · not financial data</figcaption>
+              <figcaption>Financial tracker app dashboard</figcaption>
             </figure>
           </section>
 
