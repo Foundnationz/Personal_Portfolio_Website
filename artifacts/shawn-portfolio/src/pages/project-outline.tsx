@@ -111,7 +111,7 @@ export default function ProjectOutline() {
               <dl className="sf-outline-metadata" aria-label="Project details">
                 <div className="sf-outline-meta-item">
                   <dt>Tools</dt>
-                  <dd>Python | SQL | Google Colab | VsCode |  </dd>
+                  <dd>Python | SQL | Google Colab | VsCode </dd>
                 </div>
                 <div className="sf-outline-meta-item">
                   <dt>Timeline</dt>
