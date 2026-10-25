@@ -64,7 +64,6 @@ export default function ProjectOutline() {
           {navItems.map((item) => <Link key={item.id} href={`/#${item.id}`}>{item.label}</Link>)}
         </nav>}
       </header>
-
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
@@ -111,7 +110,7 @@ export default function ProjectOutline() {
               <p className="sf-outline-prose" data-testid="text-project-overview">{overview}</p>
               <dl className="sf-outline-metadata" aria-label="Project details">
                 <div className="sf-outline-meta-item">
-                  <dt>Role</dt>
+                  <dt>Tools</dt>
                   <dd>Product Design</dd>
                 </div>
                 <div className="sf-outline-meta-item">
@@ -144,13 +143,11 @@ export default function ProjectOutline() {
             </div>
             <figure className="sf-outline-figure">
               <img
-                src={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"}
-                alt="Financial tracker app dashboard showing balance, income, expenses, and monthly spending"
-                width={804}
-                height={1748}
+                src={import.meta.env.BASE_URL + "images/project-financial-tracker.jpg"}
+                alt="Abstract network and technology illustration used as a project reference image"
                 data-testid="img-project-illustration"
               />
-              <figcaption>Financial tracker app dashboard</figcaption>
+              <figcaption>Illustrative image · not financial data</figcaption>
             </figure>
           </section>
 
@@ -176,7 +173,6 @@ export default function ProjectOutline() {
           </div>
         </div>
       </main>
-
       <SiteFooter
         onNavigate={navigateHome}
         homeHref={import.meta.env.BASE_URL}
