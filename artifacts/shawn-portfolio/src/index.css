@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -141,7 +140,7 @@
   --chart-4: 160 30% 50%;
   --chart-5: 230 40% 65%;
 
-  --app-font-sans: 'Geist', 'Helvetica Neue', sans-serif;
+  --app-font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.5rem; /* 8px */

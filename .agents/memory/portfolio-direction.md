@@ -26,3 +26,9 @@ Keep project-detail labels and values individually editable through the visual e
 **Why:** The user wants to change these themselves and could not edit the four project metadata cells when they were generated from a list.
 
 **How to apply:** Prefer literal text in independently selectable elements for user-maintained project metadata; preserve this editing ability during later refactors.
+
+Use clean DM Sans typography throughout the website rather than decorative serif or monospaced styling, with larger body text and readable supporting labels.
+
+**Why:** The user found the original typography too fancy and some text too small, and approved the recommendation to simplify typography while retaining the colours and layout.
+
+**How to apply:** Keep body copy around 16–18px, navigation and controls 14–16px, and supporting labels 13–14px; allow wrapping rather than shrinking text to fit.

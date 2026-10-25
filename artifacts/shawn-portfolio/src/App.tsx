@@ -6,6 +6,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/portfolio';
 import ProjectOutline from '@/pages/project-outline';
+import '@/styles/portfolio-typography.css';
 import {
   Route,
   Switch,
