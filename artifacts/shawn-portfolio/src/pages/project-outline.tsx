@@ -115,7 +115,7 @@ export default function ProjectOutline() {
                 </div>
                 <div className="sf-outline-meta-item">
                   <dt>Project Type</dt>
-                  <dd>12 Weeks</dd>
+                  <dd>App Development (University-level)</dd>
                 </div>
                 <div className="sf-outline-meta-item">
                   <dt>Platform</dt>
