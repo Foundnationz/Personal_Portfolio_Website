@@ -212,8 +212,8 @@
 
 .sf-outline-text-section {
   display: grid;
-  grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 16px;
   align-items: start;
   padding: 34px 0;
   border-bottom: 1px solid var(--sf-rule);
