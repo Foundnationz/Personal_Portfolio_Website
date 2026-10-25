@@ -114,8 +114,8 @@ export default function ProjectOutline() {
                   <dd>Python | SQL | Google Colab | VsCode </dd>
                 </div>
                 <div className="sf-outline-meta-item">
-                  <dt>Timeline</dt>
-                  <dd>12 Weeks</dd>
+                  <dt>Project Type</dt>
+                  <dd>App Development (University-level project)</dd>
                 </div>
                 <div className="sf-outline-meta-item">
                   <dt>Platform</dt>
