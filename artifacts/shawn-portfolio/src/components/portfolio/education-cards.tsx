@@ -26,7 +26,7 @@ export function EducationCards() {
             <span className="sf-edu-index">02</span>
           </div>
           <div className="sf-edu-title-row">
-            <h3 id="education-second-school">Sunway College</h3>
+            <h3 id="education-second-school">Sunway College </h3>
             <span className="sf-example">Example</span>
           </div>
           <p className="sf-edu-degree" id="education-second-degree">Example: Pre-university qualification</p>
