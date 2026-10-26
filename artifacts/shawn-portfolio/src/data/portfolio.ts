@@ -71,7 +71,7 @@ export const skills: {
 
 export const education = [
   {
-    school: "UCSI University",
+    school: "UCSI University (Kuala Lumpur Campus)",
     image: "images/ucsi-university.jpg",
     imageAlt: "UCSI University campus building and entrance",
     degree: "Bachelor of Financial Technology (Honours)",
