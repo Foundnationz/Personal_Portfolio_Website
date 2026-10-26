@@ -27,7 +27,6 @@ export function EducationCards() {
           </div>
           <div className="sf-edu-title-row">
             <h3 id="education-second-school">Sunway College </h3>
-            <span className="sf-example">Example</span>
           </div>
           <p className="sf-edu-degree" id="education-second-degree">Example: Pre-university qualification</p>
           <p className="sf-edu-note" id="education-second-note">Placeholder entry. Replace with your pre-university studies and results.</p>
