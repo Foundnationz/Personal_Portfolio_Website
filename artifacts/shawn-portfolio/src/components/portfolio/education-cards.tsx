@@ -8,7 +8,7 @@ export function EducationCards() {
         </div>
         <div className="sf-edu-copy">
           <div className="sf-edu-topline">
-            <span className="sf-period" id="education-ucsi-period">Final year</span>
+            <span className="sf-period" id="education-ucsi-period">2022 - current</span>
             <span className="sf-edu-index">01</span>
           </div>
           <h3 id="education-ucsi-school">UCSI University (Kuala Lumpur Campus)</h3>
