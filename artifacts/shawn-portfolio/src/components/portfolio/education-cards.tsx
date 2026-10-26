@@ -22,7 +22,7 @@ export function EducationCards() {
         </div>
         <div className="sf-edu-copy">
           <div className="sf-edu-topline">
-            <span className="sf-period" id="education-second-period">Example: Year - Year</span>
+            <span className="sf-period" id="education-second-period">2021 - 2022</span>
             <span className="sf-edu-index">02</span>
           </div>
           <div className="sf-edu-title-row">
