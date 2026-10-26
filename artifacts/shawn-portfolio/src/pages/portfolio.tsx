@@ -250,7 +250,7 @@ export default function Portfolio() {
         <div className="sf-wrap">
           <div className="sf-section-head">
             <div className="sf-section-label sf-kicker"><b>03</b><span /><span className="sf-section-name">Education</span></div>
-            <div><h2 id="sf-education-title"><span>Academic</span><br /><span>foundation.</span></h2><p>Formal study at the intersection of finance and technology.</p></div>
+            <div><h2 id="sf-education-title"><span>Academic</span><br /><span>foundation.</span></h2><p>Education is not the learning of facts, but the training of the mind to think.</p></div>
           </div>
           <EducationCards />
         </div>
