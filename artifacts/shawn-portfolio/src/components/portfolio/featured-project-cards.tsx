@@ -20,7 +20,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
         <div className="sf-project-art"><ProjectArt kind="flow" /><span className="sf-figcaption">FIG. 02 — ILLUSTRATIVE ART, NOT DATA</span></div>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>FinTech Research</span><span className="sf-example">Example</span></div>
-          <h3>Digital Payments Journey Map</h3>
+          <h3>Predictive Analytics for House Price Estimation</h3>
           <p>Example project: mapping the steps of a customer payment.</p>
           <button className="sf-project-open" type="button" onClick={onOpenPayments} data-testid="button-view-project-payments-journey">
             <span>View project outline</span><ArrowUpRight size={15} />
