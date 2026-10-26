@@ -77,7 +77,7 @@
 .sf-section-head { display:grid; grid-template-columns:190px 1fr; gap:36px; align-items:start; margin-bottom:52px; }
 .sf-section-label { display:flex; align-items:center; gap:12px; color:var(--sf-coral); padding-top:11px; }
 .sf-section-label b { font:12px "IBM Plex Mono",monospace; }
-.sf-section-label span { display:block; height:1px; width:28px; background:currentColor; }
+.sf-section-label > span:not(.sf-section-name) { display:block; height:1px; width:28px; background:currentColor; }
 .sf-section-head h2 { max-width:780px; font:clamp(40px,5.1vw,68px)/1 "Instrument Serif",serif; letter-spacing:-.03em; margin:0; }
 .sf-section-head p { max-width:610px; margin:15px 0 0; color:var(--sf-muted); font-size:14px; }
 .sf-section-dark .sf-section-head p { color:#bfcbc1; }
@@ -107,6 +107,7 @@
 .sf-edu { display:grid; grid-template-columns:170px 1fr 46px; gap:26px; align-items:start; padding:27px 0; border-bottom:1px solid rgba(242,238,229,.25); }
 .sf-period { color:var(--sf-sun); font-size:11px; padding-top:6px; }
 .sf-edu h3 { margin:0; font-size:20px; }
+.sf-edu-title-row { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
 .sf-edu-degree { color:var(--sf-teal-light); margin:5px 0 8px; }
 .sf-edu-note { color:#c1cbc1; font-size:13px; margin:0; }
 .sf-edu-index { text-align:right; font:12px "IBM Plex Mono",monospace; color:#95aaa0; }

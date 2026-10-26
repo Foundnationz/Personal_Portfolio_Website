@@ -13,7 +13,7 @@ export function ProjectExampleDialogs({ selectedId, onClose }: { selectedId?: st
           <Dialog.Description className="sf-dialog-desc">FinTech Research · Example project case note</Dialog.Description>
           <div className="sf-dialog-body">
             <div className="sf-modal-art"><ProjectArt kind="flow" /></div>
-            <p><span className="sf-example sf-example-light">Example</span> &nbsp; Illustrative content only—not a claimed achievement.</p>
+            <p><span className="sf-example sf-example-light">Example</span>{" "}<span>Illustrative content only—not a claimed achievement.</span></p>
             <p>A sample overview of a research-style project mapping how a payment moves between parties. Replace with a real project description.</p>
             <h4>Role</h4><p>Example: Group project</p>
             <h4>Tools</h4><div className="sf-dialog-tools"><span>Presentation</span><span>Desk research</span></div>
@@ -31,7 +31,7 @@ export function ProjectExampleDialogs({ selectedId, onClose }: { selectedId?: st
           <Dialog.Description className="sf-dialog-desc">Spreadsheet Modelling · Example project case note</Dialog.Description>
           <div className="sf-dialog-body">
             <div className="sf-modal-art"><ProjectArt kind="grid" /></div>
-            <p><span className="sf-example sf-example-light">Example</span> &nbsp; Illustrative content only—not a claimed achievement.</p>
+            <p><span className="sf-example sf-example-light">Example</span>{" "}<span>Illustrative content only—not a claimed achievement.</span></p>
             <p>A sample project card for a spreadsheet model with clear inputs and assumptions. All figures would be sample data. Replace with your own.</p>
             <h4>Role</h4><p>Example: Personal project</p>
             <h4>Tools</h4><div className="sf-dialog-tools"><span>Excel</span></div>
@@ -49,7 +49,7 @@ export function ProjectExampleDialogs({ selectedId, onClose }: { selectedId?: st
           <Dialog.Description className="sf-dialog-desc">Financial Analysis · Example project case note</Dialog.Description>
           <div className="sf-dialog-body">
             <div className="sf-modal-art"><ProjectArt kind="document" /></div>
-            <p><span className="sf-example sf-example-light">Example</span> &nbsp; Illustrative content only—not a claimed achievement.</p>
+            <p><span className="sf-example sf-example-light">Example</span>{" "}<span>Illustrative content only—not a claimed achievement.</span></p>
             <p>A sample brief format: context, key questions, findings and recommendation. Replace with a real piece of coursework.</p>
             <h4>Role</h4><p>Example: Coursework</p>
             <h4>Tools</h4><div className="sf-dialog-tools"><span>Word</span><span>Public filings</span></div>

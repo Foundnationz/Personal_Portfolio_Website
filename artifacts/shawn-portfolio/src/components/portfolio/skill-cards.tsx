@@ -3,7 +3,7 @@ import { BookOpen, Code2, Users } from "lucide-react";
 export function SkillCards() {
   return <div className="sf-skills">
     <article className="sf-skill" data-testid="card-skill-0">
-      <span className="sf-skill-no">01 / <BookOpen size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
+      <span className="sf-skill-no"><span>01 /</span>{" "}<BookOpen size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
       <h3>Finance Foundations</h3>
       <p>Example: core finance topics you have studied. Replace with your own.</p>
       <ul className="sf-tags">
@@ -12,7 +12,7 @@ export function SkillCards() {
       <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
     </article>
     <article className="sf-skill" data-testid="card-skill-1">
-      <span className="sf-skill-no">02 / <Code2 size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
+      <span className="sf-skill-no"><span>02 /</span>{" "}<Code2 size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
       <h3>Technical Tools</h3>
       <p>Example: tools you use for analysis and building. Replace with your own.</p>
       <ul className="sf-tags">
@@ -21,7 +21,7 @@ export function SkillCards() {
       <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
     </article>
     <article className="sf-skill" data-testid="card-skill-2">
-      <span className="sf-skill-no">03 / <Users size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
+      <span className="sf-skill-no"><span>03 /</span>{" "}<Users size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
       <h3>Professional Skills</h3>
       <p>Example: working style strengths. Replace with your own.</p>
       <ul className="sf-tags">

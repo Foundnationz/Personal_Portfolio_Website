@@ -11,7 +11,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
         <h3>Ledger Reconciliation Walkthrough</h3>
         <p>Example project: matching entries between two sample ledgers.</p>
         <Link className="sf-project-open" href="/projects/ledger-reconciliation" data-testid="button-view-project-ledger-reconciliation">
-          View project outline <ArrowUpRight size={15} />
+          <span>View project outline</span><ArrowUpRight size={15} />
         </Link>
       </div>
     </article>
@@ -22,7 +22,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
         <h3>Digital Payments Journey Map</h3>
         <p>Example project: mapping the steps of a customer payment.</p>
         <button className="sf-project-open" type="button" onClick={onOpenPayments} data-testid="button-view-project-payments-journey">
-          View project outline <ArrowUpRight size={15} />
+          <span>View project outline</span><ArrowUpRight size={15} />
         </button>
       </div>
     </article>

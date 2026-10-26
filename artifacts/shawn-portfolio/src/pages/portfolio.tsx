@@ -100,7 +100,7 @@ function ContactForm() {
         aria-invalid={!!errors.message} aria-describedby={errors.message ? "sf-error-message" : undefined} />
       {errors.message && <span className="sf-error" id="sf-error-message">{errors.message}</span>}
     </div>
-    <button className="sf-primary" type="submit" data-testid="button-submit-contact">Preview message <ArrowRight size={15} /></button>
+    <button className="sf-primary" type="submit" data-testid="button-submit-contact"><span>Preview message</span><ArrowRight size={15} /></button>
     <p className="sf-form-note">Preview only. This form is not connected to email; nothing is sent or stored.</p>
     {valid && <p className="sf-form-status" role="status" aria-live="polite">
       Your details look valid, but this message was not sent. Your text remains above so you can copy it.
@@ -162,7 +162,7 @@ export default function Portfolio() {
       <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
         <button className="sf-brand" type="button" onClick={() => go("home")} aria-label={`${profile.name}, back to home`} data-testid="link-logo">
           <span className="sf-brand-mark">s.</span>
-          <span className="sf-brand-text">Shawn Stephen Abok<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
+          <span className="sf-brand-text"><span>Shawn Stephen Abok</span><small>FINANCIAL TECHNOLOGY · UCSI</small></span>
         </button>
         <ul className="sf-navlinks">
           <li><a href="#home" onClick={() => go("home")} aria-current={active === "home" ? "true" : undefined} data-testid="link-nav-home">Home</a></li>
@@ -179,13 +179,13 @@ export default function Portfolio() {
         </button>
       </nav>
       {menuOpen && <nav className="sf-mobile sf-wrap" id="sf-mobile-menu" aria-label="Mobile navigation">
-        <a href="#home" onClick={() => go("home")} aria-current={active === "home" ? "true" : undefined}>Home<ArrowUpRight size={14} /></a>
-        <a href="#about" onClick={() => go("about")} aria-current={active === "about" ? "true" : undefined}>About<ArrowUpRight size={14} /></a>
-        <a href="#skills" onClick={() => go("skills")} aria-current={active === "skills" ? "true" : undefined}>Skills<ArrowUpRight size={14} /></a>
-        <a href="#education" onClick={() => go("education")} aria-current={active === "education" ? "true" : undefined}>Education<ArrowUpRight size={14} /></a>
-        <a href="#projects" onClick={() => go("projects")} aria-current={active === "projects" ? "true" : undefined}>Projects<ArrowUpRight size={14} /></a>
-        <a href="#experience" onClick={() => go("experience")} aria-current={active === "experience" ? "true" : undefined}>Experience<ArrowUpRight size={14} /></a>
-        <a href="#contact" onClick={() => go("contact")} aria-current={active === "contact" ? "true" : undefined}>Contact<ArrowUpRight size={14} /></a>
+        <a href="#home" onClick={() => go("home")} aria-current={active === "home" ? "true" : undefined}><span>Home</span><ArrowUpRight size={14} /></a>
+        <a href="#about" onClick={() => go("about")} aria-current={active === "about" ? "true" : undefined}><span>About</span><ArrowUpRight size={14} /></a>
+        <a href="#skills" onClick={() => go("skills")} aria-current={active === "skills" ? "true" : undefined}><span>Skills</span><ArrowUpRight size={14} /></a>
+        <a href="#education" onClick={() => go("education")} aria-current={active === "education" ? "true" : undefined}><span>Education</span><ArrowUpRight size={14} /></a>
+        <a href="#projects" onClick={() => go("projects")} aria-current={active === "projects" ? "true" : undefined}><span>Projects</span><ArrowUpRight size={14} /></a>
+        <a href="#experience" onClick={() => go("experience")} aria-current={active === "experience" ? "true" : undefined}><span>Experience</span><ArrowUpRight size={14} /></a>
+        <a href="#contact" onClick={() => go("contact")} aria-current={active === "contact" ? "true" : undefined}><span>Contact</span><ArrowUpRight size={14} /></a>
       </nav>}
     </header>
 
@@ -193,14 +193,14 @@ export default function Portfolio() {
       <section className="sf-wrap sf-hero" id="home" aria-label="Home">
         <div className="sf-hero-copy">
           <p className="sf-kicker sf-hero-eyebrow">A student profile · Open to finance internships</p>
-          <h1>Hi There, I'm<br /><em>Shawn.</em></h1>
-          <p className="sf-lede"><strong>Final-year Financial Technology Student</strong> at UCSI University. Seeking a finance internship where I can pair a financial technology education with careful, curious work.</p>
+          <h1><span>Hi There, I'm</span><br /><em>Shawn.</em></h1>
+          <p className="sf-lede"><strong>Final-year Financial Technology Student</strong>{" "}<span>at UCSI University. Seeking a finance internship where I can pair a financial technology education with careful, curious work.</span></p>
           <div className="sf-actions">
-            <a className="sf-primary" href="#about" onClick={() => go("about")} data-testid="button-about-me">About Me <ArrowDownRight size={16} /></a>
+            <a className="sf-primary" href="#about" onClick={() => go("about")} data-testid="button-about-me"><span>About Me</span><ArrowDownRight size={16} /></a>
             <button className="sf-linkedin" type="button" onClick={openLinkedIn} aria-label="Open LinkedIn profile" data-testid="button-linkedin">
               <Link2 size={17} />
             </button>
-            <button className="sf-text-btn" type="button" onClick={openLinkedIn}>LinkedIn <ArrowUpRight size={13} /></button>
+            <button className="sf-text-btn" type="button" onClick={openLinkedIn}><span>LinkedIn</span><ArrowUpRight size={13} /></button>
           </div>
         </div>
         <div className="sf-photo-stage">
@@ -214,7 +214,7 @@ export default function Portfolio() {
       <section className="sf-section sf-section-dark" id="about" aria-labelledby="sf-about-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>01</b><span /> About</div>
+            <div className="sf-section-label sf-kicker"><b>01</b><span /><span className="sf-section-name">About</span></div>
             <div><h2 id="sf-about-title">About me.</h2></div>
           </div>
           <div className="sf-about-grid">
@@ -223,12 +223,12 @@ export default function Portfolio() {
               <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
               <div className="sf-bio">
                 <p>I am a final-year Bachelor of Financial Technology (Honours) student at UCSI University, studying where finance meets technology.</p>
-                <p>I am looking for a finance internship to learn how teams work with real numbers, processes and clients. (Example sentence: replace with your own story and interests.) <span className="sf-example">Example</span></p>
+                <p><span>I am looking for a finance internship to learn how teams work with real numbers, processes and clients. (Example sentence: replace with your own story and interests.)</span>{" "}<span className="sf-example">Example</span></p>
               </div>
               <div className="sf-about-bottom">
-                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><span>Kuala Lumpur, Malaysia <span className="sf-example">Example</span></span></div>
+                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><div><span>Kuala Lumpur, Malaysia</span>{" "}<span className="sf-example">Example</span></div></div>
                 <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume">
-                  <FileText size={15} /> View resume <ArrowUpRight size={14} />
+                  <FileText size={15} /><span>View resume</span><ArrowUpRight size={14} />
                 </button>
               </div>
             </div>
@@ -239,8 +239,8 @@ export default function Portfolio() {
       <section className="sf-section sf-section-wash" id="skills" aria-labelledby="sf-skills-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>02</b><span /> Working notes</div>
-            <div><h2 id="sf-skills-title">Foundations, still<br />taking shape.</h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
+            <div className="sf-section-label sf-kicker"><b>02</b><span /><span className="sf-section-name">Working notes</span></div>
+            <div><h2 id="sf-skills-title"><span>Foundations, still</span><br /><span>taking shape.</span></h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
           </div>
           <SkillCards />
         </div>
@@ -249,8 +249,8 @@ export default function Portfolio() {
       <section className="sf-section sf-section-dark" id="education" aria-labelledby="sf-education-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>03</b><span /> Education</div>
-            <div><h2 id="sf-education-title">Academic<br />foundation.</h2><p>Formal study at the intersection of finance and technology.</p></div>
+            <div className="sf-section-label sf-kicker"><b>03</b><span /><span className="sf-section-name">Education</span></div>
+            <div><h2 id="sf-education-title"><span>Academic</span><br /><span>foundation.</span></h2><p>Formal study at the intersection of finance and technology.</p></div>
           </div>
           <EducationCards />
         </div>
@@ -260,21 +260,21 @@ export default function Portfolio() {
         <div className="sf-wrap">
           <div className="sf-project-intro">
             <div className="sf-section-head">
-              <div className="sf-section-label sf-kicker"><b>04</b><span /> Selected work</div>
-              <div><h2 id="sf-projects-title">Evidence over<br />adjectives.</h2></div>
+              <div className="sf-section-label sf-kicker"><b>04</b><span /><span className="sf-section-name">Selected work</span></div>
+              <div><h2 id="sf-projects-title"><span>Evidence over</span><br /><span>adjectives.</span></h2></div>
             </div>
             <p className="sf-project-note">Example projects only—not claimed achievements. Each opens to an illustrative case note, ready to replace with real work.</p>
           </div>
           <FeaturedProjectCards onOpenPayments={() => openProjectOutline("payments-journey")} />
-          <div className="sf-view-all"><button className="sf-outline" type="button" onClick={() => setAllOpen(true)} data-testid="button-view-all">View all project examples <ArrowRight size={15} /></button></div>
+          <div className="sf-view-all"><button className="sf-outline" type="button" onClick={() => setAllOpen(true)} data-testid="button-view-all"><span>View all project examples</span><ArrowRight size={15} /></button></div>
         </div>
       </section>
 
       <section className="sf-section sf-section-wash" id="experience" aria-labelledby="sf-experience-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>05</b><span /> Experience</div>
-            <div><h2 id="sf-experience-title">The next chapter<br />is unwritten.</h2><p>Illustrative placeholders only. No employment or society roles are being claimed here.</p></div>
+            <div className="sf-section-label sf-kicker"><b>05</b><span /><span className="sf-section-name">Experience</span></div>
+            <div><h2 id="sf-experience-title"><span>The next chapter</span><br /><span>is unwritten.</span></h2><p>Illustrative placeholders only. No employment or society roles are being claimed here.</p></div>
           </div>
           <ExperienceCards />
         </div>
@@ -283,7 +283,7 @@ export default function Portfolio() {
       <section className="sf-section sf-section-dark" id="contact" aria-labelledby="sf-contact-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>06</b><span /> Contact</div>
+            <div className="sf-section-label sf-kicker"><b>06</b><span /><span className="sf-section-name">Contact</span></div>
             <div><h2 id="sf-contact-title">Start a conversation.</h2><p>Open to finance internship conversations. Contact details below are placeholders until replaced with real ones.</p></div>
           </div>
           <div className="sf-contact-grid">

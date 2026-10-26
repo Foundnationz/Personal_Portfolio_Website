@@ -44,7 +44,7 @@ export default function ProjectOutline() {
         <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
           <Link className="sf-brand" href={import.meta.env.BASE_URL} aria-label={`${profile.name}, home`}>
             <span className="sf-brand-mark" aria-hidden="true">s.</span>
-            <span className="sf-brand-text">Shawn Stephen Abok<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
+            <span className="sf-brand-text"><span>Shawn Stephen Abok</span><small>FINANCIAL TECHNOLOGY · UCSI</small></span>
           </Link>
           <ul className="sf-navlinks">
             <li><Link href="/#home">Home</Link></li>
@@ -74,7 +74,7 @@ export default function ProjectOutline() {
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
-            <Link className="sf-outline-back" href="/#projects"><ArrowLeft size={16} aria-hidden="true" /> Back to projects</Link>
+            <Link className="sf-outline-back" href="/#projects"><ArrowLeft size={16} aria-hidden="true" /><span>Back to projects</span></Link>
             <span className="sf-outline-index">PROJECT NOTE&nbsp; / &nbsp;01</span>
           </div>
 
@@ -86,7 +86,7 @@ export default function ProjectOutline() {
             <Dialog.Root open={unavailableOpen} onOpenChange={setUnavailableOpen}>
               <Dialog.Trigger asChild>
                 <button className="sf-primary sf-outline-view" type="button" data-testid="button-view-project">
-                  View Project <ArrowUpRight size={15} aria-hidden="true" />
+                  <span>View Project</span><ArrowUpRight size={15} aria-hidden="true" />
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
@@ -105,7 +105,7 @@ export default function ProjectOutline() {
 
           <p className="sf-outline-notice" role="note" data-testid="status-project-example">
             <span className="sf-outline-notice-mark" aria-hidden="true">i</span>
-            This outline contains example and placeholder material from the reference page. Final project content is still being prepared.
+            <span>This outline contains example and placeholder material from the reference page. Final project content is still being prepared.</span>
           </p>
 
           <section className="sf-outline-overview" aria-labelledby="overview-title">
@@ -176,7 +176,7 @@ export default function ProjectOutline() {
 
           <div className="sf-outline-end">
             <span>End of project outline</span>
-            <Link href="/#projects">Return to selected work <ArrowRight size={15} aria-hidden="true" /></Link>
+            <Link href="/#projects"><span>Return to selected work</span><ArrowRight size={15} aria-hidden="true" /></Link>
           </div>
         </div>
       </main>

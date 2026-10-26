@@ -34,7 +34,7 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
         <div className="sf-footer-columns">
           <div className="sf-footer-intro">
             <a className="sf-footer-name" href={`${homeHref}#home`} onClick={(event) => { event.preventDefault(); onNavigate("home"); }}>Shawn Stephen Abok</a>
-            <p>Thank you for visiting my personal portfolio website.<br />Connect with me over socials.</p>
+            <p><span>Thank you for visiting my personal portfolio website.</span><br /><span>Connect with me over socials.</span></p>
           </div>
           <nav className="sf-footer-links" aria-label="Footer navigation">
             <h2>Quick links</h2>
@@ -65,7 +65,7 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
           </div>
         </div>
         <div className="sf-footer-copyright">
-          <span>© {new Date().getFullYear()} Shawn Stephen Abok. All rights reserved.</span>
+          <span><span>©</span>{" "}{new Date().getFullYear()}{" "}<span>Shawn Stephen Abok. All rights reserved.</span></span>
           <span>Portfolio Showcase</span>
         </div>
       </div>
@@ -74,7 +74,7 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
       <Dialog.Portal>
         <Dialog.Overlay className="sf-dialog-overlay" />
         <Dialog.Content className="sf-dialog">
-          <Dialog.Title asChild><h2>{unconfigured} link not added yet</h2></Dialog.Title>
+          <Dialog.Title asChild><h2>{unconfigured}{" "}<span>link not added yet</span></h2></Dialog.Title>
           <Dialog.Description className="sf-dialog-desc">
             This social profile has not been connected yet. No profile page has been opened.
           </Dialog.Description>
