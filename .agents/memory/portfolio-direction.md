@@ -21,11 +21,11 @@ Project outline pages should retain the reference page's content while using res
 
 **How to apply:** Keep future project pages readable and scannable, preserving placeholder status until real project details are supplied.
 
-Keep project-detail labels and values individually editable through the visual editor rather than generated from shared text expressions.
+Keep website content independently editable through the visual editor rather than generated from shared text expressions or repeated card templates.
 
-**Why:** The user wants to change these themselves and could not edit the four project metadata cells when they were generated from a list.
+**Why:** The user wants to edit the content themselves. They reported uneditable project metadata and education text edits affecting both cards, and explicitly requested a site-wide fix for linked text.
 
-**How to apply:** Prefer literal text in independently selectable elements for user-maintained project metadata; preserve this editing ability during later refactors.
+**How to apply:** Prefer literal text at separate JSX source locations for individual cards, list entries, form labels, and project-page paragraphs. Do not reintroduce mapped text templates during refactors. Shared styling and functional state are still appropriate.
 
 Use clean DM Sans typography throughout the website rather than decorative serif or monospaced styling, with larger body text and readable supporting labels.
 

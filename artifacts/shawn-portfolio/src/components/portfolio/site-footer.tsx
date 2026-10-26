@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, X, Youtube } from "lucide-react";
-import { contact, navItems, profile } from "@/data/portfolio";
+import { contact, profile } from "@/data/portfolio";
 
 const socials = [
   { name: "Facebook", Icon: Facebook },
@@ -33,14 +33,20 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
       <div className="sf-wrap">
         <div className="sf-footer-columns">
           <div className="sf-footer-intro">
-            <a className="sf-footer-name" href={`${homeHref}#home`} onClick={(event) => { event.preventDefault(); onNavigate("home"); }}>{profile.name}</a>
+            <a className="sf-footer-name" href={`${homeHref}#home`} onClick={(event) => { event.preventDefault(); onNavigate("home"); }}>Shawn Stephen Abok</a>
             <p>Thank you for visiting my personal portfolio website.<br />Connect with me over socials.</p>
           </div>
           <nav className="sf-footer-links" aria-label="Footer navigation">
             <h2>Quick links</h2>
-            <ul>{navItems.map((item) => <li key={item.id}>
-              <a href={`${homeHref}#${item.id}`} onClick={(event) => { event.preventDefault(); onNavigate(item.id); }}>{item.label}</a>
-            </li>)}</ul>
+            <ul>
+              <li><a href={`${homeHref}#home`} onClick={(event) => { event.preventDefault(); onNavigate("home"); }}>Home</a></li>
+              <li><a href={`${homeHref}#about`} onClick={(event) => { event.preventDefault(); onNavigate("about"); }}>About</a></li>
+              <li><a href={`${homeHref}#skills`} onClick={(event) => { event.preventDefault(); onNavigate("skills"); }}>Skills</a></li>
+              <li><a href={`${homeHref}#education`} onClick={(event) => { event.preventDefault(); onNavigate("education"); }}>Education</a></li>
+              <li><a href={`${homeHref}#projects`} onClick={(event) => { event.preventDefault(); onNavigate("projects"); }}>Projects</a></li>
+              <li><a href={`${homeHref}#experience`} onClick={(event) => { event.preventDefault(); onNavigate("experience"); }}>Experience</a></li>
+              <li><a href={`${homeHref}#contact`} onClick={(event) => { event.preventDefault(); onNavigate("contact"); }}>Contact</a></li>
+            </ul>
           </nav>
           <div className="sf-footer-contact">
             <h2>Contact info</h2>
@@ -59,7 +65,7 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
           </div>
         </div>
         <div className="sf-footer-copyright">
-          <span>© {new Date().getFullYear()} {profile.name}. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Shawn Stephen Abok. All rights reserved.</span>
           <span>Portfolio Showcase</span>
         </div>
       </div>

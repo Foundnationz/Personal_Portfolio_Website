@@ -3,21 +3,19 @@ import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useLocation } from "wouter";
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, Code2, FileText,
-  Link2, Mail, MapPin, Menu, Users, X,
+  ArrowDownRight, ArrowRight, ArrowUpRight, FileText,
+  Link2, Mail, MapPin, Menu, X,
 } from "lucide-react";
 import {
-  about, contact, education, experience, featuredProjectIds, navItems, profile,
-  projects, skills, type IconKey, type Project,
+  navItems, profile,
 } from "@/data/portfolio";
-import { ProjectArt } from "@/components/portfolio/project-art";
 import { SiteFooter } from "@/components/portfolio/site-footer";
-
-const skillIcons: Record<IconKey, typeof BookOpen> = { ledger: BookOpen, code: Code2, people: Users };
-
-function Example({ light = false }: { light?: boolean }) {
-  return <span className={`sf-example${light ? " sf-example-light" : ""}`}>Example</span>;
-}
+import { EducationCards } from "@/components/portfolio/education-cards";
+import { SkillCards } from "@/components/portfolio/skill-cards";
+import { ExperienceCards } from "@/components/portfolio/experience-cards";
+import { FeaturedProjectCards } from "@/components/portfolio/featured-project-cards";
+import { ProjectExampleDialogs } from "@/components/portfolio/project-example-dialogs";
+import { ProjectIndexEntries } from "@/components/portfolio/project-index-entries";
 
 function Modal({ open, onOpenChange, title, description, children }: {
   open: boolean;
@@ -70,20 +68,32 @@ function ContactForm() {
     const firstError = Object.keys(next)[0] as FieldKey | undefined;
     if (firstError) document.getElementById(`sf-${firstError}`)?.focus();
   };
-  const field = (key: FieldKey, label: string, type = "text", wide = false) => (
-    <div className={`sf-field${wide ? " sf-field-wide" : ""}`} key={key}>
-      <label htmlFor={`sf-${key}`}>{label}</label>
-      <input id={`sf-${key}`} name={key} type={type} value={values[key]} onChange={(event) => update(key, event.target.value)}
-        aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `sf-error-${key}` : undefined} />
-      {errors[key] && <span className="sf-error" id={`sf-error-${key}`}>{errors[key]}</span>}
-    </div>
-  );
   const valid = attempted && Object.keys(errors).length === 0;
   return <form className="sf-form" onSubmit={submit} noValidate data-testid="form-contact">
-    {field("first", "First name")}
-    {field("last", "Last name")}
-    {field("email", "Email address", "email", true)}
-    {field("subject", "Subject", "text", true)}
+    <div className="sf-field">
+      <label htmlFor="sf-first">First name</label>
+      <input id="sf-first" name="first" type="text" value={values.first} onChange={(event) => update("first", event.target.value)}
+        aria-invalid={!!errors.first} aria-describedby={errors.first ? "sf-error-first" : undefined} />
+      {errors.first && <span className="sf-error" id="sf-error-first">{errors.first}</span>}
+    </div>
+    <div className="sf-field">
+      <label htmlFor="sf-last">Last name</label>
+      <input id="sf-last" name="last" type="text" value={values.last} onChange={(event) => update("last", event.target.value)}
+        aria-invalid={!!errors.last} aria-describedby={errors.last ? "sf-error-last" : undefined} />
+      {errors.last && <span className="sf-error" id="sf-error-last">{errors.last}</span>}
+    </div>
+    <div className="sf-field sf-field-wide">
+      <label htmlFor="sf-email">Email address</label>
+      <input id="sf-email" name="email" type="email" value={values.email} onChange={(event) => update("email", event.target.value)}
+        aria-invalid={!!errors.email} aria-describedby={errors.email ? "sf-error-email" : undefined} />
+      {errors.email && <span className="sf-error" id="sf-error-email">{errors.email}</span>}
+    </div>
+    <div className="sf-field sf-field-wide">
+      <label htmlFor="sf-subject">Subject</label>
+      <input id="sf-subject" name="subject" type="text" value={values.subject} onChange={(event) => update("subject", event.target.value)}
+        aria-invalid={!!errors.subject} aria-describedby={errors.subject ? "sf-error-subject" : undefined} />
+      {errors.subject && <span className="sf-error" id="sf-error-subject">{errors.subject}</span>}
+    </div>
     <div className="sf-field sf-field-wide">
       <label htmlFor="sf-message">Message</label>
       <textarea id="sf-message" name="message" rows={5} value={values.message} onChange={(event) => update("message", event.target.value)}
@@ -102,16 +112,15 @@ export default function Portfolio() {
   const [, navigate] = useLocation();
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProjectId, setSelectedProjectId] = useState<string>();
   const [allOpen, setAllOpen] = useState(false);
   const [notice, setNotice] = useState<"resume" | "linkedin" | null>(null);
-  const featured = projects.filter((project) => featuredProjectIds.includes(project.id));
-  const openProjectOutline = (project: Project) => {
+  const openProjectOutline = (id: string) => {
     setAllOpen(false);
-    if (project.id === "ledger-reconciliation") {
+    if (id === "ledger-reconciliation") {
       navigate("/projects/ledger-reconciliation");
     } else {
-      setSelectedProject(project);
+      setSelectedProjectId(id);
     }
   };
 
@@ -153,12 +162,16 @@ export default function Portfolio() {
       <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
         <button className="sf-brand" type="button" onClick={() => go("home")} aria-label={`${profile.name}, back to home`} data-testid="link-logo">
           <span className="sf-brand-mark">s.</span>
-          <span className="sf-brand-text">{profile.name}<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
+          <span className="sf-brand-text">Shawn Stephen Abok<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
         </button>
         <ul className="sf-navlinks">
-          {navItems.map((item) => <li key={item.id}>
-            <a href={`#${item.id}`} onClick={() => go(item.id)} aria-current={active === item.id ? "true" : undefined} data-testid={`link-nav-${item.id}`}>{item.label}</a>
-          </li>)}
+          <li><a href="#home" onClick={() => go("home")} aria-current={active === "home" ? "true" : undefined} data-testid="link-nav-home">Home</a></li>
+          <li><a href="#about" onClick={() => go("about")} aria-current={active === "about" ? "true" : undefined} data-testid="link-nav-about">About</a></li>
+          <li><a href="#skills" onClick={() => go("skills")} aria-current={active === "skills" ? "true" : undefined} data-testid="link-nav-skills">Skills</a></li>
+          <li><a href="#education" onClick={() => go("education")} aria-current={active === "education" ? "true" : undefined} data-testid="link-nav-education">Education</a></li>
+          <li><a href="#projects" onClick={() => go("projects")} aria-current={active === "projects" ? "true" : undefined} data-testid="link-nav-projects">Projects</a></li>
+          <li><a href="#experience" onClick={() => go("experience")} aria-current={active === "experience" ? "true" : undefined} data-testid="link-nav-experience">Experience</a></li>
+          <li><a href="#contact" onClick={() => go("contact")} aria-current={active === "contact" ? "true" : undefined} data-testid="link-nav-contact">Contact</a></li>
         </ul>
         <button className="sf-menu" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen} aria-controls="sf-mobile-menu" onClick={() => setMenuOpen((open) => !open)} data-testid="button-menu">
@@ -166,8 +179,13 @@ export default function Portfolio() {
         </button>
       </nav>
       {menuOpen && <nav className="sf-mobile sf-wrap" id="sf-mobile-menu" aria-label="Mobile navigation">
-        {navItems.map((item) => <a href={`#${item.id}`} key={item.id} onClick={() => go(item.id)}
-          aria-current={active === item.id ? "true" : undefined}>{item.label}<ArrowUpRight size={14} /></a>)}
+        <a href="#home" onClick={() => go("home")} aria-current={active === "home" ? "true" : undefined}>Home<ArrowUpRight size={14} /></a>
+        <a href="#about" onClick={() => go("about")} aria-current={active === "about" ? "true" : undefined}>About<ArrowUpRight size={14} /></a>
+        <a href="#skills" onClick={() => go("skills")} aria-current={active === "skills" ? "true" : undefined}>Skills<ArrowUpRight size={14} /></a>
+        <a href="#education" onClick={() => go("education")} aria-current={active === "education" ? "true" : undefined}>Education<ArrowUpRight size={14} /></a>
+        <a href="#projects" onClick={() => go("projects")} aria-current={active === "projects" ? "true" : undefined}>Projects<ArrowUpRight size={14} /></a>
+        <a href="#experience" onClick={() => go("experience")} aria-current={active === "experience" ? "true" : undefined}>Experience<ArrowUpRight size={14} /></a>
+        <a href="#contact" onClick={() => go("contact")} aria-current={active === "contact" ? "true" : undefined}>Contact<ArrowUpRight size={14} /></a>
       </nav>}
     </header>
 
@@ -175,8 +193,8 @@ export default function Portfolio() {
       <section className="sf-wrap sf-hero" id="home" aria-label="Home">
         <div className="sf-hero-copy">
           <p className="sf-kicker sf-hero-eyebrow">A student profile · Open to finance internships</p>
-          <h1>{profile.greeting}<br /><em>Shawn.</em></h1>
-          <p className="sf-lede"><strong>{profile.headline}</strong> at {profile.university}. {profile.intro}</p>
+          <h1>Hi There, I'm<br /><em>Shawn.</em></h1>
+          <p className="sf-lede"><strong>Final-year Financial Technology Student</strong> at UCSI University. Seeking a finance internship where I can pair a financial technology education with careful, curious work.</p>
           <div className="sf-actions">
             <a className="sf-primary" href="#about" onClick={() => go("about")} data-testid="button-about-me">About Me <ArrowDownRight size={16} /></a>
             <button className="sf-linkedin" type="button" onClick={openLinkedIn} aria-label="Open LinkedIn profile" data-testid="button-linkedin">
@@ -201,13 +219,14 @@ export default function Portfolio() {
           </div>
           <div className="sf-about-grid">
             <div className="sf-about-card">
-              <h3>{profile.name}</h3>
-              <p className="sf-about-role">{profile.role}</p>
+              <h3>Shawn Stephen Abok</h3>
+              <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
               <div className="sf-bio">
-                {about.bio.map((paragraph, index) => <p key={index}>{paragraph}{index > 0 && <span> <Example /></span>}</p>)}
+                <p>I am a final-year Bachelor of Financial Technology (Honours) student at UCSI University, studying where finance meets technology.</p>
+                <p>I am looking for a finance internship to learn how teams work with real numbers, processes and clients. (Example sentence: replace with your own story and interests.) <span className="sf-example">Example</span></p>
               </div>
               <div className="sf-about-bottom">
-                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><span>{about.location} <Example /></span></div>
+                <div className="sf-meta-row"><MapPin size={16} aria-hidden /><span>Kuala Lumpur, Malaysia <span className="sf-example">Example</span></span></div>
                 <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume">
                   <FileText size={15} /> View resume <ArrowUpRight size={14} />
                 </button>
@@ -223,17 +242,7 @@ export default function Portfolio() {
             <div className="sf-section-label sf-kicker"><b>02</b><span /> Working notes</div>
             <div><h2 id="sf-skills-title">Foundations, still<br />taking shape.</h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
           </div>
-          <div className="sf-skills">
-            {skills.map((skill, index) => {
-              const Icon = skillIcons[skill.icon];
-              return <article className="sf-skill" key={skill.title} data-testid={`card-skill-${index}`}>
-                <span className="sf-skill-no">0{index + 1} / <Icon size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
-                <h3>{skill.title}</h3><p>{skill.description}</p>
-                <ul className="sf-tags">{skill.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-                <div className="sf-skill-foot"><Example light /></div>
-              </article>;
-            })}
-          </div>
+          <SkillCards />
         </div>
       </section>
 
@@ -243,19 +252,7 @@ export default function Portfolio() {
             <div className="sf-section-label sf-kicker"><b>03</b><span /> Education</div>
             <div><h2 id="sf-education-title">Academic<br />foundation.</h2><p>Formal study at the intersection of finance and technology.</p></div>
           </div>
-          <div className="sf-education-list">
-            {education.map((entry, index) => <article className="sf-edu" key={entry.school} data-testid={`card-education-${index}`}>
-              <div className="sf-edu-image sf-edu-image-photo">
-                <img src={import.meta.env.BASE_URL + entry.image} alt={entry.imageAlt} loading="lazy" decoding="async" />
-              </div>
-              <div className="sf-edu-copy">
-                <div className="sf-edu-topline"><span className="sf-period">{entry.period}</span><span className="sf-edu-index">0{index + 1}</span></div>
-                <h3>{entry.school} {entry.isExample && <Example />}</h3>
-                <p className="sf-edu-degree">{entry.degree}</p>
-                <p className="sf-edu-note">{entry.note}</p>
-              </div>
-            </article>)}
-          </div>
+          <EducationCards />
         </div>
       </section>
 
@@ -268,18 +265,7 @@ export default function Portfolio() {
             </div>
             <p className="sf-project-note">Example projects only—not claimed achievements. Each opens to an illustrative case note, ready to replace with real work.</p>
           </div>
-          <div className="sf-project-stack">
-            {featured.map((project, index) => <article className="sf-project" key={project.id} data-testid={`card-project-${project.id}`}>
-              <div className="sf-project-art"><ProjectArt kind={project.art} /><span className="sf-figcaption">FIG. 0{index + 1} — ILLUSTRATIVE ART, NOT DATA</span></div>
-              <div className="sf-project-copy">
-                <div className="sf-project-meta"><span>{project.category}</span><Example /></div>
-                <h3>{project.title}</h3><p>{project.summary}</p>
-                <button className="sf-project-open" type="button" onClick={() => openProjectOutline(project)} data-testid={`button-view-project-${project.id}`}>
-                  View project outline <ArrowUpRight size={15} />
-                </button>
-              </div>
-            </article>)}
-          </div>
+          <FeaturedProjectCards onOpenPayments={() => openProjectOutline("payments-journey")} />
           <div className="sf-view-all"><button className="sf-outline" type="button" onClick={() => setAllOpen(true)} data-testid="button-view-all">View all project examples <ArrowRight size={15} /></button></div>
         </div>
       </section>
@@ -290,14 +276,7 @@ export default function Portfolio() {
             <div className="sf-section-label sf-kicker"><b>05</b><span /> Experience</div>
             <div><h2 id="sf-experience-title">The next chapter<br />is unwritten.</h2><p>Illustrative placeholders only. No employment or society roles are being claimed here.</p></div>
           </div>
-          <div className="sf-exp-list">
-            {experience.map((item, index) => <article className="sf-exp" key={`${item.title}-${index}`} data-testid={`item-experience-${index}`}>
-              <div className="sf-exp-date">{item.period}</div>
-              <div className="sf-exp-card"><div className="sf-exp-head"><h3>{item.title}</h3><Example light /></div><p className="sf-exp-org">{item.org}</p>
-                <ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>
-              </div>
-            </article>)}
-          </div>
+          <ExperienceCards />
         </div>
       </section>
 
@@ -311,9 +290,9 @@ export default function Portfolio() {
             <div className="sf-contact-intro">
               <p>A thoughtful introduction is always welcome. For now, the contact details below are examples, not working personal contact information.</p>
               <div className="sf-contact-list">
-                <div className="sf-contact-item"><Mail size={17} aria-hidden /><div><small>EMAIL · EXAMPLE</small><span>{contact.email}</span></div></div>
-                <div className="sf-contact-item"><Link2 size={17} aria-hidden /><div><small>CONNECT</small><button type="button" onClick={openLinkedIn}>{contact.connect}</button></div></div>
-                <div className="sf-contact-item"><MapPin size={17} aria-hidden /><div><small>LOCATION · EXAMPLE</small><span>{contact.location}</span></div></div>
+                <div className="sf-contact-item"><Mail size={17} aria-hidden /><div><small>EMAIL · EXAMPLE</small><span>your.email@example.com</span></div></div>
+                <div className="sf-contact-item"><Link2 size={17} aria-hidden /><div><small>CONNECT</small><button type="button" onClick={openLinkedIn}>LinkedIn link not configured yet</button></div></div>
+                <div className="sf-contact-item"><MapPin size={17} aria-hidden /><div><small>LOCATION · EXAMPLE</small><span>Kuala Lumpur, Malaysia</span></div></div>
               </div>
             </div>
             <ContactForm />
@@ -323,23 +302,9 @@ export default function Portfolio() {
     </main>
     <SiteFooter onNavigate={go} />
 
-    <Modal open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}
-      title={selectedProject?.title ?? ""} description={selectedProject ? `${selectedProject.category} · Example project case note` : ""}>
-      {selectedProject && <div className="sf-dialog-body">
-        <div className="sf-modal-art"><ProjectArt kind={selectedProject.art} /></div>
-        <p><Example light /> &nbsp; Illustrative content only—not a claimed achievement.</p>
-        <p>{selectedProject.overview}</p>
-        <h4>Role</h4><p>{selectedProject.role}</p>
-        <h4>Tools</h4><div className="sf-dialog-tools">{selectedProject.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
-        <h4>Highlights</h4><ul>{selectedProject.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
-      </div>}
-    </Modal>
+    <ProjectExampleDialogs selectedId={selectedProjectId} onClose={() => setSelectedProjectId(undefined)} />
     <Modal open={allOpen} onOpenChange={setAllOpen} title="Project index" description="Every entry is an example placeholder. Select one to inspect its illustrative case note.">
-      <div className="sf-all-list">{projects.map((project) => <button type="button" key={project.id} data-testid={`button-all-${project.id}`}
-        onClick={() => openProjectOutline(project)}>
-        <span className="sf-all-art"><ProjectArt kind={project.art} /></span>
-        <span className="sf-all-title"><strong>{project.title}</strong><small>{project.category} · Example</small></span><ArrowUpRight size={16} />
-      </button>)}</div>
+      <ProjectIndexEntries onOpen={openProjectOutline} />
     </Modal>
     <Modal open={!!notice} onOpenChange={(open) => !open && setNotice(null)}
       title={notice === "resume" ? "Resume not added yet" : "LinkedIn not configured"}

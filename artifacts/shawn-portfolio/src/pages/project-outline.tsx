@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { navItems, profile } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
-
-const overview = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.";
 
 export default function ProjectOutline() {
   const [, setLocation] = useLocation();
@@ -46,14 +44,16 @@ export default function ProjectOutline() {
         <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
           <Link className="sf-brand" href={import.meta.env.BASE_URL} aria-label={`${profile.name}, home`}>
             <span className="sf-brand-mark" aria-hidden="true">s.</span>
-            <span className="sf-brand-text">{profile.name}<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
+            <span className="sf-brand-text">Shawn Stephen Abok<small>FINANCIAL TECHNOLOGY · UCSI</small></span>
           </Link>
           <ul className="sf-navlinks">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link href={`/#${item.id}`}>{item.label}</Link>
-              </li>
-            ))}
+            <li><Link href="/#home">Home</Link></li>
+            <li><Link href="/#about">About</Link></li>
+            <li><Link href="/#skills">Skills</Link></li>
+            <li><Link href="/#education">Education</Link></li>
+            <li><Link href="/#projects">Projects</Link></li>
+            <li><Link href="/#experience">Experience</Link></li>
+            <li><Link href="/#contact">Contact</Link></li>
           </ul>
           <button className="sf-menu" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen} aria-controls="outline-mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>
@@ -61,7 +61,13 @@ export default function ProjectOutline() {
           </button>
         </nav>
         {menuOpen && <nav id="outline-mobile-nav" className="sf-mobile sf-wrap" aria-label="Mobile navigation">
-          {navItems.map((item) => <Link key={item.id} href={`/#${item.id}`}>{item.label}</Link>)}
+          <Link href="/#home">Home</Link>
+          <Link href="/#about">About</Link>
+          <Link href="/#skills">Skills</Link>
+          <Link href="/#education">Education</Link>
+          <Link href="/#projects">Projects</Link>
+          <Link href="/#experience">Experience</Link>
+          <Link href="/#contact">Contact</Link>
         </nav>}
       </header>
 
@@ -108,7 +114,7 @@ export default function ProjectOutline() {
                 <span className="sf-outline-number">01</span>
                 <h2 id="overview-title">Project Overview</h2>
               </div>
-              <p className="sf-outline-prose" data-testid="text-project-overview">{overview}</p>
+              <p className="sf-outline-prose" data-testid="text-project-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
               <dl className="sf-outline-metadata" aria-label="Project details">
                 <div className="sf-outline-meta-item">
                   <dt>Role</dt>
@@ -157,7 +163,7 @@ export default function ProjectOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose">{overview}</p>
+            <p className="sf-outline-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
           </section>
 
           <section className="sf-outline-text-section sf-outline-workflow" aria-labelledby="workflow-title">
@@ -165,7 +171,7 @@ export default function ProjectOutline() {
               <span className="sf-outline-number">03</span>
               <h2 id="workflow-title">Project Workflow</h2>
             </div>
-            <p className="sf-outline-prose">{overview}</p>
+            <p className="sf-outline-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
           </section>
 
           <div className="sf-outline-end">

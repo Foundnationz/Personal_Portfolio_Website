@@ -1,5 +1,6 @@
-// All editable content lives here. Items marked `isExample: true` are placeholders
-// and are labelled "Example" in the UI. Replace them with real details, then flip the flag.
+// Runtime configuration and original reference data.
+// Independently editable visible section text lives directly in the JSX components,
+// not in shared array templates. Keep the placeholder notices until content is verified.
 
 export type IconKey = "ledger" | "code" | "people";
 export type ArtKind = "ledger" | "grid" | "document" | "flow";
