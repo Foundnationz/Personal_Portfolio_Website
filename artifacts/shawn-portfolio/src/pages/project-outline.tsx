@@ -70,7 +70,6 @@ export default function ProjectOutline() {
           <Link href="/#contact">Contact</Link>
         </nav>}
       </header>
-
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
@@ -117,7 +116,7 @@ export default function ProjectOutline() {
               <p className="sf-outline-prose" data-testid="text-project-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
               <dl className="sf-outline-metadata" aria-label="Project details">
                 <div className="sf-outline-meta-item">
-                  <dt>Role</dt>
+                  <dt>Tools</dt>
                   <dd>Product Design</dd>
                 </div>
                 <div className="sf-outline-meta-item">
@@ -180,7 +179,6 @@ export default function ProjectOutline() {
           </div>
         </div>
       </main>
-
       <SiteFooter
         onNavigate={navigateHome}
         homeHref={import.meta.env.BASE_URL}
