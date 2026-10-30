@@ -1,7 +1,7 @@
 import "@/styles/signature-fintech.css";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, FileText,
   Link2, Mail, MapPin, Menu, X,
@@ -15,7 +15,6 @@ import { SkillCards } from "@/components/portfolio/skill-cards";
 import { ExperienceCards } from "@/components/portfolio/experience-cards";
 import { FeaturedProjectCards } from "@/components/portfolio/featured-project-cards";
 import { ProjectExampleDialogs } from "@/components/portfolio/project-example-dialogs";
-import { ProjectIndexEntries } from "@/components/portfolio/project-index-entries";
 
 function Modal({ open, onOpenChange, title, description, children }: {
   open: boolean;
@@ -113,10 +112,8 @@ export default function Portfolio() {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState<string>();
-  const [allOpen, setAllOpen] = useState(false);
   const [notice, setNotice] = useState<"resume" | "linkedin" | null>(null);
   const openProjectOutline = (id: string) => {
-    setAllOpen(false);
     if (id === "ledger-reconciliation") {
       navigate("/projects/ledger-reconciliation");
     } else {
@@ -266,7 +263,7 @@ export default function Portfolio() {
             <p className="sf-project-note">Example projects only—not claimed achievements. Each opens to an illustrative case note, ready to replace with real work.</p>
           </div>
           <FeaturedProjectCards onOpenPayments={() => openProjectOutline("payments-journey")} />
-          <div className="sf-view-all"><button className="sf-outline" type="button" onClick={() => setAllOpen(true)} data-testid="button-view-all"><span>View all project examples</span><ArrowRight size={15} /></button></div>
+          <div className="sf-view-all"><Link className="sf-outline" href="/projects" data-testid="button-view-all"><span>View all project examples</span><ArrowRight size={15} /></Link></div>
         </div>
       </section>
 
@@ -303,9 +300,6 @@ export default function Portfolio() {
     <SiteFooter onNavigate={go} />
 
     <ProjectExampleDialogs selectedId={selectedProjectId} onClose={() => setSelectedProjectId(undefined)} />
-    <Modal open={allOpen} onOpenChange={setAllOpen} title="Project index" description="Every entry is an example placeholder. Select one to inspect its illustrative case note.">
-      <ProjectIndexEntries onOpen={openProjectOutline} />
-    </Modal>
     <Modal open={!!notice} onOpenChange={(open) => !open && setNotice(null)}
       title={notice === "resume" ? "Resume not added yet" : "LinkedIn not configured"}
       description={notice === "resume"

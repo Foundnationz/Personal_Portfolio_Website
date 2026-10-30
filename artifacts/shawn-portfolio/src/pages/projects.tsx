@@ -1,0 +1,250 @@
+import "@/styles/signature-fintech.css";
+import "@/styles/projects.css";
+import "@/styles/portfolio-typography.css";
+import { useEffect, useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { ArrowLeft, ArrowUpRight, Menu, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import { profile } from "@/data/portfolio";
+import { SiteFooter } from "@/components/portfolio/site-footer";
+
+export default function ProjectsPage() {
+  const [, setLocation] = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [outlineOpen, setOutlineOpen] = useState(false);
+
+  useEffect(() => {
+    const previousTitle = document.title;
+    const pageDescription = "A collection of example and in-progress FinTech project outlines by Shawn Stephen Abok, a final-year Financial Technology student.";
+    document.title = "Projects | " + profile.name;
+    const metadata: [string, string, string][] = [
+      ["name", "description", pageDescription],
+      ["property", "og:title", document.title],
+      ["property", "og:description", pageDescription],
+      ["name", "twitter:title", document.title],
+      ["name", "twitter:description", pageDescription],
+    ];
+    const restoreMetadata = metadata.map(([attribute, key, content]) => {
+      const existing = document.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
+      const meta = existing ?? document.createElement("meta");
+      const previousContent = meta.getAttribute("content");
+      meta.setAttribute(attribute, key);
+      meta.content = content;
+      if (!existing) document.head.appendChild(meta);
+      return () => {
+        if (!existing) meta.remove();
+        else if (previousContent === null) meta.removeAttribute("content");
+        else meta.content = previousContent;
+      };
+    });
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    return () => {
+      document.title = previousTitle;
+      restoreMetadata.forEach((restore) => restore());
+    };
+  }, []);
+
+  const navigateHome = (id: string) => setLocation(`/#${id}`);
+
+  return (
+    <div className="sf-page projects-page">
+      <a className="sf-skip" href="#projects-main">Skip to project collection</a>
+      <header className="sf-header">
+        <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
+          <Link className="sf-brand" href="/#home" aria-label={`${profile.name}, home`}>
+            <span className="sf-brand-mark" aria-hidden="true">s.</span>
+            <span className="sf-brand-text"><span>Shawn Stephen Abok</span><small>FINANCIAL TECHNOLOGY · UCSI</small></span>
+          </Link>
+          <ul className="sf-navlinks">
+            <li><Link href="/#home">Home</Link></li>
+            <li><Link href="/#about">About</Link></li>
+            <li><Link href="/#skills">Skills</Link></li>
+            <li><Link href="/#education">Education</Link></li>
+            <li><Link href="/projects" aria-current="page">Projects</Link></li>
+            <li><Link href="/#experience">Experience</Link></li>
+            <li><Link href="/#contact">Contact</Link></li>
+          </ul>
+          <button
+            className="sf-menu"
+            type="button"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            aria-controls="projects-mobile-nav"
+            onClick={() => setMenuOpen(!menuOpen)}
+            data-testid="button-toggle-project-navigation"
+          >
+            {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+          </button>
+        </nav>
+        {menuOpen && (
+          <nav id="projects-mobile-nav" className="sf-mobile sf-wrap" aria-label="Mobile navigation">
+            <Link href="/#home">Home</Link>
+            <Link href="/#about">About</Link>
+            <Link href="/#skills">Skills</Link>
+            <Link href="/#education">Education</Link>
+            <Link href="/projects" aria-current="page" onClick={() => setMenuOpen(false)}>Projects</Link>
+            <Link href="/#experience">Experience</Link>
+            <Link href="/#contact">Contact</Link>
+          </nav>
+        )}
+      </header>
+
+      <main className="projects-main" id="projects-main">
+        <div className="sf-wrap projects-wrap">
+          <div className="projects-return-row">
+            <Link className="projects-return-link" href="/#home" data-testid="link-return-home">
+              <ArrowLeft size={16} aria-hidden="true" />
+              <span>Return home</span>
+            </Link>
+            <span className="projects-index">WORK COLLECTION / 05 ENTRIES</span>
+          </div>
+
+          <section className="projects-intro" aria-labelledby="projects-title">
+            <p className="projects-kicker">Financial technology · Selected work</p>
+            <h1 id="projects-title">Projects, in progress.</h1>
+            <p className="projects-lede">A small collection of finance-focused examples and developing ideas. Project notes are labelled clearly where material is illustrative or still being prepared.</p>
+            <div className="projects-intro-rule">
+              <span>Five project notes</span>
+              <span>Updated as work develops</span>
+            </div>
+          </section>
+
+          <section className="projects-collection" aria-label="All projects">
+            <article className="projects-card projects-card-ledger" data-testid="card-project-ledger-reconciliation">
+              <div className="projects-card-art projects-art-ledger" aria-hidden="true">
+                <div className="projects-art-ledger-sheet">
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                </div>
+                <span className="projects-art-caption">FIG. 01 — ILLUSTRATIVE ART, NOT DATA</span>
+              </div>
+              <div className="projects-card-copy">
+                <div className="projects-card-meta">
+                  <span>Accounting workflow</span>
+                  <span className="sf-example sf-example-light">Example</span>
+                </div>
+                <h2 className="projects-card-title">Financial Tracker &amp; Budgeting App</h2>
+                <p className="projects-card-description">Example project: matching entries between two sample ledgers.</p>
+                <Link className="projects-card-action" href="/projects/ledger-reconciliation" data-testid="link-project-ledger-reconciliation">
+                  <span>View project outline</span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
+              </div>
+            </article>
+
+            <article className="projects-card projects-card-house" data-testid="card-project-house-price-estimation">
+              <div className="projects-card-art projects-art-house" aria-hidden="true">
+                <div className="projects-art-chart">
+                  <span className="projects-chart-axis projects-chart-axis-y" />
+                  <span className="projects-chart-axis projects-chart-axis-x" />
+                  <span className="projects-chart-line" />
+                  <span className="projects-chart-dot projects-chart-dot-one" />
+                  <span className="projects-chart-dot projects-chart-dot-two" />
+                  <span className="projects-chart-dot projects-chart-dot-three" />
+                  <span className="projects-chart-dot projects-chart-dot-four" />
+                </div>
+                <span className="projects-art-caption">FIG. 02 — CONCEPTUAL ILLUSTRATION</span>
+              </div>
+              <div className="projects-card-copy">
+                <div className="projects-card-meta">
+                  <span>Predictive analytics</span>
+                  <span className="sf-example sf-example-light">Example</span>
+                </div>
+                <h2 className="projects-card-title">Predictive Analytics for House Price Estimation</h2>
+                <p className="projects-card-description">An example project theme exploring how property features could inform an estimate. The project outline is in preparation.</p>
+                <Dialog.Root open={outlineOpen} onOpenChange={setOutlineOpen}>
+                  <Dialog.Trigger asChild>
+                    <button className="projects-card-action" type="button" data-testid="button-open-house-price-outline">
+                      <span>Outline in preparation</span>
+                      <ArrowUpRight size={16} aria-hidden="true" />
+                    </button>
+                  </Dialog.Trigger>
+                  <Dialog.Portal>
+                    <Dialog.Overlay className="sf-dialog-overlay" />
+                    <Dialog.Content className="sf-dialog projects-dialog" aria-describedby="house-price-outline-description">
+                      <Dialog.Title asChild><h2>Outline in preparation</h2></Dialog.Title>
+                      <Dialog.Description className="sf-dialog-desc" id="house-price-outline-description">
+                        The final outline for Predictive Analytics for House Price Estimation has not been supplied yet.
+                      </Dialog.Description>
+                      <p className="sf-dialog-body">This page currently lists the project as an example theme only. Its methods, scope, and findings are not being represented until the project outline is ready.</p>
+                      <Dialog.Close className="sf-dialog-close" aria-label="Close dialog"><X size={18} aria-hidden="true" /></Dialog.Close>
+                    </Dialog.Content>
+                  </Dialog.Portal>
+                </Dialog.Root>
+              </div>
+            </article>
+
+            <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-cash-flow-notes">
+              <div className="projects-card-art projects-art-cashflow" aria-hidden="true">
+                <div className="projects-art-ledger-sheet">
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                  <span className="projects-art-row"><i /><i /><i /></span>
+                </div>
+                <span className="projects-art-caption">FIG. 03 — PLACEHOLDER VISUAL</span>
+              </div>
+              <div className="projects-card-copy">
+                <div className="projects-card-meta">
+                  <span>Personal finance</span>
+                  <span className="projects-placeholder-badge">Additional placeholder project</span>
+                </div>
+                <h2 className="projects-card-title">Cash Flow Scenario Notes</h2>
+                <p className="projects-card-description">A placeholder concept for organising simple cash-flow scenarios. No project work or results are presented here.</p>
+                <span className="projects-coming-soon" role="status">Coming soon</span>
+              </div>
+            </article>
+
+            <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-market-data-log">
+              <div className="projects-card-art projects-art-market" aria-hidden="true">
+                <div className="projects-art-bars">
+                  <i /><i /><i /><i /><i /><i /><i />
+                </div>
+                <span className="projects-art-caption">FIG. 04 — PLACEHOLDER VISUAL</span>
+              </div>
+              <div className="projects-card-copy">
+                <div className="projects-card-meta">
+                  <span>Market research</span>
+                  <span className="projects-placeholder-badge">Additional placeholder project</span>
+                </div>
+                <h2 className="projects-card-title">Market Data Reading Log</h2>
+                <p className="projects-card-description">A placeholder for future notes on reading financial market data, without claims of completed analysis.</p>
+                <span className="projects-coming-soon" role="status">Coming soon</span>
+              </div>
+            </article>
+
+            <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-risk-metrics-sheet">
+              <div className="projects-card-art projects-art-risk" aria-hidden="true">
+                <div className="projects-art-ring">
+                  <span />
+                </div>
+                <span className="projects-art-caption">FIG. 05 — PLACEHOLDER VISUAL</span>
+              </div>
+              <div className="projects-card-copy">
+                <div className="projects-card-meta">
+                  <span>Financial analysis</span>
+                  <span className="projects-placeholder-badge">Additional placeholder project</span>
+                </div>
+                <h2 className="projects-card-title">Risk Metrics Study Sheet</h2>
+                <p className="projects-card-description">A placeholder idea for a study sheet on introductory risk measures. Scope and materials are not yet available.</p>
+                <span className="projects-coming-soon" role="status">Coming soon</span>
+              </div>
+            </article>
+          </section>
+
+          <div className="projects-endnote">
+            <span>Project collection / end</span>
+            <Link href="/#home" data-testid="link-projects-end-home">
+              <span>Back to Shawn’s homepage</span>
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </main>
+
+      <SiteFooter onNavigate={navigateHome} homeHref={import.meta.env.BASE_URL} />
+    </div>
+  );
+}

@@ -9,6 +9,7 @@ const componentRoot = new URL("components/portfolio/", sourceRoot);
 const files = [
   "pages/portfolio.tsx",
   "pages/project-outline.tsx",
+  "pages/projects.tsx",
   ...readdirSync(componentRoot).filter((name) => name.endsWith(".tsx"))
     .map((name) => `components/portfolio/${name}`),
 ];
@@ -60,4 +61,34 @@ test("both education cards expose all four text fields as separate plain element
     }
   }
   assert.equal(positions.size, 8, "each field must have its own source position");
+});
+
+test("project collection contains two current projects and three independent placeholder cards", () => {
+  const source = parse("pages/projects.tsx");
+  const cards = elements(source).filter((node) => node.openingElement.tagName.getText(source) === "article");
+  assert.equal(cards.length, 5);
+  const headings = cards.map((card) => {
+    const heading = elements(card).find((node) => node.openingElement.tagName.getText(source) === "h2");
+    assert(heading, "every project must have a heading");
+    assert(heading.children.every(ts.isJsxText), "project names must be independent literal text");
+    return heading.children.map((node) => node.text.trim()).join(" ");
+  });
+  assert.equal(headings[0], "Financial Tracker &amp; Budgeting App");
+  assert.equal(headings[1], "Predictive Analytics for House Price Estimation");
+  assert.equal(new Set(headings).size, 5);
+  assert(cards.slice(2).every((card) => card.getText(source).includes("Additional placeholder project")));
+  assert(cards[0].getText(source).includes('href="/projects/ledger-reconciliation"'));
+  assert(!cards.slice(2).some((card) => card.getText(source).includes("<Link")), "unfinished projects must not have dead outline links");
+});
+
+test("homepage collection link routes to the dedicated projects page, not the old modal", () => {
+  const source = parse("pages/portfolio.tsx");
+  const link = elements(source).find((node) => node.openingElement.attributes.properties.some((prop) =>
+    ts.isJsxAttribute(prop) && prop.name.getText(source) === "data-testid" &&
+    prop.initializer && ts.isStringLiteral(prop.initializer) && prop.initializer.text === "button-view-all"));
+  assert(link);
+  assert.equal(link.openingElement.tagName.getText(source), "Link");
+  assert(link.openingElement.attributes.properties.some((prop) =>
+    ts.isJsxAttribute(prop) && prop.name.getText(source) === "href" &&
+    prop.initializer && ts.isStringLiteral(prop.initializer) && prop.initializer.text === "/projects"));
 });

@@ -6,6 +6,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/portfolio';
 import ProjectOutline from '@/pages/project-outline';
+import ProjectsPage from '@/pages/projects';
 import '@/styles/portfolio-typography.css';
 import {
   Route,
@@ -23,6 +24,7 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/projects" component={ProjectsPage} />
         <Route path="/projects/ledger-reconciliation" component={ProjectOutline} />
         <Route component={NotFound} />
       </Switch>
