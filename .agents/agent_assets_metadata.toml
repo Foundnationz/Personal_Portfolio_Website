@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "NaPnFTgeXJ8kG0LH6n40n"
+uri = "file://generated-artifacts/shawn-portfolio-source.zip"
+type = "unspecified"
+title = "Portfolio website — complete source ZIP"
+description = "Standalone website source, all local images, pinned dependencies and lockfile, regression checks, and step-by-step setup instructions. Excludes secrets, earlier mockups, unused server code, and generated files. Verified to build independently."
+logical_id = "ef085426-a086-46c8-9143-74842182dd97"
+content_hash = "sha256:5249bf6da063506a79b3f0708e96ab681c628f7057bf746630ff1c221611a1d0"
+size = 981972
+mtime_ms = 1793456460057
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:5b0c2a04-f00e-415e-bb69-10f0605eaa2e/ef085426-a086-46c8-9143-74842182dd97/111206ad-32f3-4f70-aa6b-01043ec562de"
+storage_version_token = "1793456479368585"
+content_type = "application/octet-stream"
