@@ -92,3 +92,11 @@ test("homepage collection link routes to the dedicated projects page, not the ol
     ts.isJsxAttribute(prop) && prop.name.getText(source) === "href" &&
     prop.initializer && ts.isStringLiteral(prop.initializer) && prop.initializer.text === "/projects"));
 });
+
+test("financial tracker outline keeps the uploaded dashboard instead of the old illustration", () => {
+  const source = parse("pages/project-outline.tsx");
+  assert(source.text.includes('"images/financial-tracker-dashboard.png"'));
+  assert(!source.text.includes('"images/project-financial-tracker.jpg"'));
+  const image = readFileSync(new URL("../public/images/financial-tracker-dashboard.png", import.meta.url));
+  assert.equal(image.subarray(0, 8).toString("hex"), "89504e470d0a1a0a", "the dashboard asset must be a valid PNG");
+});

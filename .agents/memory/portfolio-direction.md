@@ -21,6 +21,12 @@ Project outline pages should retain the reference page's content while using res
 
 **How to apply:** Keep future project pages readable and scannable, preserving placeholder status until real project details are supplied.
 
+Preserve user-supplied project screenshots during unrelated page and navigation changes; do not substitute the original reference illustration.
+
+**Why:** The user has repeatedly reported their uploaded project image disappearing and expects it to remain on the project outline.
+
+**How to apply:** When changing the portfolio or project routes, retain the selected uploaded image and verify the outline still displays it. Placeholder descriptions are not permission to replace user-chosen assets.
+
 Keep website content independently editable through the visual editor rather than generated from shared text expressions or repeated card templates.
 
 **Why:** The user wants to edit the content themselves. They reported uneditable project metadata and education text edits affecting both cards, and explicitly requested a site-wide fix for linked text.
