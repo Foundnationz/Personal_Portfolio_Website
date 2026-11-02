@@ -27,6 +27,12 @@ Preserve user-supplied project screenshots during unrelated page and navigation 
 
 **How to apply:** When changing the portfolio or project routes, retain the selected uploaded image and verify the outline still displays it. Placeholder descriptions are not permission to replace user-chosen assets.
 
+Treat all existing edits across the portfolio as protected, whether they were made in Build or Design.
+
+**Why:** The user explicitly asked that edits to any part of the website should not be undone unless they say so.
+
+**How to apply:** Inspect the latest files before editing, make the smallest targeted change possible, and preserve existing text, images, and styling outside the request. Never restore stale versions or replace whole sections/files to make an unrelated change. If a requested change would override an existing edit, ask first.
+
 Keep website content independently editable through the visual editor rather than generated from shared text expressions or repeated card templates.
 
 **Why:** The user wants to edit the content themselves. They reported uneditable project metadata and education text edits affecting both cards, and explicitly requested a site-wide fix for linked text.
