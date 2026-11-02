@@ -107,6 +107,13 @@ test("project details use an unboxed list and the summary adapts to the viewport
   assert(css.includes("grid-template-columns: repeat(3, minmax(0, 1fr))"));
   assert(css.includes("grid-template-columns: 1fr;"));
   assert(css.includes(".sf-outline-summary {\n  grid-column: 1 / -1;"), "the summary should use the full overview width");
+  assert(css.includes(".sf-outline-figure {\n  width: min(100%, 200px);"), "the desktop screenshot should not hold the summary too far below the details");
+  assert(css.includes(".sf-outline-figure {\n    width: min(100%, 330px);"), "keep the project screenshot comfortably sized on mobile");
+  assert(css.includes("row-gap: 24px;"), "keep the overview-to-summary spacing compact");
+  const projectPage = parse("pages/project-outline.tsx");
+  assert(projectPage.text.includes('className="sf-outline-image-link"'));
+  assert(projectPage.text.includes('aria-label="Open the financial tracker dashboard image at full size"'));
+  assert(projectPage.text.includes('target="_blank"'), "the small desktop preview must link to the full-size image");
   assert(typography.includes(".sf-page .sf-outline-meta-item { min-height: 54px; padding: 0;"));
   const source = parse("pages/project-outline.tsx");
   const nodes = elements(source);

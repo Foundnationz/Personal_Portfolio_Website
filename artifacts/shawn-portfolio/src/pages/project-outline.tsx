@@ -149,12 +149,24 @@ export default function ProjectOutline() {
               </section>
             </div>
             <figure className="sf-outline-figure">
-              <img
-                src={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"}
-                alt="Financial tracker app dashboard showing total balance, income, expenses, and monthly spending"
-                data-testid="img-project-illustration"
-              />
-              <figcaption>Financial tracker dashboard · sample interface</figcaption>
+              <a
+                className="sf-outline-image-link"
+                href={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the financial tracker dashboard image at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"}
+                  alt="Financial tracker app dashboard showing total balance, income, expenses, and monthly spending"
+                  data-testid="img-project-illustration"
+                />
+              </a>
+              <figcaption>
+                <a href={import.meta.env.BASE_URL + "images/financial-tracker-dashboard.png"} target="_blank" rel="noreferrer">
+                  Open full-size image
+                </a>
+              </figcaption>
             </figure>
             <section className="sf-outline-summary" aria-labelledby="project-summary-title">
               <h3 className="sf-outline-group-heading" id="project-summary-title">Summary</h3>

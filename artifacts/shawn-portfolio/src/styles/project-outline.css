@@ -97,7 +97,8 @@
 .sf-outline-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(270px, .88fr);
-  gap: clamp(32px, 6vw, 78px);
+  column-gap: clamp(32px, 6vw, 78px);
+  row-gap: 24px;
   align-items: start;
   padding: 0 0 47px;
   border-bottom: 1px solid var(--sf-rule);
@@ -229,8 +230,16 @@
 }
 
 .sf-outline-figure {
-  width: min(100%, 330px);
+  width: min(100%, 200px);
   margin: 3px auto 0;
+}
+
+.sf-outline-image-link {
+  display: block;
+}
+
+.sf-outline-figure figcaption a {
+  color: inherit;
 }
 
 .sf-outline-figure img {
