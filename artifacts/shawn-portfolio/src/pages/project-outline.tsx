@@ -1,7 +1,6 @@
 import "@/styles/signature-fintech.css";
 import "@/styles/project-outline.css";
 import { useEffect, useState } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
@@ -9,7 +8,6 @@ import { SiteFooter } from "@/components/portfolio/site-footer";
 
 export default function ProjectOutline() {
   const [, setLocation] = useLocation();
-  const [unavailableOpen, setUnavailableOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -82,24 +80,16 @@ export default function ProjectOutline() {
               <p className="sf-kicker sf-outline-kicker">Financial technology · Example outline</p>
               <h1 id="project-title">Financial Tracker and Budgetting App</h1>
             </div>
-            <Dialog.Root open={unavailableOpen} onOpenChange={setUnavailableOpen}>
-              <Dialog.Trigger asChild>
-                <button className="sf-primary sf-outline-view" type="button" data-testid="button-view-project">
-                  <span>View Project</span><ArrowUpRight size={15} aria-hidden="true" />
-                </button>
-              </Dialog.Trigger>
-              <Dialog.Portal>
-                <Dialog.Overlay className="sf-dialog-overlay" />
-                <Dialog.Content className="sf-dialog" aria-describedby="project-link-description">
-                  <Dialog.Title asChild><h2>Project link unavailable</h2></Dialog.Title>
-                  <Dialog.Description className="sf-dialog-desc" id="project-link-description">
-                    No live project destination has been provided, so this button does not open an external page.
-                  </Dialog.Description>
-                  <p className="sf-dialog-body">This outline is a reference-based example and is awaiting final project content.</p>
-                  <Dialog.Close className="sf-dialog-close" aria-label="Close dialog"><X size={18} /></Dialog.Close>
-                </Dialog.Content>
-              </Dialog.Portal>
-            </Dialog.Root>
+            <a
+              className="sf-primary sf-outline-view"
+              href="https://github.com/Foundnationz/finance-tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="button-view-project"
+              aria-label="View project on GitHub (opens in a new tab)"
+            >
+              <span>View Project</span><ArrowUpRight size={15} aria-hidden="true" />
+            </a>
           </section>
 
           <p className="sf-outline-notice" role="note" data-testid="status-project-example">
