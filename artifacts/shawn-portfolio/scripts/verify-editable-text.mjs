@@ -100,3 +100,18 @@ test("financial tracker outline keeps the uploaded dashboard instead of the old 
   const image = readFileSync(new URL("../public/images/financial-tracker-dashboard.png", import.meta.url));
   assert.equal(image.subarray(0, 8).toString("hex"), "89504e470d0a1a0a", "the dashboard asset must be a valid PNG");
 });
+
+test("project details use an unboxed list and the summary adapts to the viewport", () => {
+  const css = readFileSync(new URL("../src/styles/project-outline.css", import.meta.url), "utf8");
+  const typography = readFileSync(new URL("../src/styles/portfolio-typography.css", import.meta.url), "utf8");
+  assert(css.includes("grid-template-columns: repeat(3, minmax(0, 1fr))"));
+  assert(css.includes("grid-template-columns: 1fr;"));
+  assert(typography.includes(".sf-page .sf-outline-meta-item { min-height: 0; padding: 0;"));
+  const source = parse("pages/project-outline.tsx");
+  const nodes = elements(source);
+  for (const content of ["Project details", "Summary", "Goal", "Process", "Insights"]) {
+    assert(nodes.some((node) =>
+      node.children.some((child) => ts.isJsxText(child) && child.text.trim() === content)),
+    `Missing independently editable ${content} text`);
+  }
+});

@@ -114,38 +114,44 @@ export default function ProjectOutline() {
                 <h2 id="overview-title">Project Overview</h2>
               </div>
               <p className="sf-outline-prose" data-testid="text-project-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
-              <dl className="sf-outline-metadata" aria-label="Project details">
-                <div className="sf-outline-meta-item">
-                  <dt>Tools</dt>
-                  <dd>Product Design</dd>
+              <section className="sf-outline-details" aria-labelledby="project-details-title">
+                <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
+                <dl className="sf-outline-metadata" aria-label="Project details">
+                  <div className="sf-outline-meta-item">
+                    <dt>Tools</dt>
+                    <dd>Product Design</dd>
+                  </div>
+                  <div className="sf-outline-meta-item">
+                    <dt>Project Object</dt>
+                    <dd>12 Weeks</dd>
+                  </div>
+                  <div className="sf-outline-meta-item">
+                    <dt>Platform</dt>
+                    <dd>Web &amp; Mobile</dd>
+                  </div>
+                  <div className="sf-outline-meta-item">
+                    <dt>Focus</dt>
+                    <dd>Financial Tracking</dd>
+                  </div>
+                </dl>
+              </section>
+              <section className="sf-outline-summary" aria-labelledby="project-summary-title">
+                <h3 className="sf-outline-group-heading" id="project-summary-title">Summary</h3>
+                <div className="sf-outline-summary-grid">
+                  <article>
+                    <h4>Goal</h4>
+                    <p>Automate financial management for individuals.</p>
+                  </article>
+                  <article>
+                    <h4>Process</h4>
+                    <p>User research, prototyping, and iterative testing.</p>
+                  </article>
+                  <article>
+                    <h4>Insights</h4>
+                    <p>Simplicity drives long-term user retention.</p>
+                  </article>
                 </div>
-                <div className="sf-outline-meta-item">
-                  <dt>Project Object</dt>
-                  <dd>12 Weeks</dd>
-                </div>
-                <div className="sf-outline-meta-item">
-                  <dt>Platform</dt>
-                  <dd>Web &amp; Mobile</dd>
-                </div>
-                <div className="sf-outline-meta-item">
-                  <dt>Focus</dt>
-                  <dd>Financial Tracking</dd>
-                </div>
-              </dl>
-              <div className="sf-outline-summary-grid">
-                <article>
-                  <h3>Goal</h3>
-                  <p>Automate financial management for individuals.</p>
-                </article>
-                <article>
-                  <h3>Process</h3>
-                  <p>User research, prototyping, and iterative testing.</p>
-                </article>
-                <article>
-                  <h3>Insights</h3>
-                  <p>Simplicity drives long-term user retention.</p>
-                </article>
-              </div>
+              </section>
             </div>
             <figure className="sf-outline-figure">
               <img

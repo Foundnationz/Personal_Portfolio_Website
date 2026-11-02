@@ -135,20 +135,22 @@
 .sf-outline-metadata {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 27px 0 0;
+  gap: 13px 28px;
+  margin: 0;
+  padding: 18px 0 0;
   border-top: 1px solid var(--sf-rule);
-  border-left: 1px solid var(--sf-rule);
 }
 
 .sf-outline-meta-item {
-  min-height: 69px;
-  padding: 12px 15px;
-  border-right: 1px solid var(--sf-rule);
-  border-bottom: 1px solid var(--sf-rule);
+  display: grid;
+  grid-template-columns: minmax(90px, .8fr) minmax(0, 1.2fr);
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
 }
 
 .sf-outline-meta-item dt {
-  margin-bottom: 4px;
+  margin: 0;
   color: var(--sf-muted);
   font: 9px "IBM Plex Mono", monospace;
   letter-spacing: .09em;
@@ -160,21 +162,33 @@
   color: var(--sf-ink);
   font-size: 12px;
   font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.sf-outline-details {
+  margin-top: 27px;
+}
+
+.sf-outline-group-heading {
+  margin: 0 0 14px;
+  color: var(--sf-muted);
+  font: 600 13px/1.5 "DM Sans", sans-serif;
+  letter-spacing: .02em;
 }
 
 .sf-outline-summary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 25px;
+  gap: 15px;
 }
 
 .sf-outline-summary-grid article {
+  min-width: 0;
   padding-top: 10px;
   border-top: 2px solid #c4c7b9;
 }
 
-.sf-outline-summary-grid h3 {
+.sf-outline-summary-grid h4 {
   margin: 0 0 6px;
   color: var(--sf-teal);
   font: 10px "IBM Plex Mono", monospace;
@@ -187,6 +201,22 @@
   color: #4e5a54;
   font-size: 11px;
   line-height: 1.6;
+}
+
+.sf-outline-summary {
+  margin-top: 25px;
+}
+
+.sf-outline-page.sf-page .sf-outline-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sf-outline-page.sf-page .sf-outline-summary-grid h4 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .sf-outline-figure {
@@ -295,6 +325,20 @@
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 28px 0;
+  }
+
+  .sf-outline-metadata {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sf-outline-meta-item {
+    grid-template-columns: minmax(92px, .7fr) minmax(0, 1.3fr);
+  }
+
+  .sf-outline-page.sf-page .sf-outline-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
