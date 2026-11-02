@@ -143,24 +143,29 @@
 
 .sf-outline-meta-item {
   display: grid;
-  grid-template-columns: minmax(90px, .8fr) minmax(0, 1.2fr);
-  align-items: baseline;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: start;
   gap: 10px;
+  min-height: 54px;
   min-width: 0;
 }
 
+.sf-outline-meta-icon {
+  margin-top: 2px;
+  color: var(--sf-teal);
+  stroke-width: 1.8;
+}
+
 .sf-outline-meta-item dt {
-  margin: 0;
+  margin: 0 0 3px;
   color: var(--sf-muted);
-  font: 9px "IBM Plex Mono", monospace;
-  letter-spacing: .09em;
-  text-transform: uppercase;
+  font: 500 13px/1.45 "DM Sans", sans-serif;
 }
 
 .sf-outline-meta-item dd {
   margin: 0;
   color: var(--sf-ink);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   overflow-wrap: anywhere;
 }
@@ -204,7 +209,11 @@
 }
 
 .sf-outline-summary {
-  margin-top: 25px;
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-top: 7px;
+  padding-top: 25px;
+  border-top: 1px solid var(--sf-rule);
 }
 
 .sf-outline-page.sf-page .sf-outline-summary-grid {
@@ -333,7 +342,7 @@
   }
 
   .sf-outline-meta-item {
-    grid-template-columns: minmax(92px, .7fr) minmax(0, 1.3fr);
+    min-height: 50px;
   }
 
   .sf-outline-page.sf-page .sf-outline-summary-grid {

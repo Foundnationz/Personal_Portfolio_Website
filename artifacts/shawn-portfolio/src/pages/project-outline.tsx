@@ -2,7 +2,7 @@ import "@/styles/signature-fintech.css";
 import "@/styles/project-outline.css";
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
@@ -118,39 +118,34 @@ export default function ProjectOutline() {
                 <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
                 <dl className="sf-outline-metadata" aria-label="Project details">
                   <div className="sf-outline-meta-item">
-                    <dt>Tools</dt>
-                    <dd>Product Design</dd>
+                    <Wrench className="sf-outline-meta-icon" size={18} aria-hidden="true" />
+                    <div>
+                      <dt>Tools</dt>
+                      <dd>Product Design</dd>
+                    </div>
                   </div>
                   <div className="sf-outline-meta-item">
-                    <dt>Project Object</dt>
-                    <dd>12 Weeks</dd>
+                    <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
+                    <div>
+                      <dt>Project Object</dt>
+                      <dd>12 Weeks</dd>
+                    </div>
                   </div>
                   <div className="sf-outline-meta-item">
-                    <dt>Platform</dt>
-                    <dd>Web &amp; Mobile</dd>
+                    <MonitorSmartphone className="sf-outline-meta-icon" size={18} aria-hidden="true" />
+                    <div>
+                      <dt>Platform</dt>
+                      <dd>Web &amp; Mobile</dd>
+                    </div>
                   </div>
                   <div className="sf-outline-meta-item">
-                    <dt>Focus</dt>
-                    <dd>Financial Tracking</dd>
+                    <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
+                    <div>
+                      <dt>Focus</dt>
+                      <dd>Financial Tracking</dd>
+                    </div>
                   </div>
                 </dl>
-              </section>
-              <section className="sf-outline-summary" aria-labelledby="project-summary-title">
-                <h3 className="sf-outline-group-heading" id="project-summary-title">Summary</h3>
-                <div className="sf-outline-summary-grid">
-                  <article>
-                    <h4>Goal</h4>
-                    <p>Automate financial management for individuals.</p>
-                  </article>
-                  <article>
-                    <h4>Process</h4>
-                    <p>User research, prototyping, and iterative testing.</p>
-                  </article>
-                  <article>
-                    <h4>Insights</h4>
-                    <p>Simplicity drives long-term user retention.</p>
-                  </article>
-                </div>
               </section>
             </div>
             <figure className="sf-outline-figure">
@@ -161,6 +156,23 @@ export default function ProjectOutline() {
               />
               <figcaption>Financial tracker dashboard · sample interface</figcaption>
             </figure>
+            <section className="sf-outline-summary" aria-labelledby="project-summary-title">
+              <h3 className="sf-outline-group-heading" id="project-summary-title">Summary</h3>
+              <div className="sf-outline-summary-grid">
+                <article>
+                  <h4>Goal</h4>
+                  <p>Automate financial management for individuals.</p>
+                </article>
+                <article>
+                  <h4>Process</h4>
+                  <p>User research, prototyping, and iterative testing.</p>
+                </article>
+                <article>
+                  <h4>Insights</h4>
+                  <p>Simplicity drives long-term user retention.</p>
+                </article>
+              </div>
+            </section>
           </section>
 
           <section className="sf-outline-text-section" aria-labelledby="problem-title">

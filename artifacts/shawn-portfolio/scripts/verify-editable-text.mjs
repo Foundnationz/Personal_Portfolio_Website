@@ -106,7 +106,8 @@ test("project details use an unboxed list and the summary adapts to the viewport
   const typography = readFileSync(new URL("../src/styles/portfolio-typography.css", import.meta.url), "utf8");
   assert(css.includes("grid-template-columns: repeat(3, minmax(0, 1fr))"));
   assert(css.includes("grid-template-columns: 1fr;"));
-  assert(typography.includes(".sf-page .sf-outline-meta-item { min-height: 0; padding: 0;"));
+  assert(css.includes(".sf-outline-summary {\n  grid-column: 1 / -1;"), "the summary should use the full overview width");
+  assert(typography.includes(".sf-page .sf-outline-meta-item { min-height: 54px; padding: 0;"));
   const source = parse("pages/project-outline.tsx");
   const nodes = elements(source);
   for (const content of ["Project details", "Summary", "Goal", "Process", "Insights"]) {
@@ -114,4 +115,6 @@ test("project details use an unboxed list and the summary adapts to the viewport
       node.children.some((child) => ts.isJsxText(child) && child.text.trim() === content)),
     `Missing independently editable ${content} text`);
   }
+  assert.equal((source.text.match(/<CalendarDays|<MonitorSmartphone|<Target|<Wrench/g) ?? []).length, 4,
+    "each project detail has one decorative icon");
 });
