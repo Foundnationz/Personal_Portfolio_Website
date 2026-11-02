@@ -200,7 +200,21 @@ export default function ProjectOutline() {
               <span className="sf-outline-number">03</span>
               <h2 id="workflow-title">Project Workflow</h2>
             </div>
-            <p className="sf-outline-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+            <figure className="sf-outline-workflow-figure">
+              <a
+                href={import.meta.env.BASE_URL + "images/financial-app-development-lifecycle.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the financial app development lifecycle diagram at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/financial-app-development-lifecycle.png"}
+                  alt="Financial app development lifecycle: original final-year project phases A and B, post-submission desktop development steps 1 through 13, and a scope note"
+                  data-testid="img-project-workflow"
+                />
+              </a>
+              <figcaption>Select the diagram to view it at full size.</figcaption>
+            </figure>
           </section>
 
           <div className="sf-outline-end">
