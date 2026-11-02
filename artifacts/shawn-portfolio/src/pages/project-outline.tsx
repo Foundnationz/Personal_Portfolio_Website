@@ -192,7 +192,7 @@ export default function ProjectOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose">Generation Z users may struggle to maintain consistent financial records, monitor recurring expenses, and translate spending information into practical budgeting decisions. Financial tools that separate transaction tracking, subscription management, savings goals, and understandable guidance can make these tasks difficult to manage together. This project addresses the need for an accessible personal finance application that combines these functions with clear visualisations, motivational features, and explainable, rule-based suggestions.</p>
+            <p className="sf-outline-prose text-justify">        Generation Z users may struggle to maintain consistent financial records, monitor recurring expenses, and translate spending information into practical budgeting decisions. Financial tools that separate transaction tracking, subscription management, savings goals, and understandable guidance can make these tasks difficult to manage together. This project addresses the need for an accessible personal finance application that combines these functions with clear visualisations, motivational features, and explainable, rule-based suggestions.</p>
           </section>
 
           <section className="sf-outline-text-section sf-outline-workflow" aria-labelledby="workflow-title">
