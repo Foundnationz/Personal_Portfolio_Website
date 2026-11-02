@@ -208,6 +208,14 @@ export default function ProjectOutline() {
             </figure>
           </section>
 
+          <section className="sf-outline-text-section" aria-labelledby="project-outcome-title">
+            <div className="sf-outline-section-heading">
+              <span className="sf-outline-number">04</span>
+              <h2 id="project-outcome-title">Project Outcome</h2>
+            </div>
+            <p className="sf-outline-prose sf-project-outcome-copy">Placeholder: Summarise the project's key outcomes, confirmed results, and benefits for users once the final project details are available.</p>
+          </section>
+
           <div className="sf-outline-end">
             <span>End of project outline</span>
             <Link href="/#projects"><span>Return to selected work</span><ArrowRight size={15} aria-hidden="true" /></Link>
