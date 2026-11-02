@@ -1,7 +1,7 @@
 import "@/styles/signature-fintech.css";
 import "@/styles/project-outline.css";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Github, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
@@ -86,9 +86,10 @@ export default function ProjectOutline() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-view-project"
-              aria-label="View project on GitHub (opens in a new tab)"
+              aria-label="View project detail on GitHub (opens in a new tab)"
             >
-              <span>View Project</span><ArrowUpRight size={15} aria-hidden="true" />
+              <Github size={16} aria-hidden="true" />
+              <span>View Project Detail</span><ArrowUpRight size={15} aria-hidden="true" />
             </a>
           </section>
 
