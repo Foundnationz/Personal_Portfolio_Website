@@ -113,7 +113,7 @@ export default function ProjectOutline() {
                 <span className="sf-outline-number">01</span>
                 <h2 id="overview-title">Project Overview</h2>
               </div>
-              <p className="sf-outline-prose" data-testid="text-project-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+              <p className="sf-outline-prose sf-overview-prose" data-testid="text-project-overview">Finance Tracker is a personal finance application designed with Generation Z users in mind. It combines account management, transaction tracking, budgets, subscriptions, savings goals, and financial visualisations with motivational features and explainable, rule-based guidance.</p>
               <section className="sf-outline-details" aria-labelledby="project-details-title">
                 <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
                 <dl className="sf-outline-metadata" aria-label="Project details">

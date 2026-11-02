@@ -133,6 +133,10 @@
   line-height: 1.8;
 }
 
+.sf-overview-prose {
+  text-indent: 2em;
+}
+
 .sf-outline-metadata {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
