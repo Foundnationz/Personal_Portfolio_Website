@@ -97,7 +97,7 @@ export default function ProjectsPage() {
               <ArrowLeft size={16} aria-hidden="true" />
               <span>Return home</span>
             </Link>
-            <span className="projects-index">WORK COLLECTION / 05 ENTRIES</span>
+            <span className="projects-index">WORK COLLECTION / 04 ENTRIES</span>
           </div>
 
           <section className="projects-intro" aria-labelledby="projects-title">
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
             <h1 id="projects-title">Projects, in progress.</h1>
             <p className="projects-lede">A small collection of finance-focused examples and developing ideas. Project notes are labelled clearly where material is illustrative or still being prepared.</p>
             <div className="projects-intro-rule">
-              <span>Five project notes</span>
+              <span>Four project notes</span>
               <span>Updated as work develops</span>
             </div>
           </section>
@@ -212,23 +212,6 @@ export default function ProjectsPage() {
               </div>
             </article>
 
-            <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-risk-metrics-sheet">
-              <div className="projects-card-art projects-art-risk" aria-hidden="true">
-                <div className="projects-art-ring">
-                  <span />
-                </div>
-                <span className="projects-art-caption">FIG. 05 — PLACEHOLDER VISUAL</span>
-              </div>
-              <div className="projects-card-copy">
-                <div className="projects-card-meta">
-                  <span>Financial analysis</span>
-                  <span className="projects-placeholder-badge">Additional placeholder project</span>
-                </div>
-                <h2 className="projects-card-title">Risk Metrics Study Sheet</h2>
-                <p className="projects-card-description">A placeholder idea for a study sheet on introductory risk measures. Scope and materials are not yet available.</p>
-                <span className="projects-coming-soon" role="status">Coming soon</span>
-              </div>
-            </article>
           </section>
 
           <div className="projects-endnote">
