@@ -126,7 +126,7 @@ export default function ProjectOutline() {
                     <MonitorSmartphone className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Platform</dt>
-                      <dd>Web &amp; Mobile</dd>
+                      <dd>Local & Cloud Environment (PC) </dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
