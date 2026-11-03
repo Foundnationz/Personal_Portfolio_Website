@@ -69,17 +69,6 @@
   white-space: nowrap;
 }
 
-.sf-outline-view-pending {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed var(--sf-rule);
-  border-radius: 3px;
-  color: var(--sf-muted);
-  font-size: 13px;
-  font-weight: 600;
-}
-
 .sf-outline-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(270px, .88fr);

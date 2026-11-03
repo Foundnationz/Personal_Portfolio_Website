@@ -1,7 +1,7 @@
 import "@/styles/signature-fintech.css";
 import "@/styles/project-outline.css";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Github, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
@@ -81,7 +81,17 @@ export default function HouseRentOutline() {
               <p className="sf-kicker sf-outline-kicker">Financial technology · Predictive analytics</p>
               <h1 id="project-title">Predictive Analytics for House Rent Estimation</h1>
             </div>
-            <span className="sf-outline-view sf-outline-view-pending" role="status">Project link pending</span>
+            <a
+              className="sf-primary sf-outline-view"
+              href="https://github.com/Foundnationz/house-rent-prediction.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="button-view-house-rent-project"
+              aria-label="View project detail on GitHub (opens in a new tab)"
+            >
+              <Github size={16} aria-hidden="true" />
+              <span>View Project Detail</span><ArrowUpRight size={15} aria-hidden="true" />
+            </a>
           </section>
 
           <section className="sf-outline-overview" aria-labelledby="overview-title">
