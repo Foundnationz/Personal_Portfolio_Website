@@ -119,7 +119,7 @@ export default function ProjectOutline() {
                     <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Project Type</dt>
-                      <dd>12 Weeks</dd>
+                      <dd>App Development | Final Year Project | Report Writing</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
