@@ -172,9 +172,11 @@ export default function ProjectOutline() {
                 </article>
                 <article>
                   <h4>Results</h4>
-                  <p>- Developed the Colab prototype into a desktop finance app with improved record management, unified scheduling, budget history, and rule-based recommendations.
-                  - Enhanced usability and privacy through a tabbed Dashboard, password controls, and self-service account deletion.
-                  - Passed 46 automated tests and selected manual checks, with development and setup documented on GitHub.</p>
+                  <ul>
+                    <li>Developed the Colab prototype into a desktop finance app with improved record management, unified scheduling, budget history, and rule-based recommendations.</li>
+                    <li>Enhanced usability and privacy through a tabbed Dashboard, password controls, and self-service account deletion.</li>
+                    <li>Passed 46 automated tests and selected manual checks, with development and setup documented on GitHub.</li>
+                  </ul>
                 </article>
               </div>
             </section>

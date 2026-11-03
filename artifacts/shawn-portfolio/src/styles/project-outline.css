@@ -213,6 +213,21 @@
   line-height: 1.6;
 }
 
+.sf-outline-summary-grid ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 19px;
+  list-style: disc;
+  color: #4e5a54;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.sf-outline-summary-grid li::marker {
+  color: var(--sf-teal);
+}
+
 .sf-outline-summary {
   grid-column: 1 / -1;
   min-width: 0;
