@@ -112,7 +112,7 @@ export default function ProjectOutline() {
                     <Wrench className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Tools</dt>
-                      <dd>Product Design</dd>
+                      <dd>VsCode | Python | SQL | Google Colab</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
