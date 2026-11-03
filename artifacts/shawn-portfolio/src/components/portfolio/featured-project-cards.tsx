@@ -18,7 +18,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>Accounting Workflow</span><span className="sf-example">Example</span></div>
           <h3>Financial Tracker & Budgeting App</h3>
-          <p>Python desktop application designed to help Generation Z users manage accounts, transactions, budgets, subscriptions, and savings goals. Evolved from a joint Final Year Project prototype, it combines financial visualisations, motivational features, and explainable rule-based recommendations to support informed budgeting decisions. The application uses Tkinter and SQLite, with password hashing, privacy controls, and automated regression tests.</p>
+          <p>Finance Tracker is a Python desktop app for Gen Z users to manage spending, budgets, subscriptions, and savings goals, with visual dashboards and explainable financial guidance.</p>
           <Link className="sf-project-open" href="/projects/ledger-reconciliation" data-testid="button-view-project-ledger-reconciliation">
             <span>View project outline</span><ArrowUpRight size={15} />
           </Link>
