@@ -164,7 +164,7 @@ export default function ProjectOutline() {
               <div className="sf-outline-summary-grid">
                 <article>
                   <h4>Goal</h4>
-                  <p>Enhance and automate financial management system for Gen- Z </p>
+                  <p>Enhance and automate financial management system for Gen- Z including rule-based recommendation system.</p>
                 </article>
                 <article>
                   <h4>Process</h4>
