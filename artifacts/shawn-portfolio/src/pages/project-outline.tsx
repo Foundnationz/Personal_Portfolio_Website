@@ -213,7 +213,39 @@ export default function ProjectOutline() {
               <span className="sf-outline-number">04</span>
               <h2 id="project-outcome-title">Project Outcome</h2>
             </div>
-            <p className="sf-outline-prose sf-project-outcome-copy">Placeholder: Summarise the project's key outcomes, confirmed results, and benefits for users once the final project details are available.</p>
+            <div className="sf-project-outcome-groups">
+              <section className="sf-project-outcome-group" aria-labelledby="outcome-desktop-title">
+                <h3 id="outcome-desktop-title">Desktop Application Development</h3>
+                <ul>
+                  <li>Migrated the original Google Colab prototype into a local desktop application using Python, Tkinter, and SQLite.</li>
+                  <li>Integrated account management, transaction tracking, budgets, subscriptions, wishlist goals, and financial visualisations within one interface.</li>
+                </ul>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="outcome-records-title">
+                <h3 id="outcome-records-title">Financial Record Management</h3>
+                <ul>
+                  <li>Added editing controls, transaction notes, references, tags, and Need/Want classification.</li>
+                  <li>Improved budget calculations through consistent calendar periods, clearer spending breakdowns, and recorded monthly settings history.</li>
+                  <li>Unified subscription and recurring-transaction processing with stable history links and duplicate-occurrence protection.</li>
+                </ul>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="outcome-guidance-title">
+                <h3 id="outcome-guidance-title">Explainable Financial Guidance</h3>
+                <ul>
+                  <li>Implemented rule-based Dashboard suggestions covering budget allowances, spending changes, upcoming expenses, and subscription commitments.</li>
+                  <li>Added Needs/Wants reflection, repeated-spending review, historical budget comparisons, and data-quality notices.</li>
+                  <li>Displayed relevant calculations, date ranges, and limitations to help users interpret the guidance.</li>
+                </ul>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="outcome-usability-title">
+                <h3 id="outcome-usability-title">Usability and Privacy Controls</h3>
+                <ul>
+                  <li>Organised the Dashboard into Overview, Period Insights, and Current Planning tabs.</li>
+                  <li>Improved chart readability, scrolling, password confirmation, and password-visibility controls.</li>
+                  <li>Added password-confirmed self-service account deletion while preserving other users’ records.</li>
+                </ul>
+              </section>
+            </div>
           </section>
 
           <div className="sf-outline-end">
