@@ -133,7 +133,7 @@ export default function ProjectOutline() {
                     <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Focus</dt>
-                      <dd>Financial Tracking</dd>
+                      <dd>Financial Management Tracking & Budgeting</dd>
                     </div>
                   </div>
                 </dl>
