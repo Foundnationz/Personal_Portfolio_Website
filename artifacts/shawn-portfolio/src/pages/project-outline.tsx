@@ -171,7 +171,7 @@ export default function ProjectOutline() {
                   <p className="text-justify">The project began by identifying financial challenges, reviewing existing solutions, and designing system requirements and workflows. A Colab prototype was developed and tested before the report was submitted. Subsequent work migrated it to a desktop application, improved its functionality, security, and usability, and introduced rule-based financial recommendations. The updated application was then tested and documented on GitHub, with further improvements identified.</p>
                 </article>
                 <article>
-                  <h4>Insights</h4>
+                  <h4>Outcome</h4>
                   <p>Simplicity drives long-term user retention.</p>
                 </article>
               </div>
