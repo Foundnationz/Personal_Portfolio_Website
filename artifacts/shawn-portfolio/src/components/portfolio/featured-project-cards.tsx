@@ -6,7 +6,16 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
   return (
     <div className="sf-project-stack">
       <article className="sf-project" data-testid="card-project-ledger-reconciliation">
-        <div className="sf-project-art"><ProjectArt kind="ledger" /><span className="sf-figcaption">FIG. 01 — ILLUSTRATIVE ART, NOT DATA</span></div>
+        <div className="sf-project-art sf-project-art-photo">
+          <img
+            src={import.meta.env.BASE_URL + "images/financial-tracker-workspace.jpg"}
+            alt="A smartphone, calculator, and financial charts on a desk beside a laptop"
+            loading="lazy"
+            decoding="async"
+            data-testid="img-featured-financial-tracker"
+          />
+          <span className="sf-figcaption">PERSONAL FINANCE · UNSPLASH</span>
+        </div>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>Accounting Workflow</span><span className="sf-example">Example</span></div>
           <h3>Financial Tracker & Budgeting App</h3>
