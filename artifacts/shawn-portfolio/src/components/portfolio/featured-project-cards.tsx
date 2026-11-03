@@ -38,7 +38,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>FinTech Research</span><span className="sf-example">Example</span></div>
           <h3>Predictive Analytics for House Rent Estimation</h3>
-          <p>Example project: mapping the steps of a customer payment.</p>
+          <p>Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
           <button className="sf-project-open" type="button" onClick={onOpenPayments} data-testid="button-view-project-payments-journey">
             <span>View project outline</span><ArrowUpRight size={15} />
           </button>
