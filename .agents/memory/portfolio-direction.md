@@ -15,11 +15,11 @@ Use the revised Signature FinTech template as the portfolio's default going forw
 
 **How to apply:** Retain these preferences in later refinements or integration of the chosen design; stack content logically on small screens.
 
-Project outline pages should retain the reference page's content while using restrained styling that does not distract recruiters from reading.
+Project outline pages should retain the reference page's content while using restrained styling that does not distract recruiters from reading. For the Finance Tracker project, the user confirmed that 46 automated tests and selected manual checks passed and asked to remove the visible example/placeholder framing.
 
-**Why:** The user explicitly prioritized project content over fancy design elements.
+**Why:** The user explicitly prioritized project content over fancy design elements and confirmed the 46-test result as accurate.
 
-**How to apply:** Keep future project pages readable and scannable, preserving placeholder status until real project details are supplied.
+**How to apply:** Keep future project pages readable and scannable. Treat the Finance Tracker test result as confirmed, and don't label that project page as an example unless the user asks.
 
 Preserve user-supplied project screenshots during unrelated page and navigation changes; do not substitute the original reference illustration.
 

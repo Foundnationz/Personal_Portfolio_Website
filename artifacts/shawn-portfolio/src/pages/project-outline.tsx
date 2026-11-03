@@ -15,7 +15,7 @@ export default function ProjectOutline() {
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     const previousDescription = description?.content;
     const createdDescription = !description;
-    const pageDescription = "An example project outline for a financial tracker and budgeting app by Shawn Stephen Abok.";
+    const pageDescription = "Project overview, workflow, and outcomes for a personal finance tracker and budgeting app by Shawn Stephen Abok.";
     const meta = description ?? document.createElement("meta");
 
     if (createdDescription) {
@@ -77,7 +77,7 @@ export default function ProjectOutline() {
 
           <section className="sf-outline-heading" aria-labelledby="project-title">
             <div>
-              <p className="sf-kicker sf-outline-kicker">Financial technology · Example outline</p>
+              <p className="sf-kicker sf-outline-kicker">Financial technology · Personal finance</p>
               <h1 id="project-title">Financial Tracker and Budgetting App</h1>
             </div>
             <a
@@ -92,11 +92,6 @@ export default function ProjectOutline() {
               <span>View Project Detail</span><ArrowUpRight size={15} aria-hidden="true" />
             </a>
           </section>
-
-          <p className="sf-outline-notice" role="note" data-testid="status-project-example">
-            <span className="sf-outline-notice-mark" aria-hidden="true">i</span>
-            <span>This outline contains example and placeholder material from the reference page. Final project content is still being prepared.</span>
-          </p>
 
           <section className="sf-outline-overview" aria-labelledby="overview-title">
             <div className="sf-outline-overview-copy">
