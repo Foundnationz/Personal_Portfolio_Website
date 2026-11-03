@@ -118,7 +118,7 @@ export default function ProjectOutline() {
                   <div className="sf-outline-meta-item">
                     <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
-                      <dt>Project Object</dt>
+                      <dt>Project Type</dt>
                       <dd>12 Weeks</dd>
                     </div>
                   </div>
