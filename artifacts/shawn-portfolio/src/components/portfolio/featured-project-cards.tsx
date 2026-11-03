@@ -14,7 +14,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
             decoding="async"
             data-testid="img-featured-financial-tracker"
           />
-          <span className="sf-figcaption">PERSONAL FINANCE · UNSPLASH</span>
+          <span className="sf-figcaption">PERSONAL FINANCE </span>
         </div>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>Accounting Workflow</span><span className="sf-example">Example</span></div>
