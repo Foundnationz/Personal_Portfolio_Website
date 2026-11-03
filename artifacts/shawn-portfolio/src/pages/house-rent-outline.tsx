@@ -36,7 +36,7 @@ export default function HouseRentOutline() {
   const navigateHome = (id: string) => setLocation(`/#${id}`);
 
   return (
-    <div className="sf-page sf-outline-page">
+    <div className="sf-page sf-outline-page sf-house-rent-outline-page">
       <a className="sf-skip" href="#project-main">Skip to project content</a>
       <header className="sf-header">
         <nav className="sf-wrap sf-nav" aria-label="Primary navigation">
@@ -194,31 +194,39 @@ export default function HouseRentOutline() {
               <span className="sf-outline-number">04</span>
               <h2 id="project-outcome-title">Project Outcome</h2>
             </div>
-            <div className="sf-project-outcome-groups">
-              <section className="sf-project-outcome-group" aria-labelledby="outcome-data-title">
-                <h3 id="outcome-data-title">Data Preparation</h3>
-                <ul>
-                  <li>Placeholder: Describe the dataset, cleaning, and features used.</li>
-                </ul>
-              </section>
-              <section className="sf-project-outcome-group" aria-labelledby="outcome-model-title">
-                <h3 id="outcome-model-title">Model Development</h3>
-                <ul>
-                  <li>Placeholder: Add the models considered and the final approach.</li>
-                </ul>
-              </section>
-              <section className="sf-project-outcome-group" aria-labelledby="outcome-evaluation-title">
-                <h3 id="outcome-evaluation-title">Model Evaluation</h3>
-                <ul>
-                  <li>Placeholder: Add verified evaluation results and validation details.</li>
-                </ul>
-              </section>
-              <section className="sf-project-outcome-group" aria-labelledby="outcome-findings-title">
-                <h3 id="outcome-findings-title">Key Findings</h3>
-                <ul>
-                  <li>Placeholder: Summarise the findings, limitations, and possible next steps.</li>
-                </ul>
-              </section>
+            <div className="sf-rent-result-list">
+              <article className="sf-rent-result">
+                <h3 className="sf-rent-result-title">Result 1: Placeholder finding title</h3>
+                <p className="sf-rent-result-copy">Placeholder: Add a brief explanation of the first result, the evidence behind it, and what it means.</p>
+                <figure className="sf-rent-result-figure">
+                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 1">
+                    <span>Result 1 image placeholder</span>
+                  </div>
+                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                </figure>
+              </article>
+
+              <article className="sf-rent-result">
+                <h3 className="sf-rent-result-title">Result 2: Placeholder finding title</h3>
+                <p className="sf-rent-result-copy">Placeholder: Explain a second verified result and include any context needed to interpret it.</p>
+                <figure className="sf-rent-result-figure">
+                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 2">
+                    <span>Result 2 image placeholder</span>
+                  </div>
+                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                </figure>
+              </article>
+
+              <article className="sf-rent-result">
+                <h3 className="sf-rent-result-title">Result 3: Placeholder finding title</h3>
+                <p className="sf-rent-result-copy">Placeholder: Summarise another result, noting its relevance and any limitations.</p>
+                <figure className="sf-rent-result-figure">
+                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 3">
+                    <span>Result 3 image placeholder</span>
+                  </div>
+                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                </figure>
+              </article>
             </div>
           </section>
 
