@@ -112,22 +112,22 @@ export default function ProjectsPage() {
 
           <section className="projects-collection" aria-label="All projects">
             <article className="projects-card projects-card-ledger" data-testid="card-project-ledger-reconciliation">
-              <div className="projects-card-art projects-art-ledger" aria-hidden="true">
-                <div className="projects-art-ledger-sheet">
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                </div>
-                <span className="projects-art-caption">FIG. 01 — ILLUSTRATIVE ART, NOT DATA</span>
+              <div className="projects-card-art projects-card-art-photo">
+                <img
+                  src={import.meta.env.BASE_URL + "images/financial-tracker-workspace.jpg"}
+                  alt="A smartphone, calculator, and financial charts on a desk beside a laptop"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="projects-art-caption">PERSONAL FINANCE</span>
               </div>
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
-                  <span>Accounting workflow</span>
+                  <span>Accounting Workflow</span>
                   <span className="sf-example sf-example-light">Example</span>
                 </div>
                 <h2 className="projects-card-title">Financial Tracker &amp; Budgeting App</h2>
-                <p className="projects-card-description">Example project: matching entries between two sample ledgers.</p>
+                <p className="projects-card-description">Finance Tracker is a Python desktop app for Gen Z users to manage spending, budgets, subscriptions, and savings goals, with visual dashboards and explainable financial guidance.</p>
                 <Link className="projects-card-action" href="/projects/ledger-reconciliation" data-testid="link-project-ledger-reconciliation">
                   <span>View project outline</span>
                   <ArrowUpRight size={16} aria-hidden="true" />
@@ -136,29 +136,26 @@ export default function ProjectsPage() {
             </article>
 
             <article className="projects-card projects-card-house" data-testid="card-project-house-price-estimation">
-              <div className="projects-card-art projects-art-house" aria-hidden="true">
-                <div className="projects-art-chart">
-                  <span className="projects-chart-axis projects-chart-axis-y" />
-                  <span className="projects-chart-axis projects-chart-axis-x" />
-                  <span className="projects-chart-line" />
-                  <span className="projects-chart-dot projects-chart-dot-one" />
-                  <span className="projects-chart-dot projects-chart-dot-two" />
-                  <span className="projects-chart-dot projects-chart-dot-three" />
-                  <span className="projects-chart-dot projects-chart-dot-four" />
-                </div>
-                <span className="projects-art-caption">FIG. 02 — CONCEPTUAL ILLUSTRATION</span>
+              <div className="projects-card-art projects-card-art-contained">
+                <img
+                  src={import.meta.env.BASE_URL + "images/predictive-house-rent.png"}
+                  alt="A yellow house in front of chart bars with rising and falling arrows, representing house rent prediction"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="projects-art-caption">HOUSE RENT ESTIMATION · CONCEPT VISUAL</span>
               </div>
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
-                  <span>Predictive analytics</span>
+                  <span>FinTech Research</span>
                   <span className="sf-example sf-example-light">Example</span>
                 </div>
-                <h2 className="projects-card-title">Predictive Analytics for House Price Estimation</h2>
-                <p className="projects-card-description">An example project theme exploring how property features could inform an estimate. The project outline is in preparation.</p>
+                <h2 className="projects-card-title">Predictive Analytics for House Rent Estimation</h2>
+                <p className="projects-card-description">Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
                 <Dialog.Root open={outlineOpen} onOpenChange={setOutlineOpen}>
                   <Dialog.Trigger asChild>
                     <button className="projects-card-action" type="button" data-testid="button-open-house-price-outline">
-                      <span>Outline in preparation</span>
+                      <span>View project outline</span>
                       <ArrowUpRight size={16} aria-hidden="true" />
                     </button>
                   </Dialog.Trigger>
@@ -167,7 +164,7 @@ export default function ProjectsPage() {
                     <Dialog.Content className="sf-dialog projects-dialog" aria-describedby="house-price-outline-description">
                       <Dialog.Title asChild><h2>Outline in preparation</h2></Dialog.Title>
                       <Dialog.Description className="sf-dialog-desc" id="house-price-outline-description">
-                        The final outline for Predictive Analytics for House Price Estimation has not been supplied yet.
+                        The final outline for Predictive Analytics for House Rent Estimation has not been supplied yet.
                       </Dialog.Description>
                       <p className="sf-dialog-body">This page currently lists the project as an example theme only. Its methods, scope, and findings are not being represented until the project outline is ready.</p>
                       <Dialog.Close className="sf-dialog-close" aria-label="Close dialog"><X size={18} aria-hidden="true" /></Dialog.Close>
