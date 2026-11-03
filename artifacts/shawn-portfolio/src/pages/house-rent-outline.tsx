@@ -182,10 +182,19 @@ export default function HouseRentOutline() {
               <h2 id="workflow-title">Project Workflow</h2>
             </div>
             <figure className="sf-outline-workflow-figure">
-              <div className="sf-outline-workflow-placeholder" role="note">
-                Placeholder: Add a workflow diagram showing data preparation, model training, evaluation, and rent estimation.
-              </div>
-              <figcaption>Workflow visual placeholder.</figcaption>
+              <a
+                href={import.meta.env.BASE_URL + "images/house-rent-workflow.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the house rent estimation workflow diagram at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/house-rent-workflow.png"}
+                  alt="House rent estimation workflow from problem definition and data preparation through modelling, evaluation, interpretation, and reporting"
+                  data-testid="img-house-rent-workflow"
+                />
+              </a>
+              <figcaption>Select the diagram to view it at full size.</figcaption>
             </figure>
           </section>
 
