@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "wouter";
 
-export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () => void }) {
+export function FeaturedProjectCards() {
   return (
     <div className="sf-project-stack">
       <article className="sf-project" data-testid="card-project-ledger-reconciliation">
@@ -24,7 +24,7 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
           </Link>
         </div>
       </article>
-      <article className="sf-project" data-testid="card-project-payments-journey">
+      <article className="sf-project" data-testid="card-project-house-rent-estimation">
         <div className="sf-project-art sf-project-art-contained">
           <img
             src={import.meta.env.BASE_URL + "images/predictive-house-rent.png"}
@@ -39,9 +39,9 @@ export function FeaturedProjectCards({ onOpenPayments }: { onOpenPayments: () =>
           <div className="sf-project-meta"><span>FinTech Research</span><span className="sf-example">Example</span></div>
           <h3>Predictive Analytics for House Rent Estimation</h3>
           <p>Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
-          <button className="sf-project-open" type="button" onClick={onOpenPayments} data-testid="button-view-project-payments-journey">
+          <Link className="sf-project-open" href="/projects/house-rent-estimation" data-testid="link-view-project-house-rent-estimation">
             <span>View project outline</span><ArrowUpRight size={15} />
-          </button>
+          </Link>
         </div>
       </article>
     </div>

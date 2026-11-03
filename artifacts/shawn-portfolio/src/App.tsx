@@ -6,6 +6,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Home from '@/pages/portfolio';
 import ProjectOutline from '@/pages/project-outline';
+import HouseRentOutline from '@/pages/house-rent-outline';
 import ProjectsPage from '@/pages/projects';
 import '@/styles/portfolio-typography.css';
 import {
@@ -26,6 +27,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/projects/ledger-reconciliation" component={ProjectOutline} />
+        <Route path="/projects/house-rent-estimation" component={HouseRentOutline} />
         <Route component={NotFound} />
       </Switch>
     </RoutedErrorBoundary>

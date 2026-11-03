@@ -69,6 +69,17 @@
   white-space: nowrap;
 }
 
+.sf-outline-view-pending {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--sf-rule);
+  border-radius: 3px;
+  color: var(--sf-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .sf-outline-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(270px, .88fr);
@@ -346,6 +357,19 @@
   font: 13px/1.5 "DM Sans", sans-serif;
 }
 
+.sf-outline-workflow-placeholder {
+  display: grid;
+  min-height: 240px;
+  place-items: center;
+  padding: 28px;
+  border: 1px dashed var(--sf-rule);
+  background: var(--sf-paper);
+  color: var(--sf-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+}
+
 .sf-outline-end {
   display: flex;
   align-items: center;
@@ -400,6 +424,10 @@
   .sf-outline-figure {
     width: min(100%, 330px);
     margin-inline: auto;
+  }
+
+  .sf-outline-workflow-placeholder {
+    min-height: 180px;
   }
 
   .sf-outline-text-section {

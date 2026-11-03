@@ -2,7 +2,6 @@ import "@/styles/signature-fintech.css";
 import "@/styles/projects.css";
 import "@/styles/portfolio-typography.css";
 import { useEffect, useState } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowLeft, ArrowUpRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
@@ -11,7 +10,6 @@ import { SiteFooter } from "@/components/portfolio/site-footer";
 export default function ProjectsPage() {
   const [, setLocation] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [outlineOpen, setOutlineOpen] = useState(false);
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -135,7 +133,7 @@ export default function ProjectsPage() {
               </div>
             </article>
 
-            <article className="projects-card projects-card-house" data-testid="card-project-house-price-estimation">
+            <article className="projects-card projects-card-house" data-testid="card-project-house-rent-estimation">
               <div className="projects-card-art projects-card-art-contained">
                 <img
                   src={import.meta.env.BASE_URL + "images/predictive-house-rent.png"}
@@ -152,25 +150,10 @@ export default function ProjectsPage() {
                 </div>
                 <h2 className="projects-card-title">Predictive Analytics for House Rent Estimation</h2>
                 <p className="projects-card-description">Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
-                <Dialog.Root open={outlineOpen} onOpenChange={setOutlineOpen}>
-                  <Dialog.Trigger asChild>
-                    <button className="projects-card-action" type="button" data-testid="button-open-house-price-outline">
-                      <span>View project outline</span>
-                      <ArrowUpRight size={16} aria-hidden="true" />
-                    </button>
-                  </Dialog.Trigger>
-                  <Dialog.Portal>
-                    <Dialog.Overlay className="sf-dialog-overlay" />
-                    <Dialog.Content className="sf-dialog projects-dialog" aria-describedby="house-price-outline-description">
-                      <Dialog.Title asChild><h2>Outline in preparation</h2></Dialog.Title>
-                      <Dialog.Description className="sf-dialog-desc" id="house-price-outline-description">
-                        The final outline for Predictive Analytics for House Rent Estimation has not been supplied yet.
-                      </Dialog.Description>
-                      <p className="sf-dialog-body">This page currently lists the project as an example theme only. Its methods, scope, and findings are not being represented until the project outline is ready.</p>
-                      <Dialog.Close className="sf-dialog-close" aria-label="Close dialog"><X size={18} aria-hidden="true" /></Dialog.Close>
-                    </Dialog.Content>
-                  </Dialog.Portal>
-                </Dialog.Root>
+                <Link className="projects-card-action" href="/projects/house-rent-estimation" data-testid="link-project-house-rent-outline">
+                  <span>View project outline</span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
               </div>
             </article>
 
