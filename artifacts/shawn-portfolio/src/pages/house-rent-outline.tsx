@@ -224,7 +224,7 @@ export default function HouseRentOutline() {
 
               <article className="sf-rent-result">
                 <h3 className="sf-rent-result-title">Result 2: City and furnishing drive rent the most</h3>
-                <p className="sf-rent-result-copy">Rent differs sharply between categories, and each box is labelled with its number of listings. Median rent by furnishing status is Furnished 27,500, Semi-Furnished 18,000 and Unfurnished 12,000. The gaps between cities are even larger, with Mumbai’s median roughly six times Kolkata’s. This is why city and furnishing status are kept in the model.</p>
+                <p className="sf-rent-result-copy text-justify">Rent differs sharply between categories, and each box is labelled with its number of listings. Median rent by furnishing status is Furnished 27,500, Semi-Furnished 18,000 and Unfurnished 12,000. The gaps between cities are even larger, with Mumbai’s median roughly six times Kolkata’s. This is why city and furnishing status are kept in the model.</p>
                 <figure className="sf-rent-result-figure">
                   <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-2.png`} alt="Four box-plot charts comparing rents by city, furnishing status, area type, and tenant preference." width={2384} height={1485} loading="eager" decoding="sync" />
                   <figcaption>Rent distributions by city, furnishing status, area type, and tenant preference.</figcaption>
