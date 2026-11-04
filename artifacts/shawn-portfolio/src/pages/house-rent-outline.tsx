@@ -137,19 +137,19 @@ export default function HouseRentOutline() {
             <figure className="sf-outline-figure">
               <a
                 className="sf-outline-image-link"
-                href={import.meta.env.BASE_URL + "images/predictive-house-rent.png"}
+                href={import.meta.env.BASE_URL + "images/house-rent-project-cover.png"}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Open the house rent estimation image at full size"
               >
                 <img
-                  src={import.meta.env.BASE_URL + "images/predictive-house-rent.png"}
-                  alt="A yellow house in front of chart bars with rising and falling arrows, representing house rent prediction"
+                  src={import.meta.env.BASE_URL + "images/house-rent-project-cover.png"}
+                  alt="A modern white home surrounded by trees and landscaping."
                   data-testid="img-house-rent-project"
                 />
               </a>
               <figcaption>
-                <a href={import.meta.env.BASE_URL + "images/predictive-house-rent.png"} target="_blank" rel="noreferrer">
+                <a href={import.meta.env.BASE_URL + "images/house-rent-project-cover.png"} target="_blank" rel="noreferrer">
                   Open full-size image
                 </a>
               </figcaption>
