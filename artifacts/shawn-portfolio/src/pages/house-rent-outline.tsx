@@ -242,7 +242,7 @@ export default function HouseRentOutline() {
 
               <article className="sf-rent-result">
                 <h3 className="sf-rent-result-title">Result 4: The model explains about 83% of rent variation, but typical errors are 21–29%, and larger for expensive homes</h3>
-                <p className="sf-rent-result-copy">The left panel plots actual against predicted log-rent for the 928 test listings, and the points follow the diagonal closely (R² about 0.83 on the log scale, about 0.70 in rupees). The right panel plots the errors, which are centred on zero. They widen as predicted rent rises (spread about 0.30 for the lowest quintile, about 0.49 for the highest). The median error by city ranges from about 21% (Bangalore and Mumbai) to about 29% (Delhi).</p>
+                <p className="sf-rent-result-copy text-justify">The left panel plots actual against predicted log-rent for the 928 test listings, and the points follow the diagonal closely (R² about 0.83 on the log scale, about 0.70 in rupees). The right panel plots the errors, which are centred on zero. They widen as predicted rent rises (spread about 0.30 for the lowest quintile, about 0.49 for the highest). The median error by city ranges from about 21% (Bangalore and Mumbai) to about 29% (Delhi).</p>
                 <figure className="sf-rent-result-figure">
                   <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-4.png`} alt="Charts comparing actual and predicted test-set rent, alongside residuals versus predicted values." width={2234} height={885} loading="eager" decoding="sync" />
                   <figcaption>Actual versus predicted rent and residuals for the test set.</figcaption>
