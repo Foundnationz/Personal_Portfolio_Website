@@ -223,7 +223,7 @@ export default function HouseRentOutline() {
               </article>
 
               <article className="sf-rent-result">
-                <h3 className="sf-rent-result-title">Result 2: Placeholder finding title</h3>
+                <h3 className="sf-rent-result-title">Result 2: City and furnishing drive rent the most</h3>
                 <p className="sf-rent-result-copy">Placeholder: Explain a second verified result and include any context needed to interpret it.</p>
                 <figure className="sf-rent-result-figure">
                   <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-2.png`} alt="Four box-plot charts comparing rents by city, furnishing status, area type, and tenant preference." width={2384} height={1485} loading="eager" decoding="sync" />
