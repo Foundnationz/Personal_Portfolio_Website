@@ -27,6 +27,12 @@ Preserve user-supplied project screenshots during unrelated page and navigation 
 
 **How to apply:** When changing the portfolio or project routes, retain the selected uploaded image and verify the outline still displays it. Placeholder descriptions are not permission to replace user-chosen assets.
 
+Do not diagnose a lost image from a blank offscreen area in a full-page preview capture alone.
+
+**Why:** Full-page captures in this workspace have left lower-page charts white even when their asset URLs returned PNGs successfully and direct image previews rendered them correctly.
+
+**How to apply:** Check the asset response and standalone rendering before replacing an uploaded image or changing unrelated page content.
+
 Treat all existing edits across the portfolio as protected, whether they were made in Build or Design.
 
 **Why:** The user explicitly asked that edits to any part of the website should not be undone unless they say so.
