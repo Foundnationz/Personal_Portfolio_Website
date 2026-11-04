@@ -228,6 +228,10 @@
   margin: 3px auto 0;
 }
 
+.sf-house-rent-outline-page .sf-outline-figure {
+  width: min(100%, 330px);
+}
+
 .sf-outline-image-link {
   display: block;
 }
