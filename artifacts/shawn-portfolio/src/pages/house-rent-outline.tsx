@@ -232,7 +232,7 @@ export default function HouseRentOutline() {
               </article>
 
               <article className="sf-rent-result">
-                <h3 className="sf-rent-result-title">Result 3: Placeholder finding title</h3>
+                <h3 className="sf-rent-result-title">Result 3: City and furnishing are the strongest rent drivers (Mumbai about 181% above Bangalore, unfurnished about 29% below furnished)</h3>
                 <p className="sf-rent-result-copy">Placeholder: Summarise another result, noting its relevance and any limitations.</p>
                 <figure className="sf-rent-result-figure">
                   <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-3.png`} alt="Horizontal bar chart showing estimated percentage effects of housing features on rent." width={1475} height={1176} loading="eager" decoding="sync" />
