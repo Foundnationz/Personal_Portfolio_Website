@@ -99,7 +99,7 @@ export default function HouseRentOutline() {
                 <span className="sf-outline-number">01</span>
                 <h2 id="overview-title">Project Overview</h2>
               </div>
-              <p className="sf-outline-prose sf-overview-prose">Placeholder: Add a concise overview of the project, the data it uses, and the rent-estimation problem it aims to address.</p>
+              <p className="sf-outline-prose sf-overview-prose text-justify">This project predicts monthly house rent in India from 4,746 listings across six cities, using linear regression on log(Rent) to handle the skew. After cleaning the data and building a leakage-safe pipeline, I compared five models and kept the simple linear one, since the others added no real benefit. It explains about 83% of the variation in log-rent, with city and furnishing as the strongest drivers, but predictions are rougher for expensive homes, so it works best as a pricing guide, not an exact valuation.</p>
               <section className="sf-outline-details" aria-labelledby="project-details-title">
                 <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
                 <dl className="sf-outline-metadata" aria-label="Project details">
