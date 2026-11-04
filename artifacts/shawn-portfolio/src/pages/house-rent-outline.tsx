@@ -159,7 +159,7 @@ export default function HouseRentOutline() {
               <div className="sf-outline-summary-grid">
                 <article>
                   <h4>Goal</h4>
-                  <p>Placeholder: State the project’s intended rent-estimation goal.</p>
+                  <p className="text-justify">The goal of this project is to build a linear regression model that predicts monthly house rent from listing details such as city, size, furnishing status and number of bedrooms and bathrooms. It also aims to show which features drive rent the most, so that the results can serve as a practical pricing guide for renters, landlords and property agents.</p>
                 </article>
                 <article>
                   <h4>Process</h4>
