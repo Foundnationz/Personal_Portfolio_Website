@@ -68,7 +68,6 @@ export default function HouseRentOutline() {
           <Link href="/#contact">Contact</Link>
         </nav>}
       </header>
-
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
@@ -215,8 +214,8 @@ export default function HouseRentOutline() {
             </div>
             <div className="sf-rent-result-list">
               <article className="sf-rent-result">
-                <h3 className="sf-rent-result-title">Result 1: Placeholder finding title</h3>
-                <p className="sf-rent-result-copy">Placeholder: Add a brief explanation of the first result, the evidence behind it, and what it means.</p>
+                <h3 className="sf-rent-result-title">Result 1: Rent is heavily skewed, so the model predicts log(Rent)</h3>
+                <p className="sf-rent-result-copy text-justify">Raw rent has a long right tail, with a skewness of 21.41. A few very expensive listings dominate it, which would distort a linear regression. After a log transform the distribution is roughly symmetric (skewness 0.91). That is why the model predicts log(Rent) and converts back to rupees afterwards.</p>
                 <figure className="sf-rent-result-figure">
                   <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 1">
                     <span>Result 1 image placeholder</span>
