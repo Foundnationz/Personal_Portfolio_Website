@@ -241,7 +241,7 @@ export default function HouseRentOutline() {
               </article>
 
               <article className="sf-rent-result">
-                <h3 className="sf-rent-result-title">Result 4: Placeholder finding title</h3>
+                <h3 className="sf-rent-result-title">Result 4: The model explains about 83% of rent variation, but typical errors are 21–29%, and larger for expensive homes</h3>
                 <p className="sf-rent-result-copy">Placeholder: Add a verified summary of the model evaluation, including relevant metrics and limitations.</p>
                 <figure className="sf-rent-result-figure">
                   <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-4.png`} alt="Charts comparing actual and predicted test-set rent, alongside residuals versus predicted values." width={2234} height={885} loading="eager" decoding="sync" />
