@@ -217,10 +217,8 @@ export default function HouseRentOutline() {
                 <h3 className="sf-rent-result-title">Result 1: Rent is heavily skewed, so the model predicts log(Rent)</h3>
                 <p className="sf-rent-result-copy text-justify">Raw rent has a long right tail, with a skewness of 21.41. A few very expensive listings dominate it, which would distort a linear regression. After a log transform the distribution is roughly symmetric (skewness 0.91). That is why the model predicts log(Rent) and converts back to rupees afterwards.</p>
                 <figure className="sf-rent-result-figure">
-                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 1">
-                    <span>Result 1 image placeholder</span>
-                  </div>
-                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                  <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-1.png`} alt="Side-by-side charts showing the raw rent distribution and the more balanced log-rent distribution." width={1758} height={717} decoding="async" />
+                  <figcaption>Raw and log-transformed rent distributions.</figcaption>
                 </figure>
               </article>
 
@@ -228,10 +226,8 @@ export default function HouseRentOutline() {
                 <h3 className="sf-rent-result-title">Result 2: Placeholder finding title</h3>
                 <p className="sf-rent-result-copy">Placeholder: Explain a second verified result and include any context needed to interpret it.</p>
                 <figure className="sf-rent-result-figure">
-                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 2">
-                    <span>Result 2 image placeholder</span>
-                  </div>
-                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                  <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-2.png`} alt="Four box-plot charts comparing rents by city, furnishing status, area type, and tenant preference." width={2384} height={1485} decoding="async" />
+                  <figcaption>Rent distributions by city, furnishing status, area type, and tenant preference.</figcaption>
                 </figure>
               </article>
 
@@ -239,10 +235,17 @@ export default function HouseRentOutline() {
                 <h3 className="sf-rent-result-title">Result 3: Placeholder finding title</h3>
                 <p className="sf-rent-result-copy">Placeholder: Summarise another result, noting its relevance and any limitations.</p>
                 <figure className="sf-rent-result-figure">
-                  <div className="sf-rent-result-image-placeholder" role="img" aria-label="Placeholder image for Result 3">
-                    <span>Result 3 image placeholder</span>
-                  </div>
-                  <figcaption>Add a chart, model output, or other supporting image.</figcaption>
+                  <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-3.png`} alt="Horizontal bar chart showing estimated percentage effects of housing features on rent." width={1475} height={1176} decoding="async" />
+                  <figcaption>Estimated percentage effects of selected features on rent.</figcaption>
+                </figure>
+              </article>
+
+              <article className="sf-rent-result">
+                <h3 className="sf-rent-result-title">Result 4: Placeholder finding title</h3>
+                <p className="sf-rent-result-copy">Placeholder: Add a verified summary of the model evaluation, including relevant metrics and limitations.</p>
+                <figure className="sf-rent-result-figure">
+                  <img className="sf-rent-result-image" src={`${import.meta.env.BASE_URL}images/house-rent-result-4.png`} alt="Charts comparing actual and predicted test-set rent, alongside residuals versus predicted values." width={2234} height={885} decoding="async" />
+                  <figcaption>Actual versus predicted rent and residuals for the test set.</figcaption>
                 </figure>
               </article>
             </div>

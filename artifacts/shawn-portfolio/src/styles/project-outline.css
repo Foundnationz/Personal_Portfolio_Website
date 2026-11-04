@@ -348,16 +348,11 @@
   background: #fff;
 }
 
-.sf-house-rent-outline-page .sf-rent-result-image-placeholder {
-  display: grid;
-  aspect-ratio: 16 / 9;
-  place-items: center;
-  padding: 20px;
-  border: 1px dashed var(--sf-rule);
-  background: var(--sf-paper);
-  color: var(--sf-muted);
-  font-size: 14px;
-  text-align: center;
+.sf-house-rent-outline-page .sf-rent-result-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .sf-house-rent-outline-page .sf-rent-result-figure figcaption {
