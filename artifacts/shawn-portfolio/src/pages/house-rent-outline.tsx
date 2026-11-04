@@ -182,7 +182,7 @@ export default function HouseRentOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose sf-problem-statement-copy">Placeholder: Describe the house-rent estimation problem, who would use the estimates, and what information is currently difficult to assess.</p>
+            <p className="sf-outline-prose sf-problem-statement-copy">Renters, landlords and property agents in Indian cities often have no objective way to judge whether a listed rent is fair, because rents vary widely with city, furnishing, size and other property features. Rents are also highly skewed, with a small number of very expensive listings, so simple averages are misleading. Without a data-driven reference, people may overpay, underprice their properties or rely on guesswork. This project addresses the problem by building a linear regression model on 4,746 rental listings across six cities. It predicts rent from the listing details, and it identifies which features, such as city and furnishing status, influence rent the most.</p>
           </section>
 
           <section className="sf-outline-text-section sf-outline-workflow" aria-labelledby="workflow-title">
