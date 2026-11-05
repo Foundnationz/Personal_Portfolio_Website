@@ -163,7 +163,7 @@ export default function HouseRentOutline() {
                 </article>
                 <article>
                   <h4>Process</h4>
-                  <p className="text-justify">I explored and cleaned the rental data, then modelled log(Rent) to handle the skew. After an 80/20 split and a leakage-safe preprocessing pipeline, I compared five regression models and kept the simple linear one, then evaluated it and interpreted its coefficients.
+                  <p className="text-justify">I explored and cleaned the rental data, then modelled log(Rent) to handle the skew. After an 80/20 split and a leakage-safe preprocessing pipeline, I compared five regression models and kept the simple linear one, then evaluated it and interpreted its coefficients. Explore and clean the data Model log(Rent) to handle the skew Split 80/20 and preprocess with one pipeline Compare five regression models Keep the simple linear model Evaluate it and interpret the coefficients
 
                   Explore and clean the data
                   Model log(Rent) to handle the skew
