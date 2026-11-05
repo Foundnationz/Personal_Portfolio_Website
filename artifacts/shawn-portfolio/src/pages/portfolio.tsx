@@ -254,7 +254,7 @@ export default function Portfolio() {
             <p className="sf-project-note">Example projects only—not claimed achievements. Each opens to an illustrative case note, ready to replace with real work.</p>
           </div>
           <FeaturedProjectCards />
-          <div className="sf-view-all"><Link className="sf-outline" href="/projects" data-testid="button-view-all"><span>View all project</span><ArrowRight size={15} /></Link></div>
+          <div className="sf-view-all"><Link className="sf-outline" href="/projects" data-testid="button-view-all"><span>View all projects</span><ArrowRight size={15} /></Link></div>
         </div>
       </section>
 
