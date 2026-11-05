@@ -175,8 +175,8 @@ export default function HouseRentOutline() {
                 </article>
                 <article>
                   <h4>Results</h4>
+                  <p className="text-justify">Placeholder: Add verified model performance and evaluation metrics.</p>
                   <ul>
-                    <li>Placeholder: Add verified model performance and evaluation metrics.</li>
                     <li>Placeholder: Summarise the key factors used in the rent estimates.</li>
                     <li>Placeholder: Note the project’s limitations and findings.</li>
                   </ul>
