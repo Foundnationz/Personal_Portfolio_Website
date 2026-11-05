@@ -262,7 +262,7 @@ export default function Portfolio() {
         <div className="sf-wrap">
           <div className="sf-section-head">
             <div className="sf-section-label sf-kicker"><b>05</b><span /><span className="sf-section-name">Experience</span></div>
-            <div><h2 id="sf-experience-title"><span>The next chapter</span><br /><span>is unwritten.</span></h2><p>Professional experience to date.</p></div>
+            <div><h2 id="sf-experience-title">Work Experience</h2><p>Professional experience to date.</p></div>
           </div>
           <ExperienceCards />
         </div>
