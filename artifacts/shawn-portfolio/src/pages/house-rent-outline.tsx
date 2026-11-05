@@ -163,7 +163,7 @@ export default function HouseRentOutline() {
                 </article>
                 <article>
                   <h4>Process</h4>
-                  <p>Placeholder: Summarise the data preparation, feature selection, modelling, and validation process.</p>
+                  <p className="text-justify">I explored and cleaned the rental data, then modelled log(Rent) to handle the skew. After an 80/20 split and a leakage-safe preprocessing pipeline, I compared five regression models and kept the simple linear one, then evaluated it and interpreted its coefficients.</p>
                 </article>
                 <article>
                   <h4>Results</h4>
