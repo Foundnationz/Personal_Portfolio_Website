@@ -29,7 +29,7 @@ export function EducationCards() {
             <h3 id="education-second-school">Sunway College </h3>
           </div>
           <p className="sf-edu-degree" id="education-second-degree">Monash University Foundation Year (MUFY)</p>
-          <p className="sf-edu-note" id="education-second-note">Placeholder entry. Replace with your pre-university studies and results.</p>
+          <p className="sf-edu-note" id="education-second-note">Placeholder text</p>
         </div>
       </article>
     </div>
