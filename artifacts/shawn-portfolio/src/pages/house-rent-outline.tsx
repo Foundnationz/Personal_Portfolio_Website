@@ -175,7 +175,7 @@ export default function HouseRentOutline() {
                 </article>
                 <article>
                   <h4>Results</h4>
-                  <p className="text-justify">Placeholder: Add verified model performance and evaluation metrics.</p>
+                  <p className="text-justify">The final linear model explains about 83% of the variation in log-rent, with typical errors of about 21–29% by city, and the other models added no real benefit. City and furnishing were the strongest drivers of rent, and predictions were less precise for expensive homes.</p>
                   <ul>
                     <li>Placeholder: Summarise the key factors used in the rent estimates.</li>
                     <li>Placeholder: Note the project’s limitations and findings.</li>
