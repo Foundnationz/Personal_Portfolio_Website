@@ -16,7 +16,7 @@ export function ExperienceCards() {
       <article className="sf-exp" data-testid="item-experience-1">
         <div className="sf-exp-date">September - November 2023</div>
         <div className="sf-exp-card">
-          <div className="sf-exp-head"><h3>Credit Intern</h3><span className="sf-example sf-example-light">Example</span></div>
+          <div className="sf-exp-head"><h3>Credit Intern</h3></div>
           <p className="sf-exp-org">Airswift Malaysia</p>
           <ul>
             <li>Prepared aging reports for credit control across five regional entities (MY, CN, ID, AU, KR).</li>
