@@ -158,13 +158,14 @@ export default function ProjectsPage() {
             </article>
 
             <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-cash-flow-notes">
-              <div className="projects-card-art projects-art-cashflow" aria-hidden="true">
-                <div className="projects-art-ledger-sheet">
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                  <span className="projects-art-row"><i /><i /><i /></span>
-                </div>
-                <span className="projects-art-caption">FIG. 03 — PLACEHOLDER VISUAL</span>
+              <div className="projects-card-art projects-card-art-photo">
+                <img
+                  src={import.meta.env.BASE_URL + "images/cash-flow-analysis.png"}
+                  alt="Financial analyst reviewing charts, spreadsheets, and market data"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="projects-art-caption">FINANCIAL ANALYSIS</span>
               </div>
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
