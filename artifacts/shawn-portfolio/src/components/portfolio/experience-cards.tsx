@@ -12,7 +12,7 @@ export function ExperienceCards() {
       <article className="sf-exp" data-testid="item-experience-1">
         <div className="sf-exp-date">September - November 2023</div>
         <div className="sf-exp-card">
-          <div className="sf-exp-head"><h3>Example: Student Society Role</h3><span className="sf-example sf-example-light">Example</span></div>
+          <div className="sf-exp-head"><h3>Credit Intern</h3><span className="sf-example sf-example-light">Example</span></div>
           <p className="sf-exp-org">Example Society</p>
           <ul><li>Placeholder: describe your responsibility.</li><li>Placeholder: describe the outcome.</li></ul>
         </div>
