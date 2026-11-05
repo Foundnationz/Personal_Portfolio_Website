@@ -13,7 +13,7 @@ export function EducationCards() {
           </div>
           <h3 id="education-ucsi-school">UCSI University (Kuala Lumpur Campus)</h3>
           <p className="sf-edu-degree" id="education-ucsi-degree">Bachelor of Financial Technology (Honours)</p>
-          <p className="sf-edu-note" id="education-ucsi-note">Specializing in digital payment, corporate finance, data analytics, and understanding of Fintech operations with hands-on Python experience. Built a finance tracker and budgeting app oriented towards Gen-Z as my final-year project, and served as a committee member as treasurer in Youth Financial Literacy (YFL)</p>
+          <p className="sf-edu-note" id="education-ucsi-note">Specializing in digital payment, corporate finance, data analytics, and understanding of Fintech operations with hands-on Python experience. Built a finance tracker and budgeting app oriented towards Gen-Z as my final-year project, and served as a committee member as treasurer in Youth Financial Literacy (YFL) club</p>
         </div>
       </article>
       <article className="sf-edu" data-testid="card-education-1">
