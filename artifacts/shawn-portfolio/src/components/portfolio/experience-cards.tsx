@@ -13,7 +13,7 @@ export function ExperienceCards() {
         <div className="sf-exp-date">September - November 2023</div>
         <div className="sf-exp-card">
           <div className="sf-exp-head"><h3>Credit Intern</h3><span className="sf-example sf-example-light">Example</span></div>
-          <p className="sf-exp-org">Example Society</p>
+          <p className="sf-exp-org">Airswift Malaysia</p>
           <ul><li>Placeholder: describe your responsibility.</li><li>Placeholder: describe the outcome.</li></ul>
         </div>
       </article>
