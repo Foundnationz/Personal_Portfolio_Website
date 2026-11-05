@@ -177,8 +177,11 @@ export default function HouseRentOutline() {
                   <h4>Results</h4>
                   <p className="text-justify">The final linear model explains about 83% of the variation in log-rent, with typical errors of about 21–29% by city, and the other models added no real benefit. City and furnishing were the strongest drivers of rent, and predictions were less precise for expensive homes.</p>
                   <ul>
-                    <li>Placeholder: Summarise the key factors used in the rent estimates.</li>
-                    <li>Placeholder: Note the project’s limitations and findings.</li>
+                    <li>R² of about 0.83 on log-rent (about 0.70 in rupees)</li>
+                    <li>Mean absolute error of about ₹11,600, with median errors of about 21–29% by city</li>
+                    <li>Ridge, Lasso, ElasticNet and polynomial models added no real benefit</li>
+                    <li>Mumbai about 181% above Bangalore; unfurnished about 29% below furnished</li>
+                    <li>Less precise for expensive homes</li>
                   </ul>
                 </article>
               </div>
