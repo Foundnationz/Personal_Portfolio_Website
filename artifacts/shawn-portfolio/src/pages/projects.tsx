@@ -110,10 +110,10 @@ export default function ProjectsPage() {
 
           <section className="projects-collection" aria-label="All projects">
             <article className="projects-card projects-card-ledger" data-testid="card-project-ledger-reconciliation">
-              <div className="projects-card-art projects-card-art-photo">
+              <div className="projects-card-art projects-card-art-contained">
                 <img
-                  src={import.meta.env.BASE_URL + "images/financial-tracker-workspace.jpg"}
-                  alt="A smartphone, calculator, and financial charts on a desk beside a laptop"
+                  src={import.meta.env.BASE_URL + "images/financial-tracker-budgeting-illustration.png"}
+                  alt="Illustration of a person saving money beside a budgeting planner and calculator"
                   loading="lazy"
                   decoding="async"
                 />
