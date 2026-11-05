@@ -6,7 +6,11 @@ export function ExperienceCards() {
         <div className="sf-exp-card">
           <div className="sf-exp-head"><h3>Operations Intern</h3></div>
           <p className="sf-exp-org">Funding Societies Malaysia</p>
-          <ul><li>Placeholder: describe a task you supported.</li><li>Placeholder: note a tool or process you learned.</li></ul>
+          <ul>
+            <li>Conducted AML checks and credit evaluations on transactions and counterparties.</li>
+            <li>Performed due diligence on loan drawdown applications across microfinancing, invoice financing and reverse factoring.</li>
+            <li>Prepared Trustee payment instructions and processed payments via the financial portal, ensuring accuracy and timeliness.</li>
+          </ul>
         </div>
       </article>
       <article className="sf-exp" data-testid="item-experience-1">
