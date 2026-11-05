@@ -227,7 +227,7 @@ export default function Portfolio() {
       <section className="sf-section sf-section-wash" id="skills" aria-labelledby="sf-skills-title">
         <div className="sf-wrap">
           <div className="sf-section-head">
-            <div className="sf-section-label sf-kicker"><b>02</b><span /><span className="sf-section-name">Working notes</span></div>
+            <div className="sf-section-label sf-kicker"><b>02</b><span /><span className="sf-section-name">Skills</span></div>
             <div><h2 id="sf-skills-title"><span>Foundations, still</span><br /><span>taking shape.</span></h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
           </div>
           <SkillCards />
