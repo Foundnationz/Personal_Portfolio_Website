@@ -5,7 +5,7 @@ export function ExperienceCards() {
         <div className="sf-exp-date">September - December 2024 </div>
         <div className="sf-exp-card">
           <div className="sf-exp-head"><h3>Operations Intern</h3></div>
-          <p className="sf-exp-org">Example Organisation</p>
+          <p className="sf-exp-org">Funding Societies Malaysia</p>
           <ul><li>Placeholder: describe a task you supported.</li><li>Placeholder: note a tool or process you learned.</li></ul>
         </div>
       </article>
