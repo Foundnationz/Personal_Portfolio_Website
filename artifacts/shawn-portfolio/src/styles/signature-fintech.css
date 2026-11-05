@@ -408,6 +408,8 @@
 .sf-exp h3 { font-size:16px; line-height:1.4; }
 .sf-exp-org { margin-bottom:9px; }
 .sf-exp ul { display:block; line-height:1.6; }
+.sf-exp[data-testid="item-experience-0"] ul { list-style:disc; padding-left:22px; }
+.sf-exp[data-testid="item-experience-0"] li::marker { color:var(--sf-teal); }
 .sf-exp li + li { margin-top:4px; }
 
 @media (max-width:640px) {
