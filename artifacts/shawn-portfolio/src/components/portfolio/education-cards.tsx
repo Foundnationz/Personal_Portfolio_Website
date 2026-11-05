@@ -13,7 +13,7 @@ export function EducationCards() {
           </div>
           <h3 id="education-ucsi-school">UCSI University (Kuala Lumpur Campus)</h3>
           <p className="sf-edu-degree" id="education-ucsi-degree">Bachelor of Financial Technology (Honours)</p>
-          <p className="sf-edu-note" id="education-ucsi-note">Currently in the final year of the programme.</p>
+          <p className="sf-edu-note" id="education-ucsi-note">Placeholder text</p>
         </div>
       </article>
       <article className="sf-edu" data-testid="card-education-1">
