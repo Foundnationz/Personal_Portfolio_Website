@@ -4,7 +4,7 @@ export function ExperienceCards() {
       <article className="sf-exp" data-testid="item-experience-0">
         <div className="sf-exp-date">September - December 2024 </div>
         <div className="sf-exp-card">
-          <div className="sf-exp-head"><h3>Operations Intern</h3><span className="sf-example sf-example-light">Example</span></div>
+          <div className="sf-exp-head"><h3>Operations Intern</h3></div>
           <p className="sf-exp-org">Example Organisation</p>
           <ul><li>Placeholder: describe a task you supported.</li><li>Placeholder: note a tool or process you learned.</li></ul>
         </div>
