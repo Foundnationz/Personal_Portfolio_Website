@@ -18,7 +18,11 @@ export function ExperienceCards() {
         <div className="sf-exp-card">
           <div className="sf-exp-head"><h3>Credit Intern</h3><span className="sf-example sf-example-light">Example</span></div>
           <p className="sf-exp-org">Airswift Malaysia</p>
-          <ul><li>Placeholder: describe your responsibility.</li><li>Placeholder: describe the outcome.</li></ul>
+          <ul>
+            <li>Prepared aging reports for credit control across five regional entities (MY, CN, ID, AU, KR).</li>
+            <li>Reconciled client and contractor invoices against timesheets, receipts and amendments in D365 and Ariba.</li>
+            <li>Generated receivables and payables summaries in Power BI for management presentations.</li>
+          </ul>
         </div>
       </article>
     </div>
