@@ -10,7 +10,7 @@ export function ExperienceCards() {
         </div>
       </article>
       <article className="sf-exp" data-testid="item-experience-1">
-        <div className="sf-exp-date">Example: Year - Year</div>
+        <div className="sf-exp-date">September - November 2023</div>
         <div className="sf-exp-card">
           <div className="sf-exp-head"><h3>Example: Student Society Role</h3><span className="sf-example sf-example-light">Example</span></div>
           <p className="sf-exp-org">Example Society</p>
