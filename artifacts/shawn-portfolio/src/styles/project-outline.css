@@ -232,8 +232,17 @@
   width: min(100%, 330px);
 }
 
+.sf-cashflow-outline-page .sf-outline-figure {
+  width: min(100%, 330px);
+}
+
 .sf-outline-image-link {
   display: block;
+}
+
+.sf-outline-view-placeholder {
+  cursor: default;
+  opacity: .76;
 }
 
 .sf-outline-figure figcaption a {

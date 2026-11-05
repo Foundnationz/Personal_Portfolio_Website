@@ -174,7 +174,10 @@ export default function ProjectsPage() {
                 </div>
                 <h2 className="projects-card-title">Cash Flow Scenario Notes</h2>
                 <p className="projects-card-description">A placeholder concept for organising simple cash-flow scenarios. No project work or results are presented here.</p>
-                <span className="projects-coming-soon" role="status">Coming soon</span>
+                <Link className="projects-card-action" href="/projects/cash-flow-scenario-notes" data-testid="link-project-cash-flow-notes">
+                  <span>View project outline</span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
               </div>
             </article>
 
