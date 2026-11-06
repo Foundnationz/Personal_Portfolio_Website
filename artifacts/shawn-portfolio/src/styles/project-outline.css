@@ -340,6 +340,37 @@
   color: var(--sf-teal);
 }
 
+.sf-cashflow-result-figure {
+  width: min(100%, 760px);
+  margin: 17px 0 0;
+  padding: 8px;
+  border: 1px solid var(--sf-rule);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.sf-cashflow-result-figure a {
+  display: block;
+}
+
+.sf-cashflow-result-figure a:focus-visible {
+  outline: 3px solid var(--sf-teal);
+  outline-offset: 3px;
+}
+
+.sf-cashflow-result-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.sf-cashflow-result-figure figcaption {
+  margin-top: 8px;
+  color: var(--sf-muted);
+  font: 13px/1.5 "DM Sans", sans-serif;
+}
+
 .sf-house-rent-outline-page .sf-rent-result-list {
   display: grid;
   gap: 28px;
