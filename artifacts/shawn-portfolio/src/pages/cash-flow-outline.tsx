@@ -99,7 +99,7 @@ export default function CashFlowOutline() {
                 <span className="sf-outline-number">01</span>
                 <h2 id="overview-title">Project Overview</h2>
               </div>
-              <p className="sf-outline-prose sf-overview-prose" data-testid="text-cash-flow-overview">Placeholder: Add a concise overview of the project, its purpose, and the cash-flow question it explores.</p>
+              <p className="sf-outline-prose sf-overview-prose text-justify" data-testid="text-cash-flow-overview">Built a three-statement pro forma model of Colgate-Palmolive for 2024 in Excel, using five years of reported financials and the percent-of-sales method. Costs were forecast with a regression on sales, and built-in checks confirm the statements tie together. The base case projects 2024 sales of $19.2 billion and profit after tax of $2.7 billion, and sensitivity tests show that profit depends far more on the cost-to-sales relationship than on sales growth. Includes the Excel model, a written report and Python-generated charts.</p>
               <section className="sf-outline-details" aria-labelledby="project-details-title">
                 <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
                 <dl className="sf-outline-metadata" aria-label="Project details">
