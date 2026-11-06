@@ -192,8 +192,19 @@ export default function CashFlowOutline() {
               <h2 id="workflow-title">Project Workflow</h2>
             </div>
             <figure className="sf-outline-workflow-figure">
-              <div className="sf-outline-workflow-placeholder">Project workflow placeholder. Add a diagram or describe the project stages here.</div>
-              <figcaption>Replace this placeholder with the project workflow.</figcaption>
+              <a
+                href={import.meta.env.BASE_URL + "images/colgate-workflow.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the Colgate-Palmolive project workflow diagram at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/colgate-workflow.png"}
+                  alt="Colgate-Palmolive project workflow, from the original group assignment through post-submission improvements and publication"
+                  data-testid="img-cash-flow-workflow"
+                />
+              </a>
+              <figcaption>Select the diagram to view it at full size.</figcaption>
             </figure>
           </section>
 
