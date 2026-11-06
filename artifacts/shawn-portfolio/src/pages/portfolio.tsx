@@ -7,7 +7,7 @@ import {
   Link2, Mail, MapPin, Menu, X,
 } from "lucide-react";
 import {
-  navItems, profile,
+  contact, navItems, profile,
 } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
 import { EducationCards } from "@/components/portfolio/education-cards";
@@ -272,13 +272,13 @@ export default function Portfolio() {
         <div className="sf-wrap">
           <div className="sf-section-head">
             <div className="sf-section-label sf-kicker"><b>06</b><span /><span className="sf-section-name">Contact</span></div>
-            <div><h2 id="sf-contact-title">Start a conversation.</h2><p>Open to finance internship conversations. Contact details below are placeholders until replaced with real ones.</p></div>
+            <div><h2 id="sf-contact-title">Start a conversation.</h2><p>Open to finance internship conversations. Feel free to reach out by email.</p></div>
           </div>
           <div className="sf-contact-grid">
             <div className="sf-contact-intro">
-              <p>A thoughtful introduction is always welcome. For now, the contact details below are examples, not working personal contact information.</p>
+              <p>A thoughtful introduction is always welcome. Email is the best way to get in touch.</p>
               <div className="sf-contact-list">
-                <div className="sf-contact-item"><Mail size={17} aria-hidden /><div><small>EMAIL · EXAMPLE</small><span>your.email@example.com</span></div></div>
+                <div className="sf-contact-item"><Mail size={17} aria-hidden /><div><small>EMAIL</small><a href={`mailto:${contact.email}`}>{contact.email}</a></div></div>
                 <div className="sf-contact-item"><Link2 size={17} aria-hidden /><div><small>CONNECT</small><button type="button" onClick={openLinkedIn}>LinkedIn link not configured yet</button></div></div>
                 <div className="sf-contact-item"><MapPin size={17} aria-hidden /><div><small>LOCATION · EXAMPLE</small><span>Kuala Lumpur, Malaysia</span></div></div>
               </div>

@@ -170,10 +170,10 @@ export const experience = [
 ];
 
 export const contact = {
-  email: "your.email@example.com",
+  email: "shawnss.abok@gmail.com",
   connect: "LinkedIn link not configured yet",
   location: "Kuala Lumpur, Malaysia",
-  isExample: true,
+  isExample: false,
 };
 
 export const navItems = [
