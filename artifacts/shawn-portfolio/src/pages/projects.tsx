@@ -87,7 +87,6 @@ export default function ProjectsPage() {
           </nav>
         )}
       </header>
-
       <main className="projects-main" id="projects-main">
         <div className="sf-wrap projects-wrap">
           <div className="projects-return-row">
@@ -172,7 +171,7 @@ export default function ProjectsPage() {
                   <span>Personal finance</span>
                   <span className="projects-placeholder-badge">Additional placeholder project</span>
                 </div>
-                <h2 className="projects-card-title">Cash Flow Scenario Notes</h2>
+                <h2 className="projects-card-title">Building Integrated Financial Statements for Colgate-Palmolive</h2>
                 <p className="projects-card-description">A placeholder concept for organising simple cash-flow scenarios. No project work or results are presented here.</p>
                 <Link className="projects-card-action" href="/projects/cash-flow-scenario-notes" data-testid="link-project-cash-flow-notes">
                   <span>View project outline</span>
@@ -210,7 +209,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </main>
-
       <SiteFooter onNavigate={navigateHome} homeHref={import.meta.env.BASE_URL} />
     </div>
   );
