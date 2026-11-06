@@ -174,8 +174,8 @@
 .sf-footer-contact-row svg { flex-shrink:0; color:#d9ab68; }
 .sf-footer-placeholder { margin:-3px 0 17px; color:#9eafb9; font-size:11px; }
 .sf-footer-socials { display:flex; gap:9px; flex-wrap:wrap; margin-top:22px; }
-.sf-footer-socials button { display:grid; place-items:center; width:36px; height:36px; border:1px solid #50636f; border-radius:50%; background:transparent; color:#d5e1df; transition:background .2s,color .2s,transform .2s; }
-.sf-footer-socials button:hover { color:#11263a; background:#e4bd65; border-color:#e4bd65; transform:translateY(-2px); }
+.sf-footer-socials button, .sf-footer-socials a { display:grid; place-items:center; width:36px; height:36px; border:1px solid #50636f; border-radius:50%; background:transparent; color:#d5e1df; transition:background .2s,color .2s,transform .2s; }
+.sf-footer-socials button:hover, .sf-footer-socials a:hover { color:#11263a; background:#e4bd65; border-color:#e4bd65; transform:translateY(-2px); }
 .sf-footer-copyright { display:flex; justify-content:space-between; align-items:center; gap:18px; border-top:1px solid #354653; padding-top:22px; color:#9eafb9; font-size:10px; line-height:1.6; }
 @media(max-width:900px) { .sf-footer-columns { grid-template-columns:1fr 1fr; gap:34px; } .sf-footer-intro { grid-column:1/-1; } }
 @media(max-width:540px) { .sf-site-footer { padding-top:40px; } .sf-footer-columns { grid-template-columns:1fr; gap:30px; padding-bottom:30px; } .sf-footer-intro { grid-column:auto; } .sf-footer-copyright { flex-direction:column; align-items:flex-start; gap:8px; } }

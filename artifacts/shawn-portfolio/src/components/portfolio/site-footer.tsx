@@ -1,22 +1,13 @@
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, X, Youtube } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, X } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { contact, profile } from "@/data/portfolio";
 
-const socials = [
-  { name: "Facebook", Icon: Facebook },
-  { name: "Instagram", Icon: Instagram },
-  { name: "YouTube", Icon: Youtube },
-  { name: "X", Icon: X },
+const socials: { name: string; Icon: LucideIcon; href?: string }[] = [
   { name: "LinkedIn", Icon: Linkedin },
-  { name: "TikTok", Icon: TikTokIcon },
+  { name: "GitHub", Icon: Github, href: profile.githubUrl },
 ];
-
-function TikTokIcon({ size = 18 }: { size?: number }) {
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M16.6 3c.3 2.1 1.5 3.4 3.4 3.7v3a8.5 8.5 0 0 1-3.5-1.1v7.1a6 6 0 1 1-5.2-6v3.1a2.9 2.9 0 1 0 2.1 2.8V3h3.2Z" />
-  </svg>;
-}
 
 export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: string) => void; homeHref?: string }) {
   const [unconfigured, setUnconfigured] = useState<string | null>(null);
@@ -57,10 +48,17 @@ export function SiteFooter({ onNavigate, homeHref = "" }: { onNavigate: (id: str
             <div className="sf-footer-contact-row"><MapPin size={15} aria-hidden="true" /><span>{contact.location}</span></div>
             {contact.isExample && <p className="sf-footer-placeholder">Contact details are placeholders.</p>}
             <div className="sf-footer-socials" aria-label="Social profiles">
-              {socials.map(({ name, Icon }) => <button key={name} type="button"
-                aria-label={`Open ${name} profile${name === "LinkedIn" && profile.linkedinUrl ? "" : " — link not added yet"}`}
-                title={name === "LinkedIn" && profile.linkedinUrl ? name : `${name} — link not added yet`}
-                onClick={() => openSocial(name)}><Icon size={18} aria-hidden="true" /></button>)}
+              {socials.map(({ name, Icon, href }) => href ? (
+                <a key={name} href={href} target="_blank" rel="noopener noreferrer"
+                  aria-label={`Open ${name} profile in a new tab`} title={name}>
+                  <Icon size={18} aria-hidden="true" />
+                </a>
+              ) : (
+                <button key={name} type="button"
+                  aria-label={`Open ${name} profile${profile.linkedinUrl ? "" : " — link not added yet"}`}
+                  title={profile.linkedinUrl ? name : `${name} — link not added yet`}
+                  onClick={() => openSocial(name)}><Icon size={18} aria-hidden="true" /></button>
+              ))}
             </div>
           </div>
         </div>
