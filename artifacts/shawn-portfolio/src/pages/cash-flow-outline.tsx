@@ -234,7 +234,7 @@ export default function CashFlowOutline() {
                 </figure>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-2">
-                <h3 id="cash-flow-result-2">Result 2: Placeholder finding title</h3>
+                <h3 id="cash-flow-result-2">Result 2: Sales grow, but EBITDA stays almost flat</h3>
                 <ul><li>Placeholder: Add a brief explanation of the second result and what it means.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
