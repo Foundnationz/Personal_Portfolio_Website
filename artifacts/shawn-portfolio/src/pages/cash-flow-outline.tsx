@@ -235,7 +235,7 @@ export default function CashFlowOutline() {
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-2">
                 <h3 id="cash-flow-result-2">Result 2: Sales grow, but EBITDA stays almost flat</h3>
-                <ul><li>Placeholder: Add a brief explanation of the second result and what it means.</li></ul>
+                <ul><li>Net sales rise from $17,967 million in 2022 to $21,164 million in 2027, while EBITDA moves only from $4,079 million to $4,455 million. Profit after tax stays near $2.7 billion in every forecast year. This shows the effect of the cost relationship in Result 1.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
                     href={import.meta.env.BASE_URL + "images/colgate-result-1.png"}
