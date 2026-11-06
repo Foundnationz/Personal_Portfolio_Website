@@ -172,7 +172,7 @@ export default function ProjectsPage() {
                   <span className="projects-placeholder-badge">Additional placeholder project</span>
                 </div>
                 <h2 className="projects-card-title">Building Integrated Financial Statements for Colgate-Palmolive</h2>
-                <p className="projects-card-description">A placeholder concept for organising simple cash-flow scenarios. No project work or results are presented here.</p>
+                <p className="projects-card-description">Integrated pro forma financials for Colgate-Palmolive (2024 base case): percent-of-sales assumptions, a regression-driven cost forecast, automatic integrity checks, and a full report covering method, sensitivity analysis and limitations.</p>
                 <Link className="projects-card-action" href="/projects/cash-flow-scenario-notes" data-testid="link-project-cash-flow-notes">
                   <span>View project outline</span>
                   <ArrowUpRight size={16} aria-hidden="true" />
