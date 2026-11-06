@@ -141,26 +141,9 @@
 .sf-exp h3 { margin:0; font-size:17px; }
 .sf-exp-org { color:var(--sf-muted); font-size:13px; margin:3px 0 11px; }
 .sf-exp ul { display:flex; flex-wrap:wrap; gap:6px 22px; padding-left:17px; margin:0; color:#495752; font-size:12px; }
-.sf-contact-grid { display:grid; grid-template-columns:.82fr 1.18fr; gap:72px; }
-.sf-contact-intro { color:#e1e6db; }
-.sf-contact-intro > p { max-width:390px; font-size:15px; line-height:1.8; }
-.sf-contact-list { display:grid; gap:20px; margin-top:30px; }
-.sf-contact-item { display:flex; gap:13px; color:var(--sf-sun); align-items:flex-start; }
-.sf-contact-item div { display:grid; gap:3px; color:#f1eee4; font-size:13px; }
-.sf-contact-item small { color:#aebdb3; font:9px "IBM Plex Mono",monospace; letter-spacing:.1em; }
-.sf-contact-item button { border:0; background:none; color:var(--sf-teal-light); text-align:left; padding:0; }
-.sf-form { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:25px; background:#213837; border:1px solid #3a5650; }
-.sf-field { min-width:0; }
-.sf-field-wide { grid-column:1/-1; }
-.sf-field label { display:block; margin-bottom:6px; color:#d9e0d5; font-size:11px; }
-.sf-field input, .sf-field textarea { display:block; width:100%; border:1px solid #597068; border-radius:2px; padding:11px 12px; color:#f4f0e5; background:#192e2c; font-size:13px; }
-.sf-field input:focus, .sf-field textarea:focus { border-color:var(--sf-sun); outline:2px solid rgba(228,189,101,.3); }
-.sf-field textarea { min-height:132px; resize:vertical; }
-.sf-field input[aria-invalid="true"], .sf-field textarea[aria-invalid="true"] { border-color:#f08c76; }
-.sf-error { color:#ffb7a5; font-size:11px; margin-top:5px; display:block; }
-.sf-form-note { grid-column:1/-1; margin:0; color:#c0cec3; font-size:11px; }
-.sf-form-status { grid-column:1/-1; padding:13px; color:#f4f0e5; border:1px solid #9ebc9d; background:rgba(183,210,195,.1); font-size:12px; }
-.sf-form .sf-primary { justify-self:start; }
+.sf-contact-simple { display:flex; justify-content:space-between; align-items:center; gap:32px; padding:28px 30px; border:1px solid #3a5650; background:#213837; }
+.sf-contact-simple-copy { max-width:500px; margin:0; color:#e1e6db; font-size:17px; line-height:1.7; }
+.sf-contact-email { flex-shrink:0; }
 .sf-site-footer { background:linear-gradient(110deg,#0b1722,#11263a); color:#c2ced4; padding:64px 0 25px; border-top:1px solid #354653; }
 .sf-footer-columns { display:grid; grid-template-columns:1.3fr .8fr 1fr; gap:60px; padding-bottom:42px; }
 .sf-footer-name { display:inline-block; color:#f2eee5; font:27px/1.2 "Instrument Serif",serif; text-decoration:none; }
@@ -216,7 +199,6 @@
   .sf-photo-frame { height:360px; }
   .sf-section { padding:80px 0; }
   .sf-about-grid { gap:40px; }
-  .sf-contact-grid { gap:34px; }
 }
 @media (max-width:640px) {
   .sf-wrap { width:calc(100% - 36px); }
@@ -253,8 +235,8 @@
   .sf-exp-date { padding:0; }
   .sf-exp ul { display:block; }
   .sf-exp li + li { margin-top:5px; }
-  .sf-contact-grid { grid-template-columns:1fr; gap:35px; }
-  .sf-form { padding:18px; gap:13px; }
+  .sf-contact-simple { flex-direction:column; align-items:flex-start; gap:20px; padding:22px; }
+  .sf-contact-email { max-width:100%; }
   .sf-footer { flex-wrap:wrap; font-size:8px; }
   .sf-dialog { padding:23px 19px; }
   .sf-dialog h2 { font-size:35px; }

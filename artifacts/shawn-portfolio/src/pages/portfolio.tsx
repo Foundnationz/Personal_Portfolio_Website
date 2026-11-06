@@ -1,5 +1,5 @@
 import "@/styles/signature-fintech.css";
-import { useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Link, useLocation } from "wouter";
 import {
@@ -33,77 +33,6 @@ function Modal({ open, onOpenChange, title, description, children }: {
       </Dialog.Content>
     </Dialog.Portal>
   </Dialog.Root>;
-}
-
-type Fields = { first: string; last: string; email: string; subject: string; message: string };
-const blankFields: Fields = { first: "", last: "", email: "", subject: "", message: "" };
-type FieldKey = keyof Fields;
-
-function ContactForm() {
-  const [values, setValues] = useState<Fields>(blankFields);
-  const [errors, setErrors] = useState<Partial<Record<FieldKey, string>>>({});
-  const [attempted, setAttempted] = useState(false);
-  const validate = (fields: Fields) => {
-    const next: Partial<Record<FieldKey, string>> = {};
-    if (!fields.first.trim()) next.first = "Enter your first name.";
-    if (!fields.last.trim()) next.last = "Enter your last name.";
-    if (!fields.email.trim()) next.email = "Enter your email address.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(fields.email.trim())) next.email = "Enter a valid email address.";
-    if (!fields.subject.trim()) next.subject = "Enter a subject.";
-    if (fields.message.trim().length < 10) next.message = "Write at least 10 characters.";
-    return next;
-  };
-  const update = (key: FieldKey, value: string) => {
-    const next = { ...values, [key]: value };
-    setValues(next);
-    if (attempted) setErrors(validate(next));
-  };
-  const submit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const next = validate(values);
-    setAttempted(true);
-    setErrors(next);
-    const firstError = Object.keys(next)[0] as FieldKey | undefined;
-    if (firstError) document.getElementById(`sf-${firstError}`)?.focus();
-  };
-  const valid = attempted && Object.keys(errors).length === 0;
-  return <form className="sf-form" onSubmit={submit} noValidate data-testid="form-contact">
-    <div className="sf-field">
-      <label htmlFor="sf-first">First name</label>
-      <input id="sf-first" name="first" type="text" value={values.first} onChange={(event) => update("first", event.target.value)}
-        aria-invalid={!!errors.first} aria-describedby={errors.first ? "sf-error-first" : undefined} />
-      {errors.first && <span className="sf-error" id="sf-error-first">{errors.first}</span>}
-    </div>
-    <div className="sf-field">
-      <label htmlFor="sf-last">Last name</label>
-      <input id="sf-last" name="last" type="text" value={values.last} onChange={(event) => update("last", event.target.value)}
-        aria-invalid={!!errors.last} aria-describedby={errors.last ? "sf-error-last" : undefined} />
-      {errors.last && <span className="sf-error" id="sf-error-last">{errors.last}</span>}
-    </div>
-    <div className="sf-field sf-field-wide">
-      <label htmlFor="sf-email">Email address</label>
-      <input id="sf-email" name="email" type="email" value={values.email} onChange={(event) => update("email", event.target.value)}
-        aria-invalid={!!errors.email} aria-describedby={errors.email ? "sf-error-email" : undefined} />
-      {errors.email && <span className="sf-error" id="sf-error-email">{errors.email}</span>}
-    </div>
-    <div className="sf-field sf-field-wide">
-      <label htmlFor="sf-subject">Subject</label>
-      <input id="sf-subject" name="subject" type="text" value={values.subject} onChange={(event) => update("subject", event.target.value)}
-        aria-invalid={!!errors.subject} aria-describedby={errors.subject ? "sf-error-subject" : undefined} />
-      {errors.subject && <span className="sf-error" id="sf-error-subject">{errors.subject}</span>}
-    </div>
-    <div className="sf-field sf-field-wide">
-      <label htmlFor="sf-message">Message</label>
-      <textarea id="sf-message" name="message" rows={5} value={values.message} onChange={(event) => update("message", event.target.value)}
-        aria-invalid={!!errors.message} aria-describedby={errors.message ? "sf-error-message" : undefined} />
-      {errors.message && <span className="sf-error" id="sf-error-message">{errors.message}</span>}
-    </div>
-    <button className="sf-primary" type="submit" data-testid="button-submit-contact"><span>Preview message</span><ArrowRight size={15} /></button>
-    <p className="sf-form-note">Preview only. This form is not connected to email; nothing is sent or stored.</p>
-    {valid && <p className="sf-form-status" role="status" aria-live="polite">
-      Your details look valid, but this message was not sent. Your text remains above so you can copy it.
-    </p>}
-  </form>;
 }
 
 export default function Portfolio() {
@@ -274,16 +203,13 @@ export default function Portfolio() {
             <div className="sf-section-label sf-kicker"><b>06</b><span /><span className="sf-section-name">Contact</span></div>
             <div><h2 id="sf-contact-title">Start a conversation.</h2><p>Open to finance internship conversations. Feel free to reach out by email.</p></div>
           </div>
-          <div className="sf-contact-grid">
-            <div className="sf-contact-intro">
-              <p>A thoughtful introduction is always welcome. Email is the best way to get in touch.</p>
-              <div className="sf-contact-list">
-                <div className="sf-contact-item"><Mail size={17} aria-hidden /><div><small>EMAIL</small><a href={`mailto:${contact.email}`}>{contact.email}</a></div></div>
-                <div className="sf-contact-item"><Link2 size={17} aria-hidden /><div><small>CONNECT</small><button type="button" onClick={openLinkedIn}>LinkedIn link not configured yet</button></div></div>
-                <div className="sf-contact-item"><MapPin size={17} aria-hidden /><div><small>LOCATION · EXAMPLE</small><span>Kuala Lumpur, Malaysia</span></div></div>
-              </div>
-            </div>
-            <ContactForm />
+          <div className="sf-contact-simple">
+            <p className="sf-contact-simple-copy">For finance internship opportunities, email me directly.</p>
+            <a className="sf-primary sf-contact-email" href={`mailto:${contact.email}`} data-testid="link-contact-email">
+              <Mail size={17} aria-hidden="true" />
+              <span>{contact.email}</span>
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>
