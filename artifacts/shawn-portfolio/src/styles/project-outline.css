@@ -240,11 +240,6 @@
   display: block;
 }
 
-.sf-outline-view-placeholder {
-  cursor: default;
-  opacity: .76;
-}
-
 .sf-outline-figure figcaption a {
   color: inherit;
 }
