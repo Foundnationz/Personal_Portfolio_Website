@@ -219,14 +219,14 @@ export default function CashFlowOutline() {
                 <ul><li>Placeholder: Add a brief explanation of the first result and its supporting evidence.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
-                    href={import.meta.env.BASE_URL + "images/colgate-result-1.png"}
+                    href={import.meta.env.BASE_URL + "images/colgate-result-2.png"}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Open the Colgate-Palmolive result 1 charts at full size"
+                    aria-label="Open the Colgate-Palmolive result 2 charts at full size"
                   >
                     <img
-                      src={import.meta.env.BASE_URL + "images/colgate-result-1.png"}
-                      alt="Charts showing Colgate-Palmolive historical and forecast net sales and EBITDA from 2018 to 2027"
+                      src={import.meta.env.BASE_URL + "images/colgate-result-2.png"}
+                      alt="Charts showing forecast EBITDA margin and the relationship between operating costs and sales"
                       data-testid="img-cash-flow-result-1"
                     />
                   </a>
@@ -238,14 +238,14 @@ export default function CashFlowOutline() {
                 <ul><li>Placeholder: Add a brief explanation of the second result and what it means.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
-                    href={import.meta.env.BASE_URL + "images/colgate-result-2.png"}
+                    href={import.meta.env.BASE_URL + "images/colgate-result-1.png"}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Open the Colgate-Palmolive result 2 charts at full size"
+                    aria-label="Open the Colgate-Palmolive result 1 charts at full size"
                   >
                     <img
-                      src={import.meta.env.BASE_URL + "images/colgate-result-2.png"}
-                      alt="Charts showing forecast EBITDA margin and the relationship between operating costs and sales"
+                      src={import.meta.env.BASE_URL + "images/colgate-result-1.png"}
+                      alt="Charts showing Colgate-Palmolive historical and forecast net sales and EBITDA from 2018 to 2027"
                       data-testid="img-cash-flow-result-2"
                     />
                   </a>
