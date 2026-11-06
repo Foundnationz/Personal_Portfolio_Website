@@ -177,7 +177,13 @@ export default function CashFlowOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose sf-problem-statement-copy">Placeholder: Describe the problem this project addresses, who is affected, and why it matters.</p>
+            <p className="sf-outline-prose sf-problem-statement-copy">Forecasting a company’s finances is only useful if the three statements agree with each other and the assumptions behind them are clear. This project asks how Colgate-Palmolive’s 2024 results can be projected from its 2018 to 2022 financials, and which assumptions matter most.</p>
+            <ul className="sf-problem-questions">
+              <li>How can the income statement, balance sheet and cash flow statement be forecast so they balance and tie together?</li>
+              <li>How should operating costs be projected when they rose almost as fast as sales?</li>
+              <li>How sensitive is 2024 profit to sales growth, the cost relationship, tax and interest?</li>
+              <li>How close does the forecast come to Colgate’s reported 2023 results, and what are its limits?</li>
+            </ul>
           </section>
 
           <section className="sf-outline-text-section sf-outline-workflow" aria-labelledby="workflow-title">

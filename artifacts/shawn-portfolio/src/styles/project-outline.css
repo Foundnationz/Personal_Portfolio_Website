@@ -281,6 +281,26 @@
   text-indent: 2em;
 }
 
+.sf-problem-questions {
+  display: grid;
+  gap: 8px;
+  max-width: 720px;
+  margin: -2px 0 0;
+  padding-left: 22px;
+  color: #4e5a54;
+  font-size: 15px;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+.sf-problem-questions li {
+  padding-left: 3px;
+}
+
+.sf-problem-questions li::marker {
+  color: var(--sf-teal);
+}
+
 .sf-project-outcome-groups {
   display: grid;
   gap: 22px;
