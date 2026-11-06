@@ -215,7 +215,7 @@ export default function CashFlowOutline() {
             </div>
             <div className="sf-project-outcome-groups">
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-1">
-                <h3 id="cash-flow-result-1">Result 1: Placeholder finding title</h3>
+                <h3 id="cash-flow-result-1">Result 1: Costs rose almost as fast as sales</h3>
                 <ul><li>Placeholder: Add a brief explanation of the first result and its supporting evidence.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
