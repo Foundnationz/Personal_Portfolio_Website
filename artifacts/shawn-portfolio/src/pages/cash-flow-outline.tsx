@@ -216,7 +216,7 @@ export default function CashFlowOutline() {
             <div className="sf-project-outcome-groups">
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-1">
                 <h3 id="cash-flow-result-1">Result 1: Costs rose almost as fast as sales</h3>
-                <ul><li>Placeholder: Add a brief explanation of the first result and its supporting evidence.</li></ul>
+                <ul><li>Operating costs track sales almost one for one, with a regression slope of 0.94 and an R² of 0.97. Each extra dollar of sales therefore adds only about six cents of EBITDA. This is the assumption that drives the whole forecast, and the EBITDA margin falls from 26.5% in 2018 to 22.7% in 2022 and 21.1% in 2027 as a result.</li></ul>
                 <figure className="sf-cashflow-result-figure">
                   <a
                     href={import.meta.env.BASE_URL + "images/colgate-result-2.png"}
