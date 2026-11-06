@@ -68,7 +68,6 @@ export default function CashFlowOutline() {
           <Link href="/#contact">Contact</Link>
         </nav>}
       </header>
-
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
@@ -79,7 +78,7 @@ export default function CashFlowOutline() {
           <section className="sf-outline-heading" aria-labelledby="project-title">
             <div>
               <p className="sf-kicker sf-outline-kicker">Financial technology · Personal finance</p>
-              <h1 id="project-title">Cash Flow Scenario Notes</h1>
+              <h1 id="project-title">Building Integrated Financial Statements for Colgate-Palmolive</h1>
             </div>
             <a
               className="sf-primary sf-outline-view"
