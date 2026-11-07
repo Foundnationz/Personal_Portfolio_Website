@@ -164,7 +164,7 @@ export default function CashFlowOutline() {
                   <h4>Results</h4>
                   <p>The forecast shows that Colgate’s profit stays almost flat whatever the sales growth, because costs rose nearly as fast as sales. The three statements balance and tie together in every year, and the sales assumption turned out to be conservative.</p>
                   <ul>
-                    <li>Placeholder: Add a key result</li>
+                    <li>Projected 2024 sales of $19,184 million, EBITDA of $4,335 million and profit after tax of $2,688 million.</li>
                     <li>Placeholder: Add another result</li>
                   </ul>
                 </article>
