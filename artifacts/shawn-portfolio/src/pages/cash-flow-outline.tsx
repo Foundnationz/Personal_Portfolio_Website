@@ -254,7 +254,7 @@ export default function CashFlowOutline() {
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-3">
                 <h3 id="cash-flow-result-3">Result 3: The cost slope drives profit far more than sales growth</h3>
-                <ul><li>Placeholder: Add a brief explanation of the third result or project deliverable.</li></ul>
+                <ul><li>Changing the cost slope by 0.04 moves 2024 profit by about $580–$590 million, while a one-point change in sales growth moves it by only about $15 million. Tax and interest each move it by $70–$95 million. Anyone using the forecast should test the cost relationship first.</li></ul>
               </section>
             </div>
           </section>
