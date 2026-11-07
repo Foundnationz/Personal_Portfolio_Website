@@ -162,7 +162,7 @@ export default function CashFlowOutline() {
                 </article>
                 <article>
                   <h4>Results</h4>
-                  <p>Placeholder: Summarise the main findings or deliverables.</p>
+                  <p>The forecast shows that Colgate’s profit stays almost flat whatever the sales growth, because costs rose nearly as fast as sales. The three statements balance and tie together in every year, and the sales assumption turned out to be conservative.</p>
                   <ul>
                     <li>Placeholder: Add a key result</li>
                     <li>Placeholder: Add another result</li>
