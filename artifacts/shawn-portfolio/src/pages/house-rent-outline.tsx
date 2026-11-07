@@ -107,14 +107,14 @@ export default function HouseRentOutline() {
                     <Wrench className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Tools</dt>
-                      <dd>Placeholder: Add tools used</dd>
+                      <dd>Google Colab | Google Docs</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
                     <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Project Type</dt>
-                      <dd>Placeholder: Add project format</dd>
+                      <dd>Data Analytics and Business Intelligence</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
