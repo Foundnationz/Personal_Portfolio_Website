@@ -258,6 +258,21 @@ export default function CashFlowOutline() {
                   <li>Changing the cost slope by 0.04 moves 2024 profit by about $580–$590 million, while a one-point change in sales growth moves it by only about $15 million. Tax and interest each move it by $70–$95 million. Anyone using the forecast should test the cost relationship first.</li>
                   <li>The chart’s values come straight from Table 8 in the report.</li>
                 </ul>
+                <figure className="sf-cashflow-result-figure">
+                  <a
+                    href={import.meta.env.BASE_URL + "images/colgate-result-3.png"}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open the Colgate-Palmolive result 3 sensitivity chart at full size"
+                  >
+                    <img
+                      src={import.meta.env.BASE_URL + "images/colgate-result-3.png"}
+                      alt="Sensitivity chart showing the effects of changes in cost slope, tax rate, interest rate, and sales growth on 2024 after-tax profit"
+                      data-testid="img-cash-flow-result-3"
+                    />
+                  </a>
+                  <figcaption>Select the image to view it at full size.</figcaption>
+                </figure>
               </section>
             </div>
           </section>
