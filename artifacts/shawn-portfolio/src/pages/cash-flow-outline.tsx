@@ -279,6 +279,30 @@ export default function CashFlowOutline() {
                   <figcaption>Select the image to view it at full size.</figcaption>
                 </figure>
               </section>
+              <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-4">
+                <h3 id="cash-flow-result-4">Result 4: Placeholder finding title</h3>
+                <ul>
+                  <li>Placeholder: Summarize the fourth result, the evidence behind it, and what it means.</li>
+                </ul>
+                <figure className="sf-cashflow-result-figure">
+                  <div className="sf-cashflow-image-placeholder" role="img" aria-label="Placeholder for the Result 4 image">
+                    Result 4 image placeholder
+                  </div>
+                  <figcaption>Replace with the image that supports Result 4.</figcaption>
+                </figure>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-5">
+                <h3 id="cash-flow-result-5">Result 5: Placeholder finding title</h3>
+                <ul>
+                  <li>Placeholder: Summarize the fifth result, the evidence behind it, and what it means.</li>
+                </ul>
+                <figure className="sf-cashflow-result-figure">
+                  <div className="sf-cashflow-image-placeholder" role="img" aria-label="Placeholder for the Result 5 image">
+                    Result 5 image placeholder
+                  </div>
+                  <figcaption>Replace with the image that supports Result 5.</figcaption>
+                </figure>
+              </section>
             </div>
           </section>
 
