@@ -192,7 +192,7 @@ export default function ProjectsPage() {
                   <span>Market research</span>
                   <span className="projects-placeholder-badge">Additional placeholder project</span>
                 </div>
-                <h2 className="projects-card-title">Market Data Reading Log</h2>
+                <h2 className="projects-card-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h2>
                 <p className="projects-card-description">A placeholder for future notes on reading financial market data, without claims of completed analysis.</p>
                 <span className="projects-coming-soon" role="status">Coming soon</span>
               </div>
