@@ -149,7 +149,7 @@ export default function CashFlowOutline() {
               <div className="sf-outline-summary-grid">
                 <article>
                   <h4>Goal</h4>
-                  <p>Placeholder: Describe what this project aims to help users understand or plan.</p>
+                  <p>The goal of this project is to build a clear, verified pro forma forecast of Colgate-Palmolive’s 2024 income statement, balance sheet and cash flow statement from its 2018 to 2022 financials, and to show which assumptions matter most to the result.</p>
                 </article>
                 <article>
                   <h4>Process</h4>
