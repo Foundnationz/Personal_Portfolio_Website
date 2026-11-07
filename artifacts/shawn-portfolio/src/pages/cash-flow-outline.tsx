@@ -157,7 +157,7 @@ export default function CashFlowOutline() {
                   <ul>
                     <li>Collected 2018–2022 financial statements and calculated the ratios and cost regression behind the forecast.</li>
                     <li>Built the income statement, balance sheet and cash flow, with cash as the balancing item.</li>
-                    <li>Placeholder: Add the final project step</li>
+                    <li>Audited the workbook, fixed errors and aligned interest with borrowings.</li>
                   </ul>
                 </article>
                 <article>
