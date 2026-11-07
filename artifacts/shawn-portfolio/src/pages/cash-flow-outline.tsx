@@ -157,7 +157,7 @@ export default function CashFlowOutline() {
                   <ul>
                     <li>Collected 2018–2022 statements and calculated the key ratios.</li>
                     <li>Built the three statements, with cash as the balancing item.</li>
-                    <li>Audited the workbook, fixed errors and aligned interest with borrowings.</li>
+                    <li>Audited the workbook, fixed errors and aligned interest.</li>
                     <li>Added balance checks, sensitivity tests and charts.</li>
                     <li>Wrote the report and published the model on GitHub.</li>
                   </ul>
