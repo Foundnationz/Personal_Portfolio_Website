@@ -253,7 +253,7 @@ export default function CashFlowOutline() {
                 </figure>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-3">
-                <h3 id="cash-flow-result-3">Result 3: Placeholder finding title</h3>
+                <h3 id="cash-flow-result-3">Result 3: The cost slope drives profit far more than sales growth</h3>
                 <ul><li>Placeholder: Add a brief explanation of the third result or project deliverable.</li></ul>
               </section>
             </div>
