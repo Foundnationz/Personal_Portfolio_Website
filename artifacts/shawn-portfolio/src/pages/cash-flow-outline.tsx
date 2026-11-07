@@ -129,11 +129,11 @@ export default function CashFlowOutline() {
                 href={import.meta.env.BASE_URL + "images/colgate-overview-sensitivity.png"}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Open the Colgate-Palmolive profit sensitivity chart at full size"
+                aria-label="Open the financial analysis illustration at full size"
               >
                 <img
                   src={import.meta.env.BASE_URL + "images/colgate-overview-sensitivity.png"}
-                  alt="Sensitivity chart showing how changes in cost slope, tax rate, interest rate, and sales growth affect 2024 profit"
+                  alt="Financial analysis illustration with charts, a calculator, gears, and currency symbols"
                   data-testid="img-cash-flow-project"
                 />
               </a>
