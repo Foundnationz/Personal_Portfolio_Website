@@ -128,7 +128,7 @@ export default function HouseRentOutline() {
                     <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Focus</dt>
-                      <dd>Placeholder: Add the project’s main focus</dd>
+                      <dd>Rent pricing analysis & prediction</dd>
                     </div>
                   </div>
                 </dl>
