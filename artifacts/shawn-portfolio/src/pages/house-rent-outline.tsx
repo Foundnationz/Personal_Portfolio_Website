@@ -114,7 +114,7 @@ export default function HouseRentOutline() {
                     <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Project Type</dt>
-                      <dd>Data Analytics and Business Intelligence</dd>
+                      <dd>Data Analytics</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
