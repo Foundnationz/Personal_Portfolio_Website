@@ -8,6 +8,7 @@ import Home from '@/pages/portfolio';
 import ProjectOutline from '@/pages/project-outline';
 import HouseRentOutline from '@/pages/house-rent-outline';
 import CashFlowOutline from '@/pages/cash-flow-outline';
+import SourceStatementsOutline from '@/pages/source-statements-outline';
 import ProjectsPage from '@/pages/projects';
 import '@/styles/portfolio-typography.css';
 import {
@@ -30,6 +31,7 @@ function Router() {
         <Route path="/projects/ledger-reconciliation" component={ProjectOutline} />
         <Route path="/projects/house-rent-estimation" component={HouseRentOutline} />
         <Route path="/projects/cash-flow-scenario-notes" component={CashFlowOutline} />
+        <Route path="/projects/source-documents-financial-statements" component={SourceStatementsOutline} />
         <Route component={NotFound} />
       </Switch>
     </RoutedErrorBoundary>

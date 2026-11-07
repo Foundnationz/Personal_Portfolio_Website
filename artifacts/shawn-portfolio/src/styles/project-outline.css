@@ -236,6 +236,15 @@
   width: min(100%, 330px);
 }
 
+.sf-source-statements-outline-page .sf-outline-figure {
+  width: min(100%, 380px);
+}
+
+.sf-source-statements-outline-page .sf-source-cover-placeholder {
+  min-height: 340px;
+  aspect-ratio: 1;
+}
+
 .sf-cashflow-outline-page .sf-outline-figure {
   width: min(100%, 520px);
 }
@@ -370,6 +379,26 @@
 }
 
 .sf-cashflow-result-figure figcaption {
+  margin-top: 8px;
+  color: var(--sf-muted);
+  font: 13px/1.5 "DM Sans", sans-serif;
+}
+
+.sf-source-result-figure {
+  width: min(100%, 760px);
+  margin: 17px 0 0;
+  padding: 8px;
+  border: 1px solid var(--sf-rule);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.sf-source-result-figure .sf-outline-workflow-placeholder {
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
+}
+
+.sf-source-result-figure figcaption {
   margin-top: 8px;
   color: var(--sf-muted);
   font: 13px/1.5 "DM Sans", sans-serif;

@@ -194,7 +194,10 @@ export default function ProjectsPage() {
                 </div>
                 <h2 className="projects-card-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h2>
                 <p className="projects-card-description">A placeholder for future notes on reading financial market data, without claims of completed analysis.</p>
-                <span className="projects-coming-soon" role="status">Coming soon</span>
+                <Link className="projects-card-action" href="/projects/source-documents-financial-statements" data-testid="link-project-source-statements-outline">
+                  <span>View project outline</span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
               </div>
             </article>
 
