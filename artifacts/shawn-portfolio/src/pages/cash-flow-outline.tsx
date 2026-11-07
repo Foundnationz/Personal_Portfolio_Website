@@ -166,7 +166,7 @@ export default function CashFlowOutline() {
                   <h4>Results</h4>
                   <p>The forecast shows that Colgate’s profit stays almost flat whatever the sales growth, because costs rose nearly as fast as sales. The three statements balance and tie together in every year, and the sales assumption turned out to be conservative.</p>
                   <ul>
-                    <li>Projected 2024 sales of $19,184 million, EBITDA of $4,335 million and profit after tax of $2,688 million.</li>
+                    <li>Projected 2024 sales of $19.2 billion and profit of $2.7 billion.</li>
                     <li>Found that costs rise about 94 cents for every extra dollar of sales, so profit stays near $2.7 billion.</li>
                     <li>Showed that a 0.04 change in the cost slope moves profit by about $580 million, compared with about $15 million for a one-point change in sales growth.</li>
                     <li>Confirmed that the balance sheet balances and cash flow ties to balance sheet cash in every year.</li>
