@@ -156,7 +156,7 @@ export default function CashFlowOutline() {
                   <p>The project worked into an improved, checked model. I built the forecast in Excel from five years of reported statements, then audited and corrected it, tested its assumptions and documented the results.</p>
                   <ul>
                     <li>Collected 2018–2022 financial statements and calculated the ratios and cost regression behind the forecast.</li>
-                    <li>Placeholder: Add the next project step</li>
+                    <li>Built the income statement, balance sheet and cash flow, with cash as the balancing item.</li>
                     <li>Placeholder: Add the final project step</li>
                   </ul>
                 </article>
