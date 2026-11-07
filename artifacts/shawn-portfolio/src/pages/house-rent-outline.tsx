@@ -121,7 +121,7 @@ export default function HouseRentOutline() {
                     <MonitorSmartphone className="sf-outline-meta-icon" size={18} aria-hidden="true" />
                     <div>
                       <dt>Platform</dt>
-                      <dd>Placeholder: Add analysis environment</dd>
+                      <dd>Windows, Mac, Linux, Chromebook</dd>
                     </div>
                   </div>
                   <div className="sf-outline-meta-item">
