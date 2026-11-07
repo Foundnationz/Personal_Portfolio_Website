@@ -233,7 +233,7 @@
 }
 
 .sf-cashflow-outline-page .sf-outline-figure {
-  width: min(100%, 330px);
+  width: min(100%, 440px);
 }
 
 .sf-outline-image-link {
@@ -521,6 +521,10 @@
   .sf-outline-figure {
     width: min(100%, 330px);
     margin-inline: auto;
+  }
+
+  .sf-cashflow-outline-page .sf-outline-figure {
+    width: min(100%, 520px);
   }
 
   .sf-outline-workflow-placeholder {

@@ -126,19 +126,19 @@ export default function CashFlowOutline() {
             <figure className="sf-outline-figure">
               <a
                 className="sf-outline-image-link"
-                href={import.meta.env.BASE_URL + "images/financial-tracker-budgeting-illustration.png"}
+                href={import.meta.env.BASE_URL + "images/colgate-overview-sensitivity.png"}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Open the financial planning illustration at full size"
+                aria-label="Open the Colgate-Palmolive profit sensitivity chart at full size"
               >
                 <img
-                  src={import.meta.env.BASE_URL + "images/financial-tracker-budgeting-illustration.png"}
-                  alt="Illustration of a person saving money beside a budgeting planner and calculator"
+                  src={import.meta.env.BASE_URL + "images/colgate-overview-sensitivity.png"}
+                  alt="Sensitivity chart showing how changes in cost slope, tax rate, interest rate, and sales growth affect 2024 profit"
                   data-testid="img-cash-flow-project"
                 />
               </a>
               <figcaption>
-                <a href={import.meta.env.BASE_URL + "images/financial-tracker-budgeting-illustration.png"} target="_blank" rel="noreferrer">
+                <a href={import.meta.env.BASE_URL + "images/colgate-overview-sensitivity.png"} target="_blank" rel="noreferrer">
                   Open full-size image
                 </a>
               </figcaption>
