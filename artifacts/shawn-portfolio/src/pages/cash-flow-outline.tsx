@@ -168,7 +168,7 @@ export default function CashFlowOutline() {
                   <ul>
                     <li>Projected 2024 sales of $19.2 billion and profit of $2.7 billion.</li>
                     <li>Found that costs rise about 94 cents per extra dollar of sales.</li>
-                    <li>Showed that a 0.04 change in the cost slope moves profit by about $580 million, compared with about $15 million for a one-point change in sales growth.</li>
+                    <li>Showed the cost slope moves profit far more than sales growth.</li>
                     <li>Confirmed that the balance sheet balances and cash flow ties to balance sheet cash in every year.</li>
                     <li>Found that forecast 2023 sales were 4.6% below the reported figure.</li>
                   </ul>
