@@ -280,7 +280,7 @@ export default function CashFlowOutline() {
                 </figure>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-4">
-                <h3 id="cash-flow-result-4">The Three Statements Balance and Tie Together in Every Year</h3>
+                <h3 id="cash-flow-result-4">Result 4: The Three Statements Balance and Tie Together in Every Year</h3>
                 <ul>
                   <li>Built a three-statement model where the balance sheet balances in every year from 2022 to 2027.</li>
                   <li>Tied cash flow to balance sheet cash, with cash as the balancing item.</li>
