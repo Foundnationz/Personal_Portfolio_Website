@@ -71,7 +71,7 @@ export default function ProjectOutline() {
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
-            <Link className="sf-outline-back" href="/#projects"><ArrowLeft size={16} aria-hidden="true" /><span>Back to projects</span></Link>
+            <Link className="sf-outline-back" href="/projects"><ArrowLeft size={16} aria-hidden="true" /><span>Back to projects</span></Link>
             <span className="sf-outline-index">PROJECT NOTE&nbsp; / &nbsp;01</span>
           </div>
 
