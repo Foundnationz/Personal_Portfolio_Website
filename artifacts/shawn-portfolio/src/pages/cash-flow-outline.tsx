@@ -280,28 +280,21 @@ export default function CashFlowOutline() {
                 </figure>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-4">
-                <h3 id="cash-flow-result-4">Result 4: Placeholder finding title</h3>
+                <h3 id="cash-flow-result-4">The Three Statements Balance and Tie Together in Every Year</h3>
                 <ul>
-                  <li>Placeholder: Summarize the fourth result, the evidence behind it, and what it means.</li>
+                  <li>Built a three-statement model where the balance sheet balances in every year from 2022 to 2027.</li>
+                  <li>Tied cash flow to balance sheet cash, with cash as the balancing item.</li>
+                  <li>Reconciled the 2022 base year to reported total assets of $15,731 million.</li>
+                  <li>Projected 2024 operating cash flow of $3,220 million, lifting cash to $2,930 million.</li>
                 </ul>
-                <figure className="sf-cashflow-result-figure">
-                  <div className="sf-cashflow-image-placeholder" role="img" aria-label="Placeholder for the Result 4 image">
-                    Result 4 image placeholder
-                  </div>
-                  <figcaption>Replace with the image that supports Result 4.</figcaption>
-                </figure>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="cash-flow-result-5">
-                <h3 id="cash-flow-result-5">Result 5: Placeholder finding title</h3>
+                <h3 id="cash-flow-result-5">The Forecast Is Conservative: 2023 Sales Came in 4.6% Below Actual</h3>
                 <ul>
-                  <li>Placeholder: Summarize the fifth result, the evidence behind it, and what it means.</li>
+                  <li>Compared the forecast with reported 2023 sales: $18,565 million against $19,457 million.</li>
+                  <li>Showed that 3.33% growth was conservative and the base year needs rebasing on 2023 actuals.</li>
+                  <li>Noted key simplifications: a five-point cost regression, constant debt and equity, and no currency or acquisition effects.</li>
                 </ul>
-                <figure className="sf-cashflow-result-figure">
-                  <div className="sf-cashflow-image-placeholder" role="img" aria-label="Placeholder for the Result 5 image">
-                    Result 5 image placeholder
-                  </div>
-                  <figcaption>Replace with the image that supports Result 5.</figcaption>
-                </figure>
               </section>
             </div>
           </section>
