@@ -158,6 +158,8 @@ export default function CashFlowOutline() {
                     <li>Collected 2018–2022 financial statements and calculated the ratios and cost regression behind the forecast.</li>
                     <li>Built the income statement, balance sheet and cash flow, with cash as the balancing item.</li>
                     <li>Audited the workbook, fixed errors and aligned interest with borrowings.</li>
+                    <li>Added balance checks, sensitivity tests and charts.</li>
+                    <li>Wrote the report and published the model on GitHub.</li>
                   </ul>
                 </article>
                 <article>
