@@ -170,7 +170,7 @@ export default function CashFlowOutline() {
                     <li>Found that costs rise about 94 cents per extra dollar of sales.</li>
                     <li>Showed the cost slope moves profit far more than sales growth.</li>
                     <li>Confirmed the balance sheet and cash flow tie in every year.</li>
-                    <li>Found that forecast 2023 sales were 4.6% below the reported figure.</li>
+                    <li>Found forecast 2023 sales were 4.6% below reported.</li>
                   </ul>
                 </article>
               </div>
