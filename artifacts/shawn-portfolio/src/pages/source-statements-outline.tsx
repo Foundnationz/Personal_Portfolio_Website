@@ -171,10 +171,19 @@ export default function SourceStatementsOutline() {
               <h2 id="workflow-title">Project Workflow</h2>
             </div>
             <figure className="sf-outline-workflow-figure">
-              <div className="sf-outline-workflow-placeholder" role="img" aria-label="Placeholder for the project workflow diagram">
-                Placeholder: Add the project workflow, steps, and supporting notes.
-              </div>
-              <figcaption>Project workflow image placeholder</figcaption>
+              <a
+                href={import.meta.env.BASE_URL + "images/source-documents-workflow.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the accounting project workflow diagram at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/source-documents-workflow.png"}
+                  alt="Accounting project workflow from reviewing 30 transactions and recording journal entries through ledger posting, adjustments, statements, source documents, and workbook checks"
+                  data-testid="img-source-statements-workflow"
+                />
+              </a>
+              <figcaption>Select the diagram to view it at full size.</figcaption>
             </figure>
           </section>
 
