@@ -184,29 +184,23 @@ export default function SourceStatementsOutline() {
               <h2 id="project-outcome-title">Project Outcome</h2>
             </div>
             <div className="sf-project-outcome-groups">
-              <section className="sf-project-outcome-group" aria-labelledby="source-result-1">
-                <h3 id="source-result-1">Result 1: Placeholder finding title</h3>
-                <ul><li>Placeholder: Explain the first result, its evidence, and what it means.</li></ul>
-                <figure className="sf-source-result-figure">
-                  <div className="sf-outline-workflow-placeholder" role="img" aria-label="Placeholder for the first result image">Result 1 image placeholder</div>
-                  <figcaption>Result 1 image placeholder</figcaption>
-                </figure>
+              <section className="sf-project-outcome-group" aria-labelledby="source-accounting-records-title">
+                <h3 id="source-accounting-records-title">Accounting Records</h3>
+                <ul>
+                  <li>Recorded all 30 transactions for the quarter in the general journal, each traced to a source document.</li>
+                  <li>Posted every entry to ledger T-accounts, carrying balances forward as closing (c/d) and opening (b/d) balances.</li>
+                  <li>Prepared an unadjusted trial balance totalling RM 1,111,300, with debits equal to credits.</li>
+                </ul>
               </section>
-              <section className="sf-project-outcome-group" aria-labelledby="source-result-2">
-                <h3 id="source-result-2">Result 2: Placeholder finding title</h3>
-                <ul><li>Placeholder: Explain the second result, its evidence, and what it means.</li></ul>
-                <figure className="sf-source-result-figure">
-                  <div className="sf-outline-workflow-placeholder" role="img" aria-label="Placeholder for the second result image">Result 2 image placeholder</div>
-                  <figcaption>Result 2 image placeholder</figcaption>
-                </figure>
-              </section>
-              <section className="sf-project-outcome-group" aria-labelledby="source-result-3">
-                <h3 id="source-result-3">Result 3: Placeholder finding title</h3>
-                <ul><li>Placeholder: Explain the third result, its evidence, and what it means.</li></ul>
-                <figure className="sf-source-result-figure">
-                  <div className="sf-outline-workflow-placeholder" role="img" aria-label="Placeholder for the third result image">Result 3 image placeholder</div>
-                  <figcaption>Result 3 image placeholder</figcaption>
-                </figure>
+              <section className="sf-project-outcome-group" aria-labelledby="source-adjustments-title">
+                <h3 id="source-adjustments-title">Adjustments and Estimates</h3>
+                <ul>
+                  <li>Calculated straight-line depreciation of RM 4,383 across the van, lorry and warehouse, charging a full month in the month of purchase.</li>
+                  <li>Adjusted for RM 5,000 of stationery used, leaving RM 3,000 on hand.</li>
+                  <li>Split the 12-month insurance premium into RM 83 expensed and RM 417 prepaid.</li>
+                  <li>Included closing inventory of RM 30,000 and wrote down every assumption behind these estimates.</li>
+                  <li>Total adjustments came to RM 39,800, giving an adjusted trial balance of RM 1,145,683.</li>
+                </ul>
               </section>
             </div>
           </section>
