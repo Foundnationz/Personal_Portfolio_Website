@@ -102,7 +102,7 @@ export default function ProjectsPage() {
             <h1 id="projects-title">Projects, in progress.</h1>
             <p className="projects-lede">A small collection of finance-focused examples and developing ideas. Project notes are labelled clearly where material is illustrative or still being prepared.</p>
             <div className="projects-intro-rule">
-              <span>Four project notes</span>
+              <span>Four projects</span>
             </div>
           </section>
 
