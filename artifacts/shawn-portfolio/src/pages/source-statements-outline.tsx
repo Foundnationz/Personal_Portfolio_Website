@@ -117,7 +117,7 @@ export default function SourceStatementsOutline() {
                   </div>
                   <div className="sf-outline-meta-item">
                     <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
-                    <div><dt>Focus</dt><dd>Placeholder: Add the project’s main focus</dd></div>
+                    <div><dt>Focus</dt><dd>Company specific periodic financial statements preparation</dd></div>
                   </div>
                 </dl>
               </section>
