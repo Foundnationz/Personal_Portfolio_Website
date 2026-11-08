@@ -161,7 +161,6 @@ export default function ProjectsPage() {
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
                   <span>Personal finance</span>
-                  <span className="projects-placeholder-badge">Additional placeholder project</span>
                 </div>
                 <h2 className="projects-card-title">Building Integrated Financial Statements for Colgate-Palmolive</h2>
                 <p className="projects-card-description">Integrated pro forma financials for Colgate-Palmolive (2024 base case): percent-of-sales assumptions, a regression-driven cost forecast, automatic integrity checks, and a full report covering method, sensitivity analysis and limitations.</p>
