@@ -141,7 +141,6 @@ export default function ProjectsPage() {
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
                   <span>FinTech Research</span>
-                  <span className="sf-example sf-example-light">Example</span>
                 </div>
                 <h2 className="projects-card-title">Predictive Analytics for House Rent Estimation</h2>
                 <p className="projects-card-description">Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
