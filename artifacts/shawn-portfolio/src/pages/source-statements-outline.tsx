@@ -122,11 +122,20 @@ export default function SourceStatementsOutline() {
                 </dl>
               </section>
             </div>
-            <figure className="sf-outline-figure">
-              <div className="sf-outline-workflow-placeholder sf-source-cover-placeholder" role="img" aria-label="Placeholder for the project overview image">
-                Placeholder: Add a representative project image.
-              </div>
-              <figcaption>Project overview image placeholder</figcaption>
+            <figure className="sf-outline-figure sf-source-cover-figure">
+              <a
+                href={import.meta.env.BASE_URL + "images/aglow-technology-logo.png"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the Aglow Technology logo at full size"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + "images/aglow-technology-logo.png"}
+                  alt="Aglow Technology logo with the tagline With Us To The Future"
+                  data-testid="img-source-statements-cover"
+                />
+              </a>
+              <figcaption>Aglow Technology · Q1 2023 accounting project</figcaption>
             </figure>
 
             <section className="sf-outline-summary" aria-labelledby="project-summary-title">

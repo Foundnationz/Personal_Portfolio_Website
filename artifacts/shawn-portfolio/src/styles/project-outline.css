@@ -236,13 +236,9 @@
   width: min(100%, 330px);
 }
 
-.sf-source-statements-outline-page .sf-outline-figure {
-  width: min(100%, 380px);
-}
-
-.sf-source-statements-outline-page .sf-source-cover-placeholder {
-  min-height: 340px;
-  aspect-ratio: 1;
+.sf-source-statements-outline-page .sf-source-cover-figure {
+  width: min(100%, 480px);
+  align-self: center;
 }
 
 .sf-cashflow-outline-page .sf-outline-figure {
