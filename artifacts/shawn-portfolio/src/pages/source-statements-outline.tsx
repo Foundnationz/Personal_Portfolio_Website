@@ -113,7 +113,7 @@ export default function SourceStatementsOutline() {
                   </div>
                   <div className="sf-outline-meta-item">
                     <MonitorSmartphone className="sf-outline-meta-icon" size={18} aria-hidden="true" />
-                    <div><dt>Platform</dt><dd>Placeholder: Add the analysis or work environment</dd></div>
+                    <div><dt>Platform</dt><dd>Windows | Mac OS | Linux | Chromebook | Android | IOS</dd></div>
                   </div>
                   <div className="sf-outline-meta-item">
                     <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
