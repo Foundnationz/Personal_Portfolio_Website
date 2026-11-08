@@ -156,7 +156,7 @@ export default function SourceStatementsOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose sf-problem-statement-copy">Accounts are only useful if every transaction is recorded correctly, the estimates behind them are clear, and the final statements agree with the books. This project asks how the first quarter of 2023 for a start-up electronics company can be turned from 30 source documents into balanced financial statements, and which adjustments matter most.</p>
+            <p className="sf-outline-prose sf-problem-statement-copy text-justify">Accounts are only useful if every transaction is recorded correctly, the estimates behind them are clear, and the final statements agree with the books. This project asks how the first quarter of 2023 for a start-up electronics company can be turned from 30 source documents into balanced financial statements, and which adjustments matter most.</p>
             <ul className="sf-problem-questions">
               <li>How can 30 transactions be recorded in the journal and ledger so that the trial balance agrees and the bank balance matches the bank statement?</li>
               <li>How should depreciation, stationery used, prepaid insurance and closing inventory be estimated, and what assumptions sit behind each one?</li>
