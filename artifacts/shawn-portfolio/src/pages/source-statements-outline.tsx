@@ -164,10 +164,7 @@ export default function SourceStatementsOutline() {
                 </article>
                 <article>
                   <h4>Results</h4>
-                  <ul>
-                    <li>Placeholder: Add a key project result.</li>
-                    <li>Placeholder: Add another result or learning.</li>
-                  </ul>
+                  <p>The 30 transactions produced a net loss of RM 44,266 for the quarter, from net sales of RM 48,800 and gross profit of RM 14,300. Total assets were RM 1,009,734, which equals liabilities plus equity, so the statements balance. The bank balance of RM 262,500 agrees with the bank statement, and the Excel workbook’s eight built-in checks all pass.</p>
                 </article>
               </div>
             </section>
