@@ -143,7 +143,7 @@ export default function SourceStatementsOutline() {
               <div className="sf-outline-summary-grid">
                 <article>
                   <h4>Goal</h4>
-                  <p>Placeholder: Describe the project goal.</p>
+                  <p>The goal of this project is to show how a start-up’s first quarter of transactions becomes a complete, balanced set of financial statements, with every estimate and assumption stated clearly.</p>
                 </article>
                 <article>
                   <h4>Process</h4>
