@@ -119,9 +119,6 @@ export default function ProjectsPage() {
                 <span className="projects-art-caption">PERSONAL FINANCE</span>
               </div>
               <div className="projects-card-copy">
-                <div className="projects-card-meta">
-                  <span className="sf-example sf-example-light">Example</span>
-                </div>
                 <h2 className="projects-card-title">Financial Tracker &amp; Budgeting App</h2>
                 <p className="projects-card-description">Finance Tracker is a Python desktop app for Gen Z users to manage spending, budgets, subscriptions, and savings goals, with visual dashboards and explainable financial guidance.</p>
                 <Link className="projects-card-action" href="/projects/ledger-reconciliation" data-testid="link-project-ledger-reconciliation">
