@@ -103,7 +103,6 @@ export default function ProjectsPage() {
             <p className="projects-lede">A small collection of finance-focused examples and developing ideas. Project notes are labelled clearly where material is illustrative or still being prepared.</p>
             <div className="projects-intro-rule">
               <span>Four project notes</span>
-              <span>Updated as work develops</span>
             </div>
           </section>
 
