@@ -144,6 +144,12 @@ export default function SourceStatementsOutline() {
                 <article>
                   <h4>Goal</h4>
                   <p>The goal of this project is to show how a start-up’s first quarter of transactions becomes a complete, balanced set of financial statements, with every estimate and assumption stated clearly.</p>
+                  <ul>
+                    <li>Record all 30 transactions in the journal and ledger from their source documents.</li>
+                    <li>Adjust the accounts for depreciation, stationery used, prepaid insurance and closing inventory.</li>
+                    <li>Prepare a statement of profit or loss and a statement of financial position that balance.</li>
+                    <li>Build an Excel workbook that links every stage and checks its own totals.</li>
+                  </ul>
                 </article>
                 <article>
                   <h4>Process</h4>

@@ -150,12 +150,6 @@ export default function CashFlowOutline() {
                 <article>
                   <h4>Goal</h4>
                   <p>The goal of this project is to build a clear, verified pro forma forecast of Colgate-Palmolive’s 2024 income statement, balance sheet and cash flow statement from its 2018 to 2022 financials, and to show which assumptions matter most to the result.</p>
-                  <ul>
-                    <li>Record all 30 transactions in the journal and ledger from their source documents.</li>
-                    <li>Adjust the accounts for depreciation, stationery used, prepaid insurance and closing inventory.</li>
-                    <li>Prepare a statement of profit or loss and a statement of financial position that balance.</li>
-                    <li>Build an Excel workbook that links every stage and checks its own totals.</li>
-                  </ul>
                 </article>
                 <article>
                   <h4>Process</h4>
