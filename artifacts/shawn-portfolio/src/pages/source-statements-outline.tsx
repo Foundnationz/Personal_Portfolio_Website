@@ -76,7 +76,6 @@ export default function SourceStatementsOutline() {
           </nav>
         )}
       </header>
-
       <main className="sf-outline-main" id="project-main">
         <div className="sf-wrap">
           <div className="sf-outline-back-row">
@@ -100,7 +99,7 @@ export default function SourceStatementsOutline() {
                 <span className="sf-outline-number">01</span>
                 <h2 id="overview-title">Project Overview</h2>
               </div>
-              <p className="sf-outline-prose sf-overview-prose">Placeholder: Add a concise overview of the project, its purpose, and the financial statements or accounting work it covers.</p>
+              <p className="sf-outline-prose sf-overview-prose text-justify">A full accounting cycle for a start-up electronics company, built from source documents. The work starts with 30 transactions and ends with a statement of profit or loss and a statement of financial position.</p>
               <section className="sf-outline-details" aria-labelledby="project-details-title">
                 <h3 className="sf-outline-group-heading" id="project-details-title">Project details</h3>
                 <dl className="sf-outline-metadata" aria-label="Project details">
