@@ -117,7 +117,7 @@ export default function CashFlowOutline() {
                   </div>
                   <div className="sf-outline-meta-item">
                     <Target className="sf-outline-meta-icon" size={18} aria-hidden="true" />
-                    <div><dt>Focus</dt><dd>Placeholder: Add the project’s main focus</dd></div>
+                    <div><dt>Focus</dt><dd>Financial Forecasting | Percentage of Sales</dd></div>
                   </div>
                 </dl>
               </section>
