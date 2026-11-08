@@ -181,11 +181,14 @@ export default function ProjectsPage() {
             </article>
 
             <article className="projects-card projects-card-placeholder" data-testid="card-placeholder-market-data-log">
-              <div className="projects-card-art projects-art-market" aria-hidden="true">
-                <div className="projects-art-bars">
-                  <i /><i /><i /><i /><i /><i /><i />
-                </div>
-                <span className="projects-art-caption">FIG. 04 — PLACEHOLDER VISUAL</span>
+              <div className="projects-card-art projects-card-art-contained">
+                <img
+                  src={import.meta.env.BASE_URL + "images/aglow-technology-logo.png"}
+                  alt="Aglow Technology logo, also shown beside the accounting project overview"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="projects-art-caption">ACCOUNTING · FINANCIAL STATEMENTS</span>
               </div>
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
