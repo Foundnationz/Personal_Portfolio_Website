@@ -187,19 +187,29 @@ export default function SourceStatementsOutline() {
               <section className="sf-project-outcome-group" aria-labelledby="source-accounting-records-title">
                 <h3 id="source-accounting-records-title">Accounting Records</h3>
                 <ul>
-                  <li>Recorded all 30 transactions for the quarter in the general journal, each traced to a source document.</li>
-                  <li>Posted every entry to ledger T-accounts, carrying balances forward as closing (c/d) and opening (b/d) balances.</li>
-                  <li>Prepared an unadjusted trial balance totalling RM 1,111,300, with debits equal to credits.</li>
+                  <li>Recorded all 30 transactions in the journal and ledger, each traced to a source document.</li>
+                  <li>Prepared an unadjusted trial balance of RM 1,111,300 with debits equal to credits.</li>
                 </ul>
               </section>
               <section className="sf-project-outcome-group" aria-labelledby="source-adjustments-title">
                 <h3 id="source-adjustments-title">Adjustments and Estimates</h3>
                 <ul>
-                  <li>Calculated straight-line depreciation of RM 4,383 across the van, lorry and warehouse, charging a full month in the month of purchase.</li>
-                  <li>Adjusted for RM 5,000 of stationery used, leaving RM 3,000 on hand.</li>
-                  <li>Split the 12-month insurance premium into RM 83 expensed and RM 417 prepaid.</li>
-                  <li>Included closing inventory of RM 30,000 and wrote down every assumption behind these estimates.</li>
-                  <li>Total adjustments came to RM 39,800, giving an adjusted trial balance of RM 1,145,683.</li>
+                  <li>Adjusted for depreciation (RM 4,383), stationery used, prepaid insurance and closing inventory, with each assumption written out.</li>
+                  <li>Adjustments of RM 39,800 gave an adjusted trial balance of RM 1,145,683.</li>
+                </ul>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="source-financial-statements-title">
+                <h3 id="source-financial-statements-title">Financial Statements</h3>
+                <ul>
+                  <li>Net sales of RM 48,800 and gross profit of RM 14,300 gave a net loss of RM 44,266 after operating expenses.</li>
+                  <li>Total assets of RM 1,009,734 equal liabilities plus equity, and the bank balance agrees with the bank statement.</li>
+                </ul>
+              </section>
+              <section className="sf-project-outcome-group" aria-labelledby="source-supporting-documents-title">
+                <h3 id="source-supporting-documents-title">Supporting Documents and Workbook</h3>
+                <ul>
+                  <li>Created source documents for every transaction.</li>
+                  <li>Built an Excel workbook that links the journal, ledger, trial balances and statements with formulas, with all eight built-in checks passing.</li>
                 </ul>
               </section>
             </div>
