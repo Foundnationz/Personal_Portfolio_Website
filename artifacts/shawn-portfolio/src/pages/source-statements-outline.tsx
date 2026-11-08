@@ -105,7 +105,7 @@ export default function SourceStatementsOutline() {
                 <dl className="sf-outline-metadata" aria-label="Project details">
                   <div className="sf-outline-meta-item">
                     <Wrench className="sf-outline-meta-icon" size={18} aria-hidden="true" />
-                    <div><dt>Tools</dt><dd>Placeholder: Add tools used</dd></div>
+                    <div><dt>Tools</dt><dd>Microsoft Excel | Google Docs</dd></div>
                   </div>
                   <div className="sf-outline-meta-item">
                     <CalendarDays className="sf-outline-meta-icon" size={18} aria-hidden="true" />
