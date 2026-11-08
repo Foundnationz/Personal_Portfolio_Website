@@ -1,7 +1,7 @@
 import "@/styles/signature-fintech.css";
 import "@/styles/project-outline.css";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, CalendarDays, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, FileSpreadsheet, FileText, Menu, MonitorSmartphone, Target, Wrench, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { profile } from "@/data/portfolio";
 import { SiteFooter } from "@/components/portfolio/site-footer";
@@ -90,6 +90,26 @@ export default function SourceStatementsOutline() {
             <div>
               <p className="sf-kicker sf-outline-kicker">Accounting · Financial reporting</p>
               <h1 id="project-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h1>
+            </div>
+            <div className="sf-outline-file-actions" role="group" aria-label="Project files">
+              <button
+                className="sf-primary sf-outline-view sf-outline-file-button"
+                type="button"
+                disabled
+                data-testid="button-source-statements-pdf"
+              >
+                <FileText size={16} aria-hidden="true" />
+                <span>Full report (PDF)</span>
+              </button>
+              <button
+                className="sf-primary sf-outline-view sf-outline-file-button"
+                type="button"
+                disabled
+                data-testid="button-source-statements-workbook"
+              >
+                <FileSpreadsheet size={16} aria-hidden="true" />
+                <span>Accounts workbook (Excel)</span>
+              </button>
             </div>
           </section>
 

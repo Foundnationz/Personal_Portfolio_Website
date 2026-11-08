@@ -69,6 +69,25 @@
   white-space: nowrap;
 }
 
+.sf-outline-file-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.sf-outline-file-button {
+  font-family: inherit;
+}
+
+.sf-outline-file-button:disabled {
+  cursor: not-allowed;
+  opacity: .78;
+  pointer-events: none;
+}
+
 .sf-outline-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(270px, .88fr);
@@ -582,6 +601,18 @@
   .sf-outline-page.sf-page .sf-outline-summary-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sf-source-statements-outline-page .sf-outline-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sf-source-statements-outline-page .sf-outline-file-actions {
+    justify-content: flex-start;
   }
 }
 
