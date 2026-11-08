@@ -120,7 +120,6 @@ export default function ProjectsPage() {
               </div>
               <div className="projects-card-copy">
                 <div className="projects-card-meta">
-                  <span>Accounting Workflow</span>
                   <span className="sf-example sf-example-light">Example</span>
                 </div>
                 <h2 className="projects-card-title">Financial Tracker &amp; Budgeting App</h2>
