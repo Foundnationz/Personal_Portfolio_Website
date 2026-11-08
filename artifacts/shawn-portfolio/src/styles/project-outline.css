@@ -82,12 +82,6 @@
   font-family: inherit;
 }
 
-.sf-outline-file-button:disabled {
-  cursor: not-allowed;
-  opacity: .78;
-  pointer-events: none;
-}
-
 .sf-outline-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(270px, .88fr);

@@ -92,24 +92,24 @@ export default function SourceStatementsOutline() {
               <h1 id="project-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h1>
             </div>
             <div className="sf-outline-file-actions" role="group" aria-label="Project files">
-              <button
+              <a
                 className="sf-primary sf-outline-view sf-outline-file-button"
-                type="button"
-                disabled
+                href={import.meta.env.BASE_URL + "files/aglow-q1-2023-accounting-report.pdf"}
+                download="Aglow_Technology_Q1_2023_Full_Report.pdf"
                 data-testid="button-source-statements-pdf"
               >
                 <FileText size={16} aria-hidden="true" />
                 <span>Full report (PDF)</span>
-              </button>
-              <button
+              </a>
+              <a
                 className="sf-primary sf-outline-view sf-outline-file-button"
-                type="button"
-                disabled
+                href={import.meta.env.BASE_URL + "files/aglow-technology-accounts-workbook.xlsx"}
+                download="Aglow_Technology_Accounts_Workbook.xlsx"
                 data-testid="button-source-statements-workbook"
               >
                 <FileSpreadsheet size={16} aria-hidden="true" />
                 <span>Accounts workbook (Excel)</span>
-              </button>
+              </a>
             </div>
           </section>
 
