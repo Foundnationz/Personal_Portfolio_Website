@@ -156,7 +156,13 @@ export default function SourceStatementsOutline() {
               <span className="sf-outline-number">02</span>
               <h2 id="problem-title">Problem Statement</h2>
             </div>
-            <p className="sf-outline-prose sf-problem-statement-copy">Placeholder: Explain the accounting question, reporting need, or problem this project set out to address.</p>
+            <p className="sf-outline-prose sf-problem-statement-copy">Accounts are only useful if every transaction is recorded correctly, the estimates behind them are clear, and the final statements agree with the books. This project asks how the first quarter of 2023 for a start-up electronics company can be turned from 30 source documents into balanced financial statements, and which adjustments matter most.</p>
+            <ul className="sf-problem-questions">
+              <li>How can 30 transactions be recorded in the journal and ledger so that the trial balance agrees and the bank balance matches the bank statement?</li>
+              <li>How should depreciation, stationery used, prepaid insurance and closing inventory be estimated, and what assumptions sit behind each one?</li>
+              <li>How much do these adjustments change the results, given that they moved the trial balance from RM 1,111,300 to RM 1,145,683?</li>
+              <li>Does the statement of financial position balance, and what do the statements show about the company’s first quarter, including a net loss of RM 44,266?</li>
+            </ul>
           </section>
 
           <section className="sf-outline-text-section sf-outline-workflow" aria-labelledby="workflow-title">
