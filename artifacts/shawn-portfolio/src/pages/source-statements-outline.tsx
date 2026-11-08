@@ -153,7 +153,14 @@ export default function SourceStatementsOutline() {
                 </article>
                 <article>
                   <h4>Process</h4>
-                  <p>Placeholder: Summarize the accounting process, source materials, and methods used.</p>
+                  <ul>
+                    <li>Read the 30 transactions and gather the source documents for each one.</li>
+                    <li>Record every transaction in the journal and post it to the ledger.</li>
+                    <li>Prepare the unadjusted trial balance.</li>
+                    <li>Make the adjustments for depreciation, stationery used, prepaid insurance and closing inventory.</li>
+                    <li>Prepare the adjusted trial balance and the final financial statements.</li>
+                    <li>Build the Excel workbook and check that the totals agree.</li>
+                  </ul>
                 </article>
                 <article>
                   <h4>Results</h4>
