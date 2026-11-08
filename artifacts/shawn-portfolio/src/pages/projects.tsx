@@ -139,9 +139,6 @@ export default function ProjectsPage() {
                 <span className="projects-art-caption">HOUSE RENT ESTIMATION · CONCEPT VISUAL</span>
               </div>
               <div className="projects-card-copy">
-                <div className="projects-card-meta">
-                  <span>FinTech Research</span>
-                </div>
                 <h2 className="projects-card-title">Predictive Analytics for House Rent Estimation</h2>
                 <p className="projects-card-description">Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
                 <Link className="projects-card-action" href="/projects/house-rent-estimation" data-testid="link-project-house-rent-outline">
