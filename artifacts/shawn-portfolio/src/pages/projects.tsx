@@ -179,9 +179,6 @@ export default function ProjectsPage() {
                 <span className="projects-art-caption">ACCOUNTING · FINANCIAL STATEMENTS</span>
               </div>
               <div className="projects-card-copy">
-                <div className="projects-card-meta">
-                  <span>Market research</span>
-                </div>
                 <h2 className="projects-card-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h2>
                 <p className="projects-card-description">A placeholder for future notes on reading financial market data, without claims of completed analysis.</p>
                 <Link className="projects-card-action" href="/projects/source-documents-financial-statements" data-testid="link-project-source-statements-outline">
