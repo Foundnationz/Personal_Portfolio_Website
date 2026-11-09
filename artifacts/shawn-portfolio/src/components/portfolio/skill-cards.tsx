@@ -19,6 +19,8 @@ export function SkillCards() {
         <p>I have utilized a number of tools and applied a number of technical skills during my studies</p>
         <ul className="sf-tags">
           <li>Excel</li><li>Python</li><li>WEKA</li><li>Data Analysis</li>
+          <li>Basic Programming</li><li>Academic Research</li><li>Canva</li>
+          <li>AI Prompt Engineering</li><li>Microsoft Office Suite</li>
         </ul>
         <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
       </article>
