@@ -156,7 +156,7 @@ export default function Portfolio() {
           <div className="sf-wrap">
             <div className="sf-section-head">
               <div className="sf-section-label sf-kicker"><b>02</b><span /><span className="sf-section-name">Skills</span></div>
-              <div><h2 id="sf-skills-title"><span>Foundations, still</span><br /><span>taking shape.</span></h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
+              <div><h2 id="sf-skills-title"><span>Skills and Tools</span></h2><p>These skill groups are examples from the portfolio source and should be confirmed before sharing as personal experience.</p></div>
             </div>
             <SkillCards />
           </div>
