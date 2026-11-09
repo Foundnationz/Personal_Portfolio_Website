@@ -111,7 +111,7 @@ export default function Portfolio() {
         <div className="sf-hero-copy">
           <p className="sf-kicker sf-hero-eyebrow">A student profile · Open to finance internships</p>
           <h1><span>Hi There, I'm</span><br /><em>Shawn.</em></h1>
-          <p className="sf-lede"><strong>Final-year Financial Technology Student</strong>{" "}<span>at UCSI University. Seeking a finance internship where I can pair a financial technology education with careful, curious work.</span></p>
+          <p className="sf-lede"><strong>Final-year Financial Technology Student</strong>{" "}<span>at UCSI University. Seeking finance or financial technologies-related job opportunities </span></p>
           <div className="sf-actions">
             <a className="sf-primary" href="#about" onClick={() => go("about")} data-testid="button-about-me"><span>About Me</span><ArrowDownRight size={16} /></a>
             <button className="sf-linkedin" type="button" onClick={openLinkedIn} aria-label="Open LinkedIn profile" data-testid="button-linkedin">
