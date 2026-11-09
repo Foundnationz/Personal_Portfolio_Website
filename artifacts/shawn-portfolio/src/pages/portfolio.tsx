@@ -138,7 +138,7 @@ export default function Portfolio() {
                 <h3>Shawn Stephen Abok</h3>
                 <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
                 <div className="sf-bio">
-                  <p>Final-year Financial Technology student with 7 months of internship experience across credit and operations in financial services. Screened 300+ prospective borrowers on World-Check and verified KYC documents, flagging 10+ discrepancies that led to deeper checks by senior staff. Prepared 25+ loan-related legal documents weekly, cross-checking borrower data on CTOS against supporting documents. Skilled in Excel and basic Python, with a fintech background. Looking to start a career in payments operations or compliance at a bank or fintech.</p>
+                  <p className="text-justify">Final-year Financial Technology student with 7 months of internship experience across credit and operations in financial services. Screened 300+ prospective borrowers on World-Check and verified KYC documents, flagging 10+ discrepancies that led to deeper checks by senior staff. Prepared 25+ loan-related legal documents weekly, cross-checking borrower data on CTOS against supporting documents. Skilled in Excel and basic Python, with a fintech background. Developed a Python and AI-powered budgeting app for Gen Z that analyses spending and generates personalized recommendations</p>
                   <p><span>I am looking for a finance internship to learn how teams work with real numbers, processes and clients. (Example sentence: replace with your own story and interests.)</span>{" "}<span className="sf-example">Example</span></p>
                 </div>
                 <div className="sf-about-bottom">
