@@ -139,7 +139,7 @@ export default function Portfolio() {
                 <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
                 <div className="sf-bio">
                   <p className="text-justify">Final-year Financial Technology student with 7 months of internship experience across credit and operations in financial services. Screened 300+ prospective borrowers on World-Check and verified KYC documents, flagging 10+ discrepancies that led to deeper checks by senior staff. Prepared 25+ loan-related legal documents weekly, cross-checking borrower data on CTOS against supporting documents. Skilled in Excel and basic Python, with a fintech background. Developed a Python budgeting app for Gen Z that analyses spending and generates personalized recommendations</p>
-                  <p><span>Seeking to join a bank or finance institutions in a credit, payments or finance operations role.</span>{" "}<span className="sf-example">Example</span></p>
+                  <p><span>Seeking to join a bank or finance institutions in a credit, payments or finance operations role.</span></p>
                 </div>
                 <div className="sf-about-bottom">
                   <div className="sf-meta-row"><MapPin size={16} aria-hidden /><div><span>Kuala Lumpur, Malaysia</span>{" "}<span className="sf-example">Example</span></div></div>
