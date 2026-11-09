@@ -100,7 +100,7 @@ export default function ProjectsPage() {
           <section className="projects-intro" aria-labelledby="projects-title">
             <p className="projects-kicker">Financial technology · Selected work</p>
             <h1 id="projects-title">Projects, in progress.</h1>
-            <p className="projects-lede">A small collection of finance-focused examples and developing ideas. Project notes are labelled clearly where material is illustrative or still being prepared.</p>
+            <p className="projects-lede">A collection of projects and developing ideas.</p>
             <div className="projects-intro-rule">
               <span>Four projects</span>
             </div>
