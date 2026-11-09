@@ -4,7 +4,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Link, useLocation } from "wouter";
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, FileText,
-  Link2, Mail, MapPin, Menu, X,
+  Linkedin, Mail, MapPin, Menu, X,
 } from "lucide-react";
 import {
   contact, navItems, profile,
@@ -115,9 +115,8 @@ export default function Portfolio() {
           <div className="sf-actions">
             <a className="sf-primary" href="#about" onClick={() => go("about")} data-testid="button-about-me"><span>About Me</span><ArrowDownRight size={16} /></a>
             <button className="sf-linkedin" type="button" onClick={openLinkedIn} aria-label="Open LinkedIn profile" data-testid="button-linkedin">
-              <Link2 size={17} />
+              <Linkedin size={18} aria-hidden="true" />
             </button>
-            <button className="sf-text-btn" type="button" onClick={openLinkedIn}><span>LinkedIn</span><ArrowUpRight size={13} /></button>
           </div>
         </div>
         <div className="sf-photo-stage">
