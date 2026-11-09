@@ -8,7 +8,7 @@ export function SkillCards() {
         <h3>Finance Foundations</h3>
         <p>I have studied core subjects related to finance in the first two years to build a strong foundation and understanding.</p>
         <ul className="sf-tags">
-          <li>Financial Accounting</li><li>Corporate Finance</li><li>Financial Markets</li><li>Risk Basics</li>
+          <li>Financial Accounting</li><li>Corporate Finance</li><li>Financial Markets</li><li>Financial Modelling</li>
         </ul>
         <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
       </article>
