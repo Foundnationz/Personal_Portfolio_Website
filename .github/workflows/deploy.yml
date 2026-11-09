@@ -1,0 +1,73 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  # Rebuild and redeploy on every push to main.
+  push:
+    branches: [main]
+  # Lets you trigger a deploy by hand from the Actions tab.
+  workflow_dispatch:
+
+# Permissions the deploy needs. Don't remove these.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# If you push twice quickly, cancel the older run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # vite.config.ts requires both of these or the build stops with an error.
+      # PORT is only used by the dev server, but the config still demands it.
+      PORT: '3000'
+      # The site lives at foundnationz.github.io/Personal_Portfolio_Website/,
+      # so assets must be looked up under that subfolder. Must match the repo
+      # name exactly, including capital letters, and keep the trailing slash.
+      BASE_PATH: /Personal_Portfolio_Website/
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the portfolio
+        run: pnpm --filter @workspace/shawn-portfolio run build
+
+      - name: Add SPA fallback for direct links
+        # The site routes pages in the browser, so GitHub Pages has no real file
+        # at /projects. Serving index.html as the 404 page lets the app load and
+        # show the right page instead of a GitHub error.
+        run: cp artifacts/shawn-portfolio/dist/public/index.html artifacts/shawn-portfolio/dist/public/404.html
+
+      - name: Upload the built site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifacts/shawn-portfolio/dist/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
