@@ -179,7 +179,7 @@ export default function ProjectsPage() {
               </div>
               <div className="projects-card-copy">
                 <h2 className="projects-card-title">From Source Documents to Financial Statements: A Q1 2023 Accounting Project</h2>
-                <p className="projects-card-description">A placeholder for future notes on reading financial market data, without claims of completed analysis.</p>
+                <p className="projects-card-description text-justify">Accounting project that follows a start-up electronics company through its first quarter of 2023. It takes 30 transactions from source documents through the journal, ledger and adjustments to a trial balance and final financial statements, with an Excel workbook that links and checks each stage.</p>
                 <Link className="projects-card-action" href="/projects/source-documents-financial-statements" data-testid="link-project-source-statements-outline">
                   <span>View project outline</span>
                   <ArrowUpRight size={16} aria-hidden="true" />
