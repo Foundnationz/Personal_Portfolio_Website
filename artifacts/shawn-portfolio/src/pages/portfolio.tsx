@@ -106,7 +106,6 @@ export default function Portfolio() {
           <a href="#contact" onClick={() => go("contact")} aria-current={active === "contact" ? "true" : undefined}><span>Contact</span><ArrowUpRight size={14} /></a>
         </nav>}
       </header>
-
       <main>
         <section className="sf-wrap sf-hero" id="home" aria-label="Home">
           <div className="sf-hero-copy">
@@ -139,7 +138,7 @@ export default function Portfolio() {
                 <h3>Shawn Stephen Abok</h3>
                 <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
                 <div className="sf-bio">
-                  <p>Final-year Financial Technology student with 7 months of internship experience across credit and operations in financial services. Screened 300+ prospective borrowers on World-Check and verified KYC documents, flagging 10+ discrepancies that led to deeper checks by senior staff. Prepared 25+ loan-related legal documents weekly, cross-checking borrower data on CTOS against supporting documents. Skilled in Excel and basic Python, with a fintech background. Seeking a finance role in banking or financial services.</p>
+                  <p>Final-year Financial Technology student with 7 months of internship experience across credit and operations in financial services. Screened 300+ prospective borrowers on World-Check and verified KYC documents, flagging 10+ discrepancies that led to deeper checks by senior staff. Prepared 25+ loan-related legal documents weekly, cross-checking borrower data on CTOS against supporting documents. Skilled in Excel and basic Python, with a fintech background. Looking to start a career in payments operations or compliance at a bank or fintech.</p>
                   <p><span>I am looking for a finance internship to learn how teams work with real numbers, processes and clients. (Example sentence: replace with your own story and interests.)</span>{" "}<span className="sf-example">Example</span></p>
                 </div>
                 <div className="sf-about-bottom">
@@ -215,7 +214,6 @@ export default function Portfolio() {
         </section>
       </main>
       <SiteFooter onNavigate={go} />
-
       <Modal open={!!notice} onOpenChange={(open) => !open && setNotice(null)}
         title={notice === "resume" ? "Resume not added yet" : "LinkedIn not configured"}
         description={notice === "resume"
