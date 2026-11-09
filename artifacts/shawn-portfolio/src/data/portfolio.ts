@@ -27,7 +27,7 @@ export const profile = {
   intro:
     "Seeking a finance internship where I can pair a financial technology education with careful, curious work.",
   // Set a real URL to enable the LinkedIn link. Empty means "not configured yet".
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/shawnstephenabok",
   githubUrl: "https://github.com/Foundnationz",
   // Set a real URL/path to a PDF to enable the resume. Empty means "not added yet".
   resumeUrl: "",
