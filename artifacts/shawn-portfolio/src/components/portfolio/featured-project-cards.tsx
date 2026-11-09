@@ -36,7 +36,7 @@ export function FeaturedProjectCards() {
           <span className="sf-figcaption">HOUSE RENT ESTIMATION · CONCEPT VISUAL</span>
         </div>
         <div className="sf-project-copy">
-          <div className="sf-project-meta"><span>FinTech Research</span></div>
+          <div className="sf-project-meta"><span>Data Analytics</span></div>
           <h3>Predictive Analytics for House Rent Estimation</h3>
           <p>Predicting monthly rent across six Indian cities with linear regression, using a log-transformed target, and recommending city, size and furnishing as the key pricing factors.</p>
           <Link className="sf-project-open" href="/projects/house-rent-estimation" data-testid="link-view-project-house-rent-estimation">
