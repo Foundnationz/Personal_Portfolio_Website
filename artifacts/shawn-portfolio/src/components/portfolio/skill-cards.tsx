@@ -22,7 +22,7 @@ export function SkillCards() {
           <li>Basic Programming</li><li>Academic Research</li><li>Canva</li>
           <li>AI Prompt Engineering</li><li>Microsoft Office Suite</li>
         </ul>
-        <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
+        <div className="sf-skill-foot"></div>
       </article>
       <article className="sf-skill" data-testid="card-skill-2">
         <span className="sf-skill-no"><span>03 /</span>{" "}<Users size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
