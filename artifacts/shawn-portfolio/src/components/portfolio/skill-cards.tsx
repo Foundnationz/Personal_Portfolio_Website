@@ -11,7 +11,7 @@ export function SkillCards() {
           <li>Financial Accounting</li><li>Corporate Finance</li><li>Financial Markets</li><li>Financial Modelling</li>
           <li>Intro to FinTech</li><li>Data Mining</li><li>Cloud Computing</li>
         </ul>
-        <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
+        <div className="sf-skill-foot"></div>
       </article>
       <article className="sf-skill" data-testid="card-skill-1">
         <span className="sf-skill-no"><span>02 /</span>{" "}<Code2 size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
