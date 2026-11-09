@@ -6,7 +6,7 @@ export function SkillCards() {
       <article className="sf-skill" data-testid="card-skill-0">
         <span className="sf-skill-no"><span>01 /</span>{" "}<BookOpen size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
         <h3>Finance Foundations</h3>
-        <p>Example: core finance topics you have studied. Replace with your own.</p>
+        <p>I have studied core subjects related to finance in the first two years to build a strong foundation and understanding.</p>
         <ul className="sf-tags">
           <li>Financial Accounting</li><li>Corporate Finance</li><li>Financial Markets</li><li>Risk Basics</li>
         </ul>
