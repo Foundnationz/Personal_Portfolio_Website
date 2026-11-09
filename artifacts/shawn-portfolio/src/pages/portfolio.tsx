@@ -142,7 +142,7 @@ export default function Portfolio() {
                   <p><span>Seeking to join a bank or finance institutions in a credit, payments or finance operations role.</span></p>
                 </div>
                 <div className="sf-about-bottom">
-                  <div className="sf-meta-row"><MapPin size={16} aria-hidden /><div><span>Kuala Lumpur, Malaysia</span>{" "}<span className="sf-example">Example</span></div></div>
+                  <div className="sf-meta-row"><MapPin size={16} aria-hidden /><div><span>Kuala Lumpur, Malaysia</span></div></div>
                   <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume">
                     <FileText size={15} /><span>View resume</span><ArrowUpRight size={14} />
                   </button>
