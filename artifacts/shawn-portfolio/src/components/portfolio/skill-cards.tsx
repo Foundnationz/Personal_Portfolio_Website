@@ -16,7 +16,7 @@ export function SkillCards() {
       <article className="sf-skill" data-testid="card-skill-1">
         <span className="sf-skill-no"><span>02 /</span>{" "}<Code2 size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
         <h3>Technical Tools</h3>
-        <p>Example: tools you use for analysis and building. Replace with your own.</p>
+        <p>I have utilized a number of tools and applied a number of technical skills during my studies</p>
         <ul className="sf-tags">
           <li>Excel</li><li>Python</li><li>SQL</li><li>Data Analysis</li>
         </ul>
