@@ -177,7 +177,7 @@ export default function Portfolio() {
             <div className="sf-project-intro">
               <div className="sf-section-head">
                 <div className="sf-section-label sf-kicker"><b>04</b><span /><span className="sf-section-name">Selected work</span></div>
-                <div><h2 id="sf-projects-title"><span>Evidence over</span><br /><span>adjectives.</span></h2></div>
+                <div><h2 id="sf-projects-title"><span>Selected Projects</span></h2></div>
               </div>
             </div>
             <FeaturedProjectCards />
