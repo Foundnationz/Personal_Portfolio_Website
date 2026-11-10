@@ -179,7 +179,6 @@ export default function Portfolio() {
                 <div className="sf-section-label sf-kicker"><b>04</b><span /><span className="sf-section-name">Selected work</span></div>
                 <div><h2 id="sf-projects-title"><span>Evidence over</span><br /><span>adjectives.</span></h2></div>
               </div>
-              <p className="sf-project-note">Example projects only—not claimed achievements. Each opens to an illustrative case note, ready to replace with real work.</p>
             </div>
             <FeaturedProjectCards />
             <div className="sf-view-all"><Link className="sf-outline" href="/projects" data-testid="button-view-all"><span>View all projects</span><ArrowRight size={15} /></Link></div>
