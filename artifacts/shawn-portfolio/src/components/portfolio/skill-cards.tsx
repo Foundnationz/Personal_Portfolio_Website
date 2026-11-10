@@ -31,7 +31,7 @@ export function SkillCards() {
         <ul className="sf-tags">
           <li>Communication</li><li>Teamwork</li><li>Attention to Detail</li><li>Time Management</li>
         </ul>
-        <div className="sf-skill-foot"><span className="sf-example sf-example-light">Example</span></div>
+        <div className="sf-skill-foot"></div>
       </article>
     </div>
   );
