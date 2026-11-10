@@ -27,7 +27,7 @@ export function SkillCards() {
       <article className="sf-skill" data-testid="card-skill-2">
         <span className="sf-skill-no"><span>03 /</span>{" "}<Users size={14} aria-hidden style={{ verticalAlign: "middle" }} /></span>
         <h3>Soft Skills</h3>
-        <p>I have acquired these skills during my studies and also my previous internships through </p>
+        <p>I have acquired these skills during my studies through club organizing activities and also my previous internships through various tasks in the office.</p>
         <ul className="sf-tags">
           <li>Communication</li><li>Teamwork</li><li>Attention to Detail</li><li>Time Management</li>
           <li>Adaptability</li><li>Willingness to Learn</li><li>Creativity</li>
