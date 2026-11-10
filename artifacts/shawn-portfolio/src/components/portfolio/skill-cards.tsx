@@ -30,6 +30,7 @@ export function SkillCards() {
         <p>Example: working style strengths. Replace with your own.</p>
         <ul className="sf-tags">
           <li>Communication</li><li>Teamwork</li><li>Attention to Detail</li><li>Time Management</li>
+          <li>Adaptability</li><li>Willingness to Learn</li><li>Creativity</li>
         </ul>
         <div className="sf-skill-foot"></div>
       </article>
