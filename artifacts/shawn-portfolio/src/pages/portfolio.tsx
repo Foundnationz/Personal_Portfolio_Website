@@ -138,7 +138,7 @@ export default function Portfolio() {
                 <h3>Shawn Stephen Abok</h3>
                 <p className="sf-about-role">Bachelor of Financial Technology (Honours) Student</p>
                 <div className="sf-bio">
-                  <p className="text-justify">Final-year Bachelor of Financial Technology (Honours) student at UCSI University, available for a 4-month internship from February to May 2027. Completed two finance internships: operations at Funding Societies, where I handled AML screening, KYC verification and loan documentation checks, and finance/credit control at Airswift. Built a Python- and rule-based recommendation system budgeting app for Gen Z as my final year project. Seeking an internship in credit, finance or payments operations at a bank or fintech.</p>
+                  <p className="text-justify">Final-year Bachelor of Financial Technology (Honours) student at UCSI University, available for a 4-month internship from February to May 2027. Completed two finance internships: operations at Funding Societies, where I handled AML screening, KYC verification and loan documentation checks, and finance/credit control at Airswift. Built a Python- and rule-based recommendation system budgeting app for Gen Z as my final year project.</p>
                   <p><span>Seeking to join a bank or finance institutions in a credit, payments or finance operations role.</span></p>
                 </div>
                 <div className="sf-about-bottom">
