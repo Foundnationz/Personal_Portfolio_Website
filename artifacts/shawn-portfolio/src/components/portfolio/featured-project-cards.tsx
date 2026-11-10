@@ -33,7 +33,7 @@ export function FeaturedProjectCards() {
             decoding="async"
             data-testid="img-featured-house-rent-prediction"
           />
-          <span className="sf-figcaption">HOUSE RENT ESTIMATION · CONCEPT VISUAL</span>
+          <span className="sf-figcaption">HOUSE RENT ESTIMATION</span>
         </div>
         <div className="sf-project-copy">
           <div className="sf-project-meta"><span>Data Analytics</span></div>
