@@ -39,7 +39,7 @@ export default function Portfolio() {
   const [, navigate] = useLocation();
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [notice, setNotice] = useState<"resume" | "linkedin" | null>(null);
+  const [notice, setNotice] = useState<"linkedin" | null>(null);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -69,10 +69,6 @@ export default function Portfolio() {
   const openLinkedIn = () => profile.linkedinUrl
     ? window.open(profile.linkedinUrl, "_blank", "noopener,noreferrer")
     : setNotice("linkedin");
-  const openResume = () => profile.resumeUrl
-    ? window.open(profile.resumeUrl, "_blank", "noopener,noreferrer")
-    : setNotice("resume");
-
   return (
     <div className="sf-page">
       <a className="sf-skip" href="#about">Skip to content</a>
@@ -143,9 +139,14 @@ export default function Portfolio() {
                 </div>
                 <div className="sf-about-bottom">
                   <div className="sf-meta-row"><MapPin size={16} aria-hidden /><div><span>Kuala Lumpur, Malaysia</span></div></div>
-                  <button className="sf-outline sf-resume" type="button" onClick={openResume} data-testid="button-view-resume">
+                  <a
+                    className="sf-outline sf-resume"
+                    href={profile.resumeUrl}
+                    download="Shawn-Stephen-Abok-Resume.pdf"
+                    data-testid="button-view-resume"
+                  >
                     <FileText size={15} /><span>View resume</span><ArrowUpRight size={14} />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -214,10 +215,8 @@ export default function Portfolio() {
       </main>
       <SiteFooter onNavigate={go} />
       <Modal open={!!notice} onOpenChange={(open) => !open && setNotice(null)}
-        title={notice === "resume" ? "Resume not added yet" : "LinkedIn not configured"}
-        description={notice === "resume"
-          ? "No resume file has been added to this portfolio, so there is nothing to download. This control will open a real PDF once one is supplied."
-          : "A LinkedIn profile URL has not been added to this portfolio. This control will open a real profile once a link is supplied."} />
+        title="LinkedIn not configured"
+        description="A LinkedIn profile URL has not been added to this portfolio. This control will open a real profile once a link is supplied." />
     </div>
   );
 }

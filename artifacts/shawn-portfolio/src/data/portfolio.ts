@@ -29,8 +29,7 @@ export const profile = {
   // Set a real URL to enable the LinkedIn link. Empty means "not configured yet".
   linkedinUrl: "https://www.linkedin.com/in/shawnstephenabok",
   githubUrl: "https://github.com/Foundnationz",
-  // Set a real URL/path to a PDF to enable the resume. Empty means "not added yet".
-  resumeUrl: "",
+  resumeUrl: import.meta.env.BASE_URL + "files/shawn-stephen-abok-resume.pdf",
   // Paths go through BASE_URL so they resolve both at the site root and under
   // a subfolder (GitHub Pages serves this project at /Personal_Portfolio_Website/).
   logo: import.meta.env.BASE_URL + "images/shawn-logo.png",
